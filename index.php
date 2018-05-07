@@ -333,6 +333,8 @@
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="js/mapmarker.jquery.js"></script>
     <script src="js/mapmarker_func.jquery.js"></script>
+
+    <script src="controlleurs/addNewPerson.js"></script>
     
 </body>
 

@@ -1,203 +1,159 @@
-                        <div class="row">
-                            <aside class="col-xl-3 col-lg-4">
-                                <h2>Request a Quote and Compare prices!</h2>
-                                <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-                                <ul class="list_ok">
-                                    <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-                                    <li>Suavitate vituperatoribus pro ad, cum in quis propriae abhorreant.</li>
-                                    <li>Aperiri deterruisset ei mea, sed cu laudem intellegat, eu mutat iuvaret voluptatum mei.</li>
-                                </ul>
-                            </aside><!-- /aside -->
+<div class="row">
+    <div class="col-xl-9 col-lg-8">
+        <div id="wizard_container">
+            <div id="top-wizard">
+                <strong>Progress</strong>
+                <div id="progressbar"></div>
+            </div><!-- /top-wizard -->
 
-                            <div class="col-xl-9 col-lg-8">
-                                <div id="wizard_container">
-                                    <div id="top-wizard">
-                                        <strong>Progress</strong>
-                                        <div id="progressbar"></div>
-                                    </div><!-- /top-wizard -->
+            <form name="example-1" id="wrapped" method="POST">
+                <input id="website" name="website" type="text" value="">
+                <div id="middle-wizard">
+                
+                    <div class="step"> 
+                        <h3 class="main_question"><strong>Etape ( 1/4 )</strong></h3>
 
-                                    <form name="example-1" id="wrapped" method="POST" enctype="multipart/form-data">
-                                        <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
-                                        <div id="middle-wizard">
-                                            <div class="step">
-                                                <h3 class="main_question"><strong>1/4</strong>What is your budget?</h3>
-                                                
-                                                <div class="form-group radio_questions">
-                                                    <label>1. My budget is under $500
-                                                        <input name="question_1" type="radio" value="My budget is under $500" class="icheck required">
-                                                    </label>
-                                                </div>
-                                                <div class="form-group radio_questions">
-                                                    <label>2. My budget is between $500 and $1000
-                                                        <input name="question_1" type="radio" value="My budget is between $500 and $1000" class="icheck required">
-                                                    </label>
-                                                </div>
-                                                <div class="form-group radio_questions">
-                                                    <label>3. My budget is between $1000 and $1500
-                                                        <input name="question_1" type="radio" value="My budget is between $1000 and $1500" class="icheck required">
-                                                    </label>
-                                                </div>
-                                                <div class="form-group radio_questions">
-                                                    <label>4. My budget is over $1500
-                                                        <input name="question_1" type="radio" value="My budget is over $1500" class="icheck required">
-                                                    </label>
-                                                </div>
-                                                
-                                            </div><!-- /step 1-->
+                        <div class="row">                           
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <h4>Mon idée</h4>
+                                    <input type="text" name="titre" class="form-control" placeholder="titre, énoncé ou le nom du projet" />
+                                </div>
+                                <div class="form-group textarea_info">
+                                    <h4>Description du problème</h4>
+                                    <textarea name="description" class="form-control" style="height: 110px;" placeholder="Vous devez justifier de la pertinence de la problématique sociale à adresser et de l’intérêt de votre projet pour la population cible"></textarea>
+                                </div>
+                                <div class="form-group textarea_info">
+                                    <h4>Description de ma solution</h4>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="bien identifier et décrire ma solution envisagée pour le problème identifié)"></textarea>
+                                </div>
+                                <div class="form-group textarea_info">
+                                    <h4>Qui sont mes cibles? et comment vont-ils participer au projet?</h4>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="bien identifier ma (es) population (s) cible (s), qui sont -ils? leur point commun ?..."></textarea>
+                                </div>
+                                <div class="form-group textarea_info">
+                                    <h4>Moyens technique et financiers nécessaire à la réalisation du projet</h4>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="définir et décrire les moyens techniques et le montant financier estimatif nécessaires à la réalisation du projet"></textarea>
+                                </div>  
+                                <div class="form-group textarea_info">
+                                    <h4>Qu’est ce que je vais changer ?</h4>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="Décrire les avantages ou les bénéfices que votre projet doit générer pour la population cible. Ils doivent refléter un changement d’état des bénéficiaires et être exprimer de leur points de vue"></textarea>
+                                </div>                                                      
+                            </div><!-- /col-sm-6 -->
+                        </div><!-- /row -->                        
+                    </div><!-- /step 1-->
 
-                                            <div class="step">
-                                                <h3 class="main_question"><strong>2/4</strong>What your poject need?</h3>
-                                                <div class="row add_bottom_30">
-                                                   
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Custom interface and layout" class="icheck required">Custom interface and layout
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Web site design" class="icheck required">Web site design
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Seo optimization" class="icheck required">Seo optimization
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="CMS integrations (Wordpress)" class="icheck required">CMS integrations (Wordpress)
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Domain registration" class="icheck required">Domain registration
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Hosting plan" class="icheck required">Hosting plan
-                                                            </label>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div><!-- /row-->
-                                                <div class="form-group textarea_info">
-                                                    <label>Additional info</label>
-                                                    <textarea name="addtional_info" class="form-control" style="height:150px;" placeholder="How many pages, other details, etc..."></textarea>
-                                                </div>
-												<div class="form-group">
-													<label>Optional file upload<br><small>(Files accepted: gif, jpg, jpeg, .png, .doc, .pdf - Max file size: 50k for demo purpose, you can increase based on your host settings.)</small></label>
-													<div class="fileupload">
-														<input type="file" name="fileupload" accept="image/*,doc,pdf">
-													</div>
-												</div>
-                                            </div><!-- /step 2-->
+                    <div class="step">                        
+                        <h3 class="main_question"><strong>Etape ( 2/4 )</strong></h3>
 
-                                            <div class="step">
-                                                <h3 class="main_question"><strong>3/4</strong>Please answer the following questions:</h3>
+                        <div class="row add_bottom_30">                            
+                            <h4>Quelle est la valeur que je vais ajouter à mes populations cibles ?</h4>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="titre" class="label">1- Valeur sociale</label>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="amélioration d’éducation ou de santé, création d’emploi, Bien être, loisirs, solidarité, autres"></textarea>
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="titre" class="label">2- Valeur économique</label>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="gains économiques de la solution, revenus générés)"></textarea>
+                                </div> 
+                            </div>
 
-                                                <div class="row">
-                                                   
-                                                    <div class="col-lg-10">
-                                                        <div class="form-group select">
-                                                            <label>If you already have an hosting plan, please define:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_1">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Unix/Linux + Mysql">Unix/Linux + Mysql</option>
-                                                                    <option value="Windows + Sql">Windows + Sql</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
 
-                                                        <div class="form-group select">
-                                                            <label>If you need an hosting plan, please define which one:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_2">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Hosting Plan 1 year + Mysql database 500MB">1 year + Mysql database 500MB</option>
-                                                                    <option value="Hosting Plan 2 year + Mysql database 500MB">2 year + Mysql database 500MB</option>
-                                                                    <option value="Hosting Plan 2 year + Mysql database 1GB">2 year + Mysql database 1GB</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <h4>Ressources humaines</h4>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="Ressources humaines nécessaires à la réalisation du projet"></textarea>
+                                </div>    
+                                <div class="form-group textarea_info">
+                                    <h4>Activités</h4>
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="décrire, dans un enchaînement logique, les activités à réaliser pour atteindre les résultats et l’objectif (s) prévus dans le cadre du projet"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /step 2-->
 
-                                                        <div class="form-group select">
-                                                            <label>If you need a newsletter campaign, please define the provider you prefer:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_3">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Mailchimp">Mailchimp</option>
-                                                                    <option value="CampaignMonitor">CampaignMonitor</option>
-                                                                    <option value="MailUp">MailUp</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
-                                                    </div>
-                                                </div><!-- /row-->
-                                            </div><!-- /step 3-->
+                    <div class="step">
+                        <h3 class="main_question"><strong>Etape ( 3/4 )</strong></h3>
 
-                                            <div class="submit step">
+                        <div class="row">                       
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="nomPrenom" class="form-control" placeholder="Nom et prénom du lead du projet/équipe" />
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="date" name="datenaissance" class="form-control" placeholder="Date de naissance" />
+                                </div> 
+                            </div>
+                             <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="adresse mail" />
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control" placeholder="Téléphone : (+212)xxxxxxxxx" />
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control" placeholder="Etablissement" />
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control" placeholder="Niveau de formation/études" />
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="Expérience professionnelles"></textarea>
+                                </div> 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <textarea name="solution" class="form-control" style="height: 110px;" placeholder="Motivation de participation à la compétition 'Social innovation projet'"></textarea>
+                                </div> 
+                            </div>
 
-                                                <h3 class="main_question"><strong>4/4</strong>Please fill with your details</h3>
+                        </div><!-- /row-->
+                    </div><!-- /step 3-->
 
-                                                <div class="row">
-                                                   
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <input type="text" name="company_name" class="form-control" placeholder="Your company name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" name="firstname" class="required form-control" placeholder="First name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" name="lastname" class="required form-control" placeholder="Last name">
-                                                        </div>
-                                                    </div><!-- /col-sm-6 -->
+                    <div class="submit step">
+                        <h3 class="main_question"><strong>Etape ( 4/4 )</strong></h3>
 
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <input type="email" name="email" class="required form-control" placeholder="Your Email">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" name="telephone" class="required form-control" placeholder="Your Telephone">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="styled-select">
-                                                                <select class="required" name="country">
-                                                                    <option value="" selected>Select your country</option>
-                                                                    <option value="Europe">Europe</option>
-                                                                    <option value="Asia">Asia</option>
-                                                                    <option value="North America">North America</option>
-                                                                    <option value="South America">South America</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /col-sm-6 -->
-                                                </div><!-- /row -->
-                                                
-                                                <div class="form-group checkbox_questions">
-                                                    <input name="terms" type="checkbox" class="icheck required" value="yes">
-                                                    <label>Please accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a> ?
-                                                    </label>
-                                                </div>
+                        <h4>Liste des membres de l’équipe du projet</h4>
 
-                                            </div><!-- /step 4-->
+                        <div class="row">                           
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" name="firstname" class="required form-control" placeholder="prénom">
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" name="lastname" class="required form-control" placeholder="nom">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="button" class="btn btn-success" id="addNewPerson" value="Add" />
+                            </div>
+                        </div>
+                        <div class="row" id="addNewHere"></div>
+                    </div><!-- /step 4-->
 
-                                        </div><!-- /middle-wizard -->
-                                        <div id="bottom-wizard">
-                                            <button type="button" name="backward" class="backward">Backward </button>
-                                            <button type="button" name="forward" class="forward">Forward</button>
-                                            <button type="submit" name="process" class="submit">Submit</button>
-                                        </div><!-- /bottom-wizard -->
-                                    </form>
-                                </div><!-- /Wizard container -->
+                </div><!-- /middle-wizard -->
+                <div id="bottom-wizard">
+                    <button type="button" name="backward" class="backward">Previous</button>
+                    <button type="button" name="forward" class="forward">Next</button>
+                    <button type="button" name="process" class="submit">Submit</button>
+                </div><!-- /bottom-wizard -->
+            </form>
+        </div><!-- /Wizard container -->
 
-                            </div><!-- /col -->
-                        </div><!-- /row -->
+    </div><!-- /col -->
+</div><!-- /row -->
