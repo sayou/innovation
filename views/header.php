@@ -6,7 +6,7 @@
 <nav class="main_nav">
     <ul class="nav nav-tabs">
         <li><a href="#tab_1" data-toggle="tab">Inscription</a></li>
-        <li><a href="#tab_2" data-toggle="tab">About</a></li>
-        <li><a href="#tab_3" data-toggle="tab">Contact</a></li>
+        <li><a href="#tab_2" data-toggle="tab">Login</a></li>
+        <li><a href="#tab_3" data-toggle="tab">A propos</a></li>
     </ul>
 </nav>
