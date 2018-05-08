@@ -1,0 +1,39 @@
+[09-Apr-2018 23:45:50 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp64\www\miniproject\public\index.php(32): Core\Router->dispatch('product')
+#1 {main}'
+Error in : 'C:\wamp64\www\miniproject\Core\Router.php' Line : '61'
+
+[09-Apr-2018 23:45:50 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp64\www\miniproject\public\index.php(32): Core\Router->dispatch('favicon.ico')
+#1 {main}'
+Error in : 'C:\wamp64\www\miniproject\Core\Router.php' Line : '61'
+
+[09-Apr-2018 23:46:40 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp64\www\miniproject\public\index.php(32): Core\Router->dispatch('product')
+#1 {main}'
+Error in : 'C:\wamp64\www\miniproject\Core\Router.php' Line : '61'
+
+[09-Apr-2018 23:57:47 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp64\www\miniproject\public\index.php(32): Core\Router->dispatch('product')
+#1 {main}'
+Error in : 'C:\wamp64\www\miniproject\Core\Router.php' Line : '61'
+
+[09-Apr-2018 23:58:06 UTC] Error Uncaught Exception : 'Twig_Error_Loader'</p>
+Message : 'Unable to find template "Posts/inde.html" (looked into: ../App/Views).'
+Stack Trace : '#0 C:\wamp64\www\miniproject\vendor\twig\twig\lib\Twig\Loader\Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('Posts/inde.html')
+#1 C:\wamp64\www\miniproject\vendor\twig\twig\lib\Twig\Environment.php(270): Twig_Loader_Filesystem->getCacheKey('Posts/inde.html')
+#2 C:\wamp64\www\miniproject\vendor\twig\twig\lib\Twig\Environment.php(350): Twig_Environment->getTemplateClass('Posts/inde.html')
+#3 C:\wamp64\www\miniproject\vendor\twig\twig\lib\Twig\Environment.php(289): Twig_Environment->loadTemplate('Posts/inde.html')
+#4 C:\wamp64\www\miniproject\Core\View.php(25): Twig_Environment->render('Posts/inde.html', Array)
+#5 C:\wamp64\www\miniproject\App\Controllers\Posts.php(13): Core\View::renderTemplate('Posts/inde.html', Array)
+#6 [internal function]: App\Controllers\Posts->indexAction()
+#7 C:\wamp64\www\miniproject\Core\Controller.php(18): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\miniproject\Core\Router.php(50): Core\Controller->__call('index', Array)
+#9 C:\wamp64\www\miniproject\public\index.php(32): Core\Router->dispatch('posts/index')
+#10 {main}'
+Error in : 'C:\wamp64\www\miniproject\vendor\twig\twig\lib\Twig\Loader\Filesystem.php' Line : '226'
+
