@@ -86,9 +86,9 @@
                         <div class="subheader" id="quote"></div>
                         
                         <!-- Partie inscription -->
-                        {% if test == true %}
+                        {% if test == 'true' %}
                             <script>swal('Votre inscription est bien enregistré !', '', 'success')</script> 
-                        {% elseif test == false %}
+                        {% elseif test == 'false' %}
                             <script>swal('Votre inscription n\'est pas enregistré.. réessayer !', '', 'error')</script> 
                         {% endif %}
 
