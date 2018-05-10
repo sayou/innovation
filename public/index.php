@@ -10,6 +10,7 @@ $router = new Core\Router();
 
 //Routes
 $router->add('',['controller'=>'Home','action'=>'index']);
+$router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
 $router->add('posts',['controller'=>'Posts','action'=>'index']);
 $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
@@ -19,6 +20,7 @@ $router->add('private_images/{filename:[\w\.-]+}', ['controller' => 'Images', 'a
 
 //Route of admin
 $router->add('admin/{controller}/{action}',['namespace' => 'Admin']);
+
 
 $url = $_SERVER['QUERY_STRING'];
 
