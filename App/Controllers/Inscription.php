@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use \Core\View;
 use App\Models\InscriptionModel;
+use App\Models\ProjectPDF;
 
 class Inscription extends \Core\Controller{
     
@@ -29,7 +30,7 @@ class Inscription extends \Core\Controller{
 	public function editAction(){
 		try{
 			//l'id est recuperé a l'aide d'une session apres auth normalement
-			$data = self::findProject(3);
+			$data = self::findProject(4);
 
 		}catch(Exception $e){
 
@@ -44,14 +45,14 @@ class Inscription extends \Core\Controller{
 	public function saveChangesAction(){
 		try{
 			//l'id est recuperé a l'aide d'une session apres auth normalement
-			$data = self::findProject(3);
+			$data = self::findProject(4);
 			extract($data);
 
 			$editedLead = InscriptionModel::editLeadInfos($_POST, $lead["id"]);
 			$editedProjet = InscriptionModel::editProjetInfos($_POST, $projet["id"], $lead["id"]);
 			$editedMembres = InscriptionModel::editMembresInfos($_POST, $projet["id"]);
 			$test = 'true';
-			$data = self::findProject(3);
+			$data = self::findProject(4);
 		}catch(Exception $e){
 			$test = null;
 		}
@@ -78,6 +79,29 @@ class Inscription extends \Core\Controller{
 		
 	}
 	// fin modification d'inscription
+
+	// impression pdf
+	public function printPDFAction(){
+		$pdf = new ProjectPDF();
+		$titre = 'Projet Innovation Sociale';
+		$pdf->SetTitle($titre);
+		$pdf->SetAuthor('Hackathon - Innovation Sociale');
+
+		//getting data
+		$data = self::findProject(4);
+
+		unset($data["lead"]["id"], $data["projet"]["id"], $data["projet"]["idLead"]);
+		$membres = $data["membres"];
+		foreach($membres as $key => $value){
+			unset($membres[$key]["id"], $membres[$key]["idProjet"]);
+		}
+
+		$pdf->AjouterSection(1, 'Projet', $data["projet"]);
+		$pdf->AjouterSection(2, 'Leader', $data["lead"]);
+		$pdf->AjouterSection(3, 'Membres', $membres);
+		$pdf->Output();
+	}
+	// fin impression pdf
 }
 
 ?>

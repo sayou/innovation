@@ -163,12 +163,6 @@ class InscriptionModel extends \Core\Model{
 	}
 	//end modification
 
-
-	//impression pdf
-
-
-	//end impression fpd
-
 }
 
 ?>
