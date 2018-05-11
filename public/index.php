@@ -11,6 +11,8 @@ $router = new Core\Router();
 //Routes
 $router->add('',['controller'=>'Home','action'=>'index']);
 $router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
+$router->add('editInscription',['controller'=>'Inscription','action'=>'edit']);
+$router->add('saveInscription',['controller'=>'Inscription','action'=>'saveChanges']);
 $router->add('posts',['controller'=>'Posts','action'=>'index']);
 $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
