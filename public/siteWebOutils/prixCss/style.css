@@ -1,0 +1,182 @@
+.fixedImg{
+}
+
+
+.partenairesGroupSection{
+  display: inline-block;
+}
+
+.partenairesImg{
+  width:  150px;
+  height: 150px;
+  margin-right: 50px;
+}
+
+.upLeft{
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.upLeft h2{
+  font-family: "times, serif";
+}
+
+.upLeftText{
+  font-size: 18px;
+  margin-left: 50px;
+  font-family: sans-serif;
+  line-height: 23px;
+  color: rgb(88, 88, 88);
+}
+
+#partenaires{
+  margin-bottom: 120px;
+  margin-top: 100px;
+}
+
+#partenairesRowSpan{
+  margin-bottom: 200px;
+}
+
+#prix{
+  margin-bottom: 200px;
+}
+
+.deal img{
+  width: 70%;
+  height: 70%;
+}
+
+.txtPrice{
+  color: rgb(88, 88, 88);
+  font-size: 17px;
+  margin-top: 15px;
+  font-family: 'Verdana, sans-serif';
+}
+
+.txtPoint{
+  color: rgb(88, 88, 88);
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.txtPriceValue{
+  color: rgb(88, 88, 88);
+}
+
+.promos {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.promo {
+  width: 250px;
+  background: transparent; 
+  color: #f9f9f9;
+  float: left;
+}
+.deal {
+  padding: 10px 0 0 0;
+}
+.deal span {
+  display: block;
+  text-align: center;
+}
+.deal span:first-of-type {
+  font-size: 23px;  
+}
+.deal span:last-of-type {
+  font-size: 13px;
+}
+.promo .price {
+  display: block;
+  width: 250px;  
+  background: transparent;
+  margin: 15px 0 10px 0;
+  text-align: center;
+  font-size: 23px;
+  padding: 17px 0 17px 0;
+  color: black;
+}
+.deal ul {
+  display: block;
+  margin: 20px 0 10px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  color: #999999;
+}
+.deal li {
+  display: block;
+  margin: 10px 0 0 0;
+}
+.promo button {
+  border: none;
+  border-radius: 40px;
+  background: #292b2e;
+  color: #f9f9f9;
+  padding: 10px 37px;
+  margin: 10px 0 20px 60px;
+}
+.scale {
+  transform: scale(1.2);
+ 
+}
+.scale button {
+  background: #64AAA4;
+}
+.scale .price {
+  color: #64AAA4;
+}
+
+.down{
+  padding-top: 100px;
+}
+
+.section-group{
+  display: block;
+}
+
+.apiDiv{
+  display: inline-block;
+  height: 100px;
+  background-color: white;
+  padding-top: 35px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.apiDiv img{
+  width: 100px;
+  height: auto;
+  margin-top: -50px;
+  margin-right: 20px;
+}
+
+.apiDivContent{
+  display: inline-block;
+}
+
+.apiTxt{
+  font-size: 20px;
+  color: rgb(88, 88, 88);
+  width: 300px;
+  line-height: 25px;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+

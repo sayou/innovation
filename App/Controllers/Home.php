@@ -16,6 +16,10 @@ class Home extends \Core\Controller{
     public function indexAction(){
         View::getView('Home/index.html');
     }
+
+    public function siteWebAction(){
+        View::getView('SiteWeb/index.html');
+    }
 }
 
 ?>
