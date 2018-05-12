@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use \Core\View;
+use App\Models\HomeModel;
 
 class Home extends \Core\Controller{
     
@@ -18,7 +19,11 @@ class Home extends \Core\Controller{
     }
 
     public function siteWebAction(){
-        View::getView('SiteWeb/index.html');
+
+        $result = HomeModel::getProjectAndLeadInfos();
+        $count = count($result);
+
+        View::getView('SiteWeb/index.html', ['projectList' => $result, 'nbrProjects' => $count]);
     }
 }
 
