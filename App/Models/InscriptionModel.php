@@ -64,7 +64,7 @@ class InscriptionModel extends \Core\Model{
         }catch(PDOException $e){echo $e->getMessage();}
 	}
 	
-	//modification : Ghassan
+	//modification & etat avancement : Ghassan
 	public static function findLeadById($idLead){
 		try{
             $db = static::getDB();
@@ -160,6 +160,22 @@ class InscriptionModel extends \Core\Model{
         }catch(PDOException $e){
             echo $e->getMessage();
         }
+	}
+
+	public static function addProgress($idLead, $progress){
+
+		$projet = self::findProjectByLead($idLead);
+		try{
+			$dateAjout = Date('d/m/Y H:i:s');
+
+        	$db = static::getDB();
+           	$stmt = $db->prepare("INSERT INTO `etatavancement`(etat, dateAjout, idProjet) VALUES(:e, :da, :idp)");				
+			$stmt->bindParam(':e',  $progress);
+			$stmt->bindParam(':da',  $dateAjout);
+			$stmt->bindParam(':idp',  $projet["id"]);
+			$stmt->execute();
+			return $db->lastInsertId();
+        }catch(PDOException $e){echo $e->getMessage();}
 	}
 	//end modification
 

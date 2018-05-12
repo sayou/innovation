@@ -13,6 +13,7 @@ $router->add('',['controller'=>'Home','action'=>'index']);
 $router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
 $router->add('editInscription',['controller'=>'Inscription','action'=>'edit']);
 $router->add('saveInscription',['controller'=>'Inscription','action'=>'saveChanges']);
+$router->add('progress',['controller'=>'Inscription','action'=>'progress']);
 $router->add('imprimerPDF',['controller'=>'Inscription','action'=>'printPDF']);
 $router->add('posts',['controller'=>'Posts','action'=>'index']);
 $router->add('{controller}/{action}');

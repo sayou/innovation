@@ -53,8 +53,9 @@
             <ul class="nav nav-tabs">
                 <li><a href="#tab_1" data-toggle="tab">Modifier votre inscription</a></li>
                 <li><a href="/imprimerPDF">Imprimer votre PDF</a></li>
+                <li><a href="#tab_3" data-toggle="tab">Etat d'avancenment</a></li>
                 <li><a href="#" data-toggle="tab">Logout</a></li>
-                <li><a href="#tab_3" data-toggle="tab">A propos</a></li>
+                <li><a href="#tab_4" data-toggle="tab">A propos</a></li>
             </ul>
         </nav>
     </header><!-- /header -->
@@ -76,7 +77,7 @@
     <div id="main_container">
        
         <div id="header_in">
-            <a href="#0" class="close_in "><i class="pe-7s-close-circle"></i></a>
+            <a href="" class="close_in "><i class="pe-7s-close-circle"></i></a>
         </div>
 
         <div class="wrapper_in">
@@ -86,11 +87,17 @@
                     <div class="tab-pane fade" id="tab_1">                                               
                         <div class="subheader" id="quote"></div>
                         
-                        <!-- Partie inscription -->
+                        <!-- Partie Modification -->
                         {% if test == 'true' %}
-                            <script>swal('Votre modification est bien enregistré !', '', 'success')</script> 
+                            <script>swal('Votre modification est bien éffectuée !', '', 'success')</script> 
                         {% elseif test == 'false' %}
-                            <script>swal('Votre modification n\'est pas enregistré.. réessayer !', '', 'error')</script> 
+                            <script>swal('Votre modification n\'est pas éffectuée avec succes...réessayer !', '', 'error')</script> 
+                        {% endif %}
+
+                        {% if testProgress == 'true' %}
+                            <script>swal('Avancement ajouté avec succes !', '', 'success')</script> 
+                        {% elseif testProgress == 'false' %}
+                            <script>swal('Ajout échoué...réessayer !', '', 'error')</script> 
                         {% endif %}
 
                         <div class="row">
@@ -269,7 +276,7 @@
                         </div><!-- /row -->
 
 
-                        <!-- End partie inscription-->
+                        <!-- End partie Modification-->
                     </div><!-- /TAB 1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
                     
                     <div class="tab-pane fade" id="tab_2">
@@ -277,59 +284,104 @@
 
                        <div class="subheader" id="about"></div>
                        <div class="row">
-   <aside class="col-xl-3 col-lg-4">
-       <h2>Request a Quote and Compare prices!</h2>
-       <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-       <ul class="list_ok">
-           <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-       </ul>
-   </aside><!-- /aside -->
+                            <aside class="col-xl-3 col-lg-4">
+                                <h2>Request a Quote and Compare prices!</h2>
+                                <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
+                                <ul class="list_ok">
+                                    <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
+                                </ul>
+                            </aside><!-- /aside -->
 
-   <div class="col-xl-9 col-lg-8">
-       <div id="wizard_container">
-           
+                            <div class="col-xl-9 col-lg-8">
+                                <div id="wizard_container">
+                                    <form name="example-1" id="wrapped" method="POST" enctype="multipart/form-data">
+                                        <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
+                                        <div id="middle-wizard">
+                                            <div class="submit step">
+                                                <h3 class="main_question">Vous avez un compte ?</h3>
 
-           <form name="example-1" id="wrapped" method="POST" enctype="multipart/form-data">
-               <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
-               <div id="middle-wizard">
-        
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" class="required form-control" placeholder="Votre email">
+                                                        </div>
+                                                    </div><!-- /col-sm-6 -->
 
-                   <div class="submit step">
-                       <h3 class="main_question">Vous avez un compte ?</h3>
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <input type="password" name="email" class="required form-control" placeholder="Votre mot de passe">
+                                                        </div>
+                                                    </div><!-- /col-sm-6 -->
 
-                       <div class="row">
-                           <div class="col-sm-12">
-                               <div class="form-group">
-                                   <input type="email" name="email" class="required form-control" placeholder="Votre email">
-                               </div>
-                           </div><!-- /col-sm-6 -->
+                                                </div><!-- /row -->
+                                            </div><!-- /step 4-->
 
-                           <div class="col-sm-12">
-                               <div class="form-group">
-                                   <input type="password" name="email" class="required form-control" placeholder="Votre mot de passe">
-                               </div>
-                           </div><!-- /col-sm-6 -->
+                                        </div><!-- /middle-wizard -->
+                                        <div id="bottom-wizard">
+                                            <button type="submit" name="process" class="submit">Connecté</button>
+                                        </div><!-- /bottom-wizard -->
+                                    </form>
+                                </div><!-- /Wizard container -->
 
-                       </div><!-- /row -->
-                       
-                       
-
-                   </div><!-- /step 4-->
-
-               </div><!-- /middle-wizard -->
-               <div id="bottom-wizard">
-                   <button type="submit" name="process" class="submit">Connecté</button>
-               </div><!-- /bottom-wizard -->
-           </form>
-       </div><!-- /Wizard container -->
-
-   </div><!-- /col -->
-</div><!-- /row -->
+                            </div><!-- /col -->
+                            </div><!-- /row -->
 
                        <!-- End partie login -->
                     </div><!-- /TAB 2:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
                     
                     <div class="tab-pane fade" id="tab_3">
+                            <!-- Partie Etat Avancement -->
+     
+                            <div class="subheader" id="about"></div>
+                            <div class="row">
+                                 <aside class="col-xl-3 col-lg-4">
+                                     <h2>Request a Quote and Compare prices!</h2>
+                                     <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
+                                     <ul class="list_ok">
+                                         <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
+                                     </ul>
+                                 </aside><!-- /aside -->
+                                 
+                                 <div class="col-xl-9 col-lg-8">
+                                     <div id="wizard_container">
+                                        {% if finInscription == 'false' %}
+                                            <div id="middle-wizard">
+                                                <div class="submit step">
+                                                    <h3 class="main_question">L'événement commence bientôt...</h3>
+                                                </div>
+                                            </div><!-- /middle-wizard -->
+                                            <div id="bottom-wizard">
+                                            </div><!-- /bottom-wizard -->
+                                        {% else %}
+                                        <form method="POST" action="/progress">
+                                                <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
+                                                <div id="middle-wizard">
+                                                    <div class="submit step">
+                                                        <h3 class="main_question">Marquez vos avancement</h3>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group">
+                                                                    <textarea name="etat" class="required form-control" placeholder="Vos progression dans le projet..." required></textarea>
+                                                                </div>
+                                                            </div><!-- /col-sm-6 -->
+                                                        </div><!-- /row -->
+
+                                                    </div><!-- /step 4-->
+                                                </div><!-- /middle-wizard -->
+                                                <div id="bottom-wizard">
+                                                    <button type="submit" class="submit">Sauvegarder</button>
+                                                </div><!-- /bottom-wizard -->
+                                            </form>
+                                        {% endif %}
+                                     </div><!-- /Wizard container -->
+     
+                                 </div><!-- /col -->
+                                 </div><!-- /row -->
+     
+                            <!-- End Etat Avancement -->
+                         </div>
+
+                    <div class="tab-pane fade" id="tab_4">
                         
                         <div id="map_contact"></div><!-- /map -->
                         
@@ -377,7 +429,7 @@
                                 </ul>
                             </div><!-- /social -->
                         </div>
-                    </div><!-- /TAB 3:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+                    </div><!-- /TAB 4:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
                 </div><!-- /tab content -->
             </div><!-- /container-fluid -->
