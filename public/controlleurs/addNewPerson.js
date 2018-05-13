@@ -110,6 +110,43 @@ $( "#inscriptionForm" ).validate({
       required: true,
       minlength:6,
       maxlength: 100
+    },
+    motDePasse: {
+      required: true,
+      minlength:8,
+      maxlength: 20
+    },
+    motDePasseDeux: {
+      required: true,
+      minlength:8,
+      maxlength: 20,
+      equalTo:"#motDePasse"
+    },
+    leadDateNaissance: {
+      required: true,
+      date : true,
+      maxDate : true
+    },
+    'membreDateNaissance[]': {
+      required: true,
+      date : true,
+      maxDate : true
     }
   }
 });
+
+
+
+$.validator.addMethod("maxDate", function(value, element){
+	var curYear = (new Date()).getFullYear();
+	var min = curYear - 50;
+	var max = curYear - 16;
+	var inputDate = new Date(value);
+
+	if(inputDate.getFullYear() > min && inputDate.getFullYear() < max )
+		return true;
+	return false;
+}, "Merci de saisir une date valide !");
+
+
+

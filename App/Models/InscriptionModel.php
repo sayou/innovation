@@ -7,6 +7,20 @@ use PDO;
 class InscriptionModel extends \Core\Model{
 	
 	//inscription : Hassan
+	 public static function addUserInfos($lead, $role){
+        try{
+        	$db = static::getDB();
+           	$stmt = $db->prepare("INSERT INTO users(email, motDePasse, role) VALUES(:email, :motDePasse, :role)");				
+			$stmt->bindParam(':email',  $lead['leadAdresseMail']);
+			$stmt->bindParam(':motDePasse',  $lead['motDePasse']);
+			$stmt->bindParam(':role',  $role);
+			$stmt->execute();
+			return true;
+        }catch(PDOException $e){echo $e->getMessage();}
+    }
+
+
+
     public static function addLeadInfos($lead){
         try{
         	$db = static::getDB();

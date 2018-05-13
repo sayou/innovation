@@ -15,9 +15,10 @@ class Inscription extends \Core\Controller{
 	    		$idLead = InscriptionModel::addLeadInfos($_POST);
 				$idProjet = InscriptionModel::addProjetInfos($_POST, $idLead);
 				InscriptionModel::addMembresInfos($_POST, $idProjet);
+				InscriptionModel::addUserInfos($_POST, 'lead');
 				$test = 'true';
 	    	} catch (Exception $e) {
-	    		$test = 'false';	
+	    		$test = 'false';
 	    	}  
 	    }  
 	    else
