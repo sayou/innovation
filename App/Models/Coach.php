@@ -4,7 +4,7 @@ namespace App\Models;
 
 use PDO;
 
-class Post extends \Core\Model{
+class Coach extends \Core\Model{
     
     public static function getAll(){
         

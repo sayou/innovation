@@ -1,4 +1,15 @@
-.fixedImg{
+.thTable{
+  color: white;
+  background-color: rgb(108, 122, 224);
+  font-size: 15px;
+}
+
+.ProjectTable tbody tr td{
+  background-color: white;
+  color: rgb(88, 88, 88);  
+  font-size: 16px;
+  padding: 20px;
+  font-family: "times, serif";
 }
 
 

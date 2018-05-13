@@ -394,22 +394,36 @@
 					<section id="projet">
 						<div class="row">
 							<h1>List des projets</h1>	
-							<br/><br/><br/><br/><br/><br/>														
+							<br/><br/><br/><br/>													
 							<div class="section-group upLeft">
-								<table class="table">
-									<tr>
-										<th>Libellé de projet</th>
-										<th>Description</th>
-										<th>Lead</th>
-										<th>Contact</th>
-									</tr>
-									<tr>
-										<td>project name</td>
-										<td>project short description</td>
-										<td>fullname</td>
-										<td>name@example.com</td>
-									</tr>
+								<table class="table ProjectTable">
+									<thead>
+										<tr>
+											<th class="thTable rad">Libellé de projet</th>
+											<th class="thTable">Description</th>
+											<th class="thTable">Lead</th>
+											<th class="thTable rad">Contact</th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										{% if nbrProjects == 0 %}
+											<tr>
+												<td colspan="4"><center>la liste est en cours vide !</center></td>
+											</tr>
+										{% endif %}
+										
+										{% for item in  projectList %}
+											<tr>
+												<td>{{ item.idee }}</td>
+												<td>{{ item.descriptionProbleme }}</td>
+												<td>{{ item.nomPrenom }}</td>
+												<td>{{ item.email }}</td>
+											</tr>
+										{% endfor %}
+									</tbody>
 								</table>
+
 							</div>
 						</div>
 					</section>	
@@ -417,7 +431,7 @@
 
 					<section id="faq">
 						<div class="row">
-							<h1>FAQ</h1>	<br/><br/><br/><br/>
+							<h1>FAQ</h1> <br/><br/>
 							<div class="section-group upLeft">
 								<h2>Pourquoi y participer ?</h2>
 								<p class="upLeftText">Pour développer son réseau, gagner un prix, échanger avec des experts, bénéficier de l’accompagnement d’un grand Groupe, être coaché par des ingénieurs spécialisés, et surtout, avoir la possibilité de partir en incubation afin de transformer une idée en réalité opérationnelle. Un weekend fun et des rencontres uniques !</p>
@@ -429,18 +443,13 @@
 							</div>
 
 							<div class="section-group upLeft">
-								<h2>Est-ce que je peux m'inscrire en équipe ?</h2>
-								<p class="upLeftText">Non, l’inscription sur le site se fait de manière individuelle mais vous pouvez venir avec des coéquipiers et compléter votre équipe - ou non - une fois sur place.</p>
-							</div>
-
-							<div class="section-group upLeft">
 								<h2>La participation à l'événement est-elle payante ?</h2>
 								<p class="upLeftText">Non, l’événement est complètement gratuit. Vous avez seulement à vous inscrire en ligne.</p>
 							</div>
 
 							<div class="section-group upLeft">
 								<h2>Jusqu’à quand puis-je m’inscrire ?</h2>
-								<p class="upLeftText">Jusqu'au jour J de l'événement, le 6 novembre 2015.</p>
+								<p class="upLeftText">Jusqu'à le 20 Mai 2018.</p>
 							</div>
 
 
@@ -456,7 +465,7 @@
 
 							<div class="section-group upLeft">
 								<h2>Quel matériel dois-je ramener pour le hackathon ?</h2>
-								<p class="upLeftText">Jusqu'au jour J de l'événement, le 6 novembre 2015.</p>
+								<p class="upLeftText">Ramenez vos ordis, tablettes, tout ce dont vous pourriez avoir besoin ; il n'y aura pas de prêt de matériel sur place.</p>
 							</div>
 
 
