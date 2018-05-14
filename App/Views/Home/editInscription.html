@@ -54,15 +54,18 @@
                 <li><a href="#tab_1" data-toggle="tab">Modifier votre inscription</a></li>
                 <li><a href="/imprimerPDF">Imprimer votre PDF</a></li>
                 <li><a href="#tab_3" data-toggle="tab">Etat d'avancenment</a></li>
-                <li><a href="#" data-toggle="tab">Logout</a></li>
-                <li><a href="#tab_4" data-toggle="tab">A propos</a></li>
+                <li><a href="/">Logout</a></li>
+                <!--<li><a href="#tab_4" data-toggle="tab">A propos</a></li>-->
             </ul>
         </nav>
     </header><!-- /header -->
 
     <div class="intro_txt animated fadeInUp">
         <h2>Innovation Social SAFI</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit qui voluptatum enim est deserunt assumenda, aspernatur quam aperiam!</p>
+        <p>Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées
+            ou de l’Ecole Supérieure de Technologie à Safi.
+            Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux.
+            Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.</p>
     </div><!-- /intro_txt -->
     
     <video id="my-video" class="video" loop muted autoplay playsinline>
@@ -108,7 +111,7 @@
                                         <div id="progressbar"></div>
                                     </div><!-- /top-wizard -->
                         
-                                    <form name="inscriptionFormulaire" method="POST" action="/saveInscription">
+                                    <form name="inscriptionFormulaire" method="POST" action="/saveInscription" id="inscriptionForm">
                                         <input id="website" name="website" type="text" value="">
                                         <div id="middle-wizard">
                                         
@@ -335,33 +338,24 @@
                             <div class="subheader" id="about"></div>
                             <div class="row">
                                  <aside class="col-xl-3 col-lg-4">
-                                     <h2>Request a Quote and Compare prices!</h2>
-                                     <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-                                     <ul class="list_ok">
+                                     <h2>Suivi du projet.</h2>
+                                     <p class="lead">Permettez à vos coach de suivre vos progressions.</p>
+                                     <!-- <ul class="list_ok">
                                          <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-                                     </ul>
+                                     </ul> -->
                                  </aside><!-- /aside -->
                                  
                                  <div class="col-xl-9 col-lg-8">
                                      <div id="wizard_container">
-                                        {% if finInscription == 'false' %}
-                                            <div id="middle-wizard">
-                                                <div class="submit step">
-                                                    <h3 class="main_question">L'événement commence bientôt...</h3>
-                                                </div>
-                                            </div><!-- /middle-wizard -->
-                                            <div id="bottom-wizard">
-                                            </div><!-- /bottom-wizard -->
-                                        {% else %}
                                         <form method="POST" action="/progress">
                                                 <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                                                 <div id="middle-wizard">
                                                     <div class="submit step">
-                                                        <h3 class="main_question">Marquez vos avancement</h3>
+                                                        <h3 class="main_question">Marquez vos avancements</h3>
                                                         <div class="row">
                                                             <div class="col-sm-12">
                                                                 <div class="form-group">
-                                                                    <textarea name="etat" class="required form-control" placeholder="Vos progression dans le projet..." required></textarea>
+                                                                    <textarea name="etat" style="height: 110px;" class="required form-control" placeholder="Vos avancements dans le projet..." required></textarea>
                                                                 </div>
                                                             </div><!-- /col-sm-6 -->
                                                         </div><!-- /row -->
@@ -372,7 +366,6 @@
                                                     <button type="submit" class="submit">Sauvegarder</button>
                                                 </div><!-- /bottom-wizard -->
                                             </form>
-                                        {% endif %}
                                      </div><!-- /Wizard container -->
      
                                  </div><!-- /col -->
@@ -381,9 +374,9 @@
                             <!-- End Etat Avancement -->
                          </div>
 
-                    <div class="tab-pane fade" id="tab_4">
+                    <!--<div class="tab-pane fade" id="tab_4">
                         
-                        <div id="map_contact"></div><!-- /map -->
+                        <div id="map_contact"></div>
                         
                         <div id="contact_info">
                             <div class="row">
@@ -418,8 +411,8 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div><!-- / row-->
-                            <hr>
+                            </div>--><!-- / row-->
+                            <!--<hr>
                             <div id="social">
                                 <ul>
                                     <li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -427,9 +420,9 @@
                                     <li><a href="#"><i class="icon-google"></i></a></li>
                                     <li><a href="#"><i class="icon-linkedin"></i></a></li>
                                 </ul>
-                            </div><!-- /social -->
-                        </div>
-                    </div><!-- /TAB 4:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+                            </div>--><!-- /social -->
+                        <!--</div>
+                    </div>--><!-- /TAB 4:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
                 </div><!-- /tab content -->
             </div><!-- /container-fluid -->
@@ -438,13 +431,13 @@
 
     <div id="additional_links">
         <ul>
-            <li>© 2018 Quote</li>
-            <li><a href="https://goo.gl/iSDJf3" class="animated_link">Purchase this template</a></li>
+            <li>© 2018 Hackathon - Innovation Sociale</li>
+            <!-- <li><a href="https://goo.gl/iSDJf3" class="animated_link">Purchase this template</a></li>
             <li><a href="index_2.html" class="animated_link">Demo Slider</a></li>
 			<li><a href="#0" class="animated_link">With UPLOAD</a></li>
             <li><a href="index_4.html" class="animated_link">With Branch</a></li>
             <li><a href="index_5.html" class="animated_link">Full Page View</a></li>
-            <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li>
+            <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li> -->
         </ul>
     </div><!-- /add links -->
 
