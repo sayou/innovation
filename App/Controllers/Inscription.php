@@ -45,7 +45,7 @@ class Inscription extends \Core\Controller{
 				//l'id est recuperé a l'aide d'une session apres auth normalement
 				$email = filter_input(INPUT_POST,"email");
 				$password = filter_input(INPUT_POST,"password");
-				$role = "user";
+				$role = "lead";
 				$result = InscriptionModel::getByEmailAndPassword($email,"123",$role);
 				if($result){
 					//echo $result[0];
