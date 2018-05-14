@@ -193,6 +193,21 @@ class InscriptionModel extends \Core\Model{
 	}
 	//end modification
 
+	public static function getByEmailAndPassword($email,$password,$role){
+		try{
+            $db = static::getDB();
+			$result = $db->query("SELECT * FROM users WHERE email = '$email' AND motDePasse = '$password' AND role = '$role' LIMIT 1");
+			$count = $result->rowCount();
+			if($count == 1){
+				$result = $db->query("SELECT * FROM leadduprojetinfos WHERE email = '$email' LIMIT 1");
+				return $result->fetchAll(PDO::FETCH_ASSOC);
+			}else{
+				return null;
+			}
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+	}
 }
 
 ?>

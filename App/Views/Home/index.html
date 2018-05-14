@@ -92,6 +92,8 @@
                             <script>swal('Votre inscription est bien enregistré !', '', 'success')</script> 
                         {% elseif test == 'false' %}
                             <script>swal('Votre inscription n\'est pas enregistré.. réessayer !', '', 'error')</script> 
+                        {% elseif test == 'error' %}
+                            <script>swal('Email ou mot de passe est incorrect !', '', 'error')</script>
                         {% endif %}
 
                         <div class="row">
@@ -306,20 +308,20 @@
                    <div class="submit step">
                        <h3 class="main_question">Vous avez un compte ?</h3>
 
-                       <!-- <div class="row">
+                        <div class="row">
                            <div class="col-sm-12">
                                <div class="form-group">
-                                   <input type="email" name="email" class="required form-control" placeholder="Votre email">
+                                   <input type="email" name="email" class="required form-control" placeholder="Votre email" required>
                                </div>
                            </div>
 
                            <div class="col-sm-12">
                                <div class="form-group">
-                                   <input type="password" name="email" class="required form-control" placeholder="Votre mot de passe">
+                                   <input type="password" name="password" class="required form-control" placeholder="Votre mot de passe" required>
                                </div>
                            </div>
 
-                       </div> -->
+                       </div> 
                        
                        
 

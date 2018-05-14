@@ -14,11 +14,11 @@ class Home extends \Core\Controller{
         //echo "(After)";
     }
 
-    public function indexAction(){
+    protected function indexAction(){
         View::getView('Home/index.html');
     }
 
-    public function siteWebAction(){
+    protected function siteWebAction(){
 
         $result = HomeModel::getProjectAndLeadInfos();
         $count = count($result);

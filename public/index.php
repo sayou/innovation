@@ -23,19 +23,19 @@ $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
 
 //Route of private image
-$router->add('private_images/{filename:[\w\.-]+}', ['controller' => 'Images', 'action' => 'show']); 
+//$router->add('private_images/{filename:[\w\.-]+}', ['controller' => 'Images', 'action' => 'show']); 
 
 //Route of admin
-$router->add('admin/{controller}/{action}',['namespace' => 'Admin']);
+//$router->add('admin/{controller}/{action}',['namespace' => 'Admin']);
 
 //Route of coach
 //$router->add('coach/{controller}/{action}',['namespace' => 'Coach']);
-$router->add('{controller}/{action}',['namespace' => 'Coach']);
+//$router->add('{controller}/{action}',['namespace' => 'Coach']);
 //$router->add('coach/{controller}/{id:\d+}/{action}',['namespace' => 'Coach']);
-
-
+$url = "";
+if(isset($_SERVER['QUERY_STRING'])){
 $url = $_SERVER['QUERY_STRING'];
-
+}
 $router->dispatch($url);
 
 
