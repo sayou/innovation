@@ -11,7 +11,7 @@ $router = new Core\Router();
 //Routes
 
 $router->add('',['controller'=>'Home','action'=>'siteWeb']);
-$router->add('inscriptionPlatform',['controller'=>'Home','action'=>'index']);
+$router->add('inscriptionPlatform',['controller'=>'Inscription','action'=>'index']);
 //$router->add('',['controller'=>'Home','action'=>'index']);
 $router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
 $router->add('editInscription',['controller'=>'Inscription','action'=>'edit']);

@@ -14,9 +14,7 @@ class Home extends \Core\Controller{
         //echo "(After)";
     }
 
-    protected function indexAction(){
-        View::getView('Home/index.html');
-    }
+    
 
     protected function siteWebAction(){
 

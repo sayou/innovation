@@ -14,10 +14,17 @@ class Inscription extends \Core\Controller{
     protected function after(){
 
 		if(isset($_SESSION['id'])){
-			editAction($_SESSION['id']);
-			exit();
+			$this->editAction($_SESSION['id']);
+			return $test="error";
+			//exit();
 		}
+	}
+
+	protected function indexAction(){
+		$test = $this->after();
+        View::getView('Home/index.html',["test"=>$test]);
     }
+	
 
     protected function addNewAction(){
 		$this->after();
@@ -46,7 +53,7 @@ class Inscription extends \Core\Controller{
 				$email = filter_input(INPUT_POST,"email");
 				$password = filter_input(INPUT_POST,"password");
 				$role = "lead";
-				$result = InscriptionModel::getByEmailAndPassword($email,"123",$role);
+				$result = InscriptionModel::getByEmailAndPassword($email,$password,$role);
 				if($result){
 					//echo $result[0];
 					$id = $result[0]["id"];
@@ -133,7 +140,8 @@ class Inscription extends \Core\Controller{
 		$pdf->SetAuthor('Hackathon - Innovation Sociale');
 
 		//getting data
-		$data = self::findProject(5);
+		session_start();
+		$data = self::findProject($_SESSION['id']);
 
 		unset($data["lead"]["id"], $data["projet"]["id"], $data["projet"]["idLead"]);
 		$membres = $data["membres"];
