@@ -32,20 +32,13 @@ class Inscription extends \Core\Controller{
 		try{
 			//l'id est recuperé a l'aide d'une session apres auth normalement
 			$data = self::findProject(5);
-
-			$finInscription = 'false';
-			if(Date('d/m/Y') == "12/05/2018"){
-				$finInscription = 'true';
-			}
 		}catch(Exception $e){
-			$finInscription = 'false';
 		}
 		
 		View::getView('Home/editInscription.html', [
 		   	"lead" => $data["lead"],
 		    	"projet" => $data["projet"],
-		 	"membres" => $data["membres"],
-			"finInscription" => $finInscription
+		 	"membres" => $data["membres"]
 		]);
 	}
 

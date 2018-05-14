@@ -52,17 +52,19 @@
         <nav class="main_nav">
             <ul class="nav nav-tabs">
                 <li><a href="#tab_1" data-toggle="tab">Modifier votre inscription</a></li>
-                <li><a href="/imprimerPDF">Imprimer votre PDF</a></li>
+                <li><a href="/imprimerPDF" target="_blank">Imprimer votre PDF</a></li>
                 <li><a href="#tab_3" data-toggle="tab">Etat d'avancenment</a></li>
-                <li><a href="#" data-toggle="tab">Logout</a></li>
-                <li><a href="#tab_4" data-toggle="tab">A propos</a></li>
+                <li><a href="/">Logout</a></li>
             </ul>
         </nav>
     </header><!-- /header -->
 
     <div class="intro_txt animated fadeInUp">
         <h2>Innovation Social SAFI</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit qui voluptatum enim est deserunt assumenda, aspernatur quam aperiam!</p>
+        <p>Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées
+            ou de l’Ecole Supérieure de Technologie à Safi.
+            Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux.
+            Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.</p>
     </div><!-- /intro_txt -->
     
     <video id="my-video" class="video" loop muted autoplay playsinline>
@@ -108,7 +110,7 @@
                                         <div id="progressbar"></div>
                                     </div><!-- /top-wizard -->
                         
-                                    <form name="inscriptionFormulaire" method="POST" action="/saveInscription">
+                                    <form name="inscriptionFormulaire" method="POST" action="/saveInscription" id="inscriptionForm">
                                         <input id="website" name="website" type="text" value="">
                                         <div id="middle-wizard">
                                         
@@ -335,33 +337,24 @@
                             <div class="subheader" id="about"></div>
                             <div class="row">
                                  <aside class="col-xl-3 col-lg-4">
-                                     <h2>Request a Quote and Compare prices!</h2>
-                                     <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-                                     <ul class="list_ok">
+                                     <h2>Suivi du projet.</h2>
+                                     <p class="lead">Permettez à vos coach de suivre vos progressions.</p>
+                                     <!-- <ul class="list_ok">
                                          <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-                                     </ul>
+                                     </ul> -->
                                  </aside><!-- /aside -->
                                  
                                  <div class="col-xl-9 col-lg-8">
                                      <div id="wizard_container">
-                                        {% if finInscription == 'false' %}
-                                            <div id="middle-wizard">
-                                                <div class="submit step">
-                                                    <h3 class="main_question">L'événement commence bientôt...</h3>
-                                                </div>
-                                            </div><!-- /middle-wizard -->
-                                            <div id="bottom-wizard">
-                                            </div><!-- /bottom-wizard -->
-                                        {% else %}
                                         <form method="POST" action="/progress">
                                                 <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                                                 <div id="middle-wizard">
                                                     <div class="submit step">
-                                                        <h3 class="main_question">Marquez vos avancement</h3>
+                                                        <h3 class="main_question">Marquez vos avancements</h3>
                                                         <div class="row">
                                                             <div class="col-sm-12">
                                                                 <div class="form-group">
-                                                                    <textarea name="etat" class="required form-control" placeholder="Vos progression dans le projet..." required></textarea>
+                                                                    <textarea name="etat" style="height: 110px;" class="required form-control" placeholder="Vos avancements dans le projet..." required></textarea>
                                                                 </div>
                                                             </div><!-- /col-sm-6 -->
                                                         </div><!-- /row -->
@@ -372,7 +365,6 @@
                                                     <button type="submit" class="submit">Sauvegarder</button>
                                                 </div><!-- /bottom-wizard -->
                                             </form>
-                                        {% endif %}
                                      </div><!-- /Wizard container -->
      
                                  </div><!-- /col -->
@@ -381,56 +373,6 @@
                             <!-- End Etat Avancement -->
                          </div>
 
-                    <div class="tab-pane fade" id="tab_4">
-                        
-                        <div id="map_contact"></div><!-- /map -->
-                        
-                        <div id="contact_info">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="box_contact">
-                                        <i class="pe-7s-map-marker"></i>
-                                        <h4>Address</h4>
-                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
-                                        <p>11 Fifth Ave - New York, 45 001238 - USA</p>
-										<a href="https://www.google.com/maps/dir//11+5th+Ave,+New+York,+NY+10003,+Stati+Uniti/@40.7322935,-73.9981148,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c25990b3af8bb9:0x854ae1d3553155!2m2!1d-73.9959261!2d40.7322935!3e0" class="btn_1" target="_blank">Get directions</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="box_contact">
-                                        <i class="pe-7s-mail-open-file"></i>
-                                        <h4>Email and website</h4>
-                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
-                                        <p>
-                                            <strong>Email:</strong> <a href="#0"><span class="__cf_email__" data-cfemail="0e7d7b7e7e617c7a4e6a61636f6760206d6163">[email&#160;protected]</span></a><br>
-                                            <strong>Website:</strong> <a href="#0">www.quote.com</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="box_contact">
-                                        <i class="pe-7s-call"></i>
-                                        <h4>Telephone</h4>
-                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
-                                        <p>
-                                        	<strong>Tel:</strong> <a href="#0">+44 543 53433</a><br>
-                                            <strong>Fax:</strong> <a href="#0">+44 543 5322</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div><!-- / row-->
-                            <hr>
-                            <div id="social">
-                                <ul>
-                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icon-google"></i></a></li>
-                                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                </ul>
-                            </div><!-- /social -->
-                        </div>
-                    </div><!-- /TAB 4:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
                 </div><!-- /tab content -->
             </div><!-- /container-fluid -->
         </div><!-- /wrapper_in -->
@@ -438,13 +380,7 @@
 
     <div id="additional_links">
         <ul>
-            <li>© 2018 Quote</li>
-            <li><a href="https://goo.gl/iSDJf3" class="animated_link">Purchase this template</a></li>
-            <li><a href="index_2.html" class="animated_link">Demo Slider</a></li>
-			<li><a href="#0" class="animated_link">With UPLOAD</a></li>
-            <li><a href="index_4.html" class="animated_link">With Branch</a></li>
-            <li><a href="index_5.html" class="animated_link">Full Page View</a></li>
-            <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li>
+            <li>© 2018 Hackathon - Innovation Sociale</li>
         </ul>
     </div><!-- /add links -->
 

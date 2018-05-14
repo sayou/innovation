@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="QUOTE - Request a quote for every type of companies">
+    <meta name="author" content="Ansonika">
+    <title>Innovation Social SAFI</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+    <link href="css/magnific-popup.min.css" rel="stylesheet">
+    <link href="css/skins/square/yellow.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- sweetAlert-->
+    <link href="sweetAlert/sweetalert.min.css" rel="stylesheet">
+    <script src="sweetAlert/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    
+    <div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /Loader_form -->
+
+    <header>
+        <div id="logo_home">
+            <h1><a href="index.html" title="Quote">Quote - Request a quote for every type of companies</a></h1>
+        </div>
+        
+        <a id="menu-button-mobile" class="cmn-toggle-switch cmn-toggle-switch__htx" href="javascript:void(0);"><span>Menu mobile</span></a>
+        <nav class="main_nav">
+            <ul class="nav nav-tabs">
+                <li><a href="#tab_1" data-toggle="tab">Inscription</a></li>
+                <li><a href="#tab_2" data-toggle="tab">Login</a></li>
+            </ul>
+        </nav>
+    </header><!-- /header -->
+
+    <div class="intro_txt animated fadeInUp">
+        <h2>Innovation Social SAFI</h2>
+        <p>Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées
+            ou de l’Ecole Supérieure de Technologie à Safi.
+            Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux.
+            Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.</p>
+    </div><!-- /intro_txt -->
+    
+    <video id="my-video" class="video" loop muted autoplay playsinline>
+      <source src="media/demo.mp4" type="video/mp4">
+      <source src="media/demo.ogv" type="video/ogg">
+      <source src="media/demo.webm" type="video/webm">
+	</video><!-- /video -->
+    <div class="video_fallback"></div>
+
+    <div class="layer"></div><!-- /mask -->
+
+    <div id="main_container">
+       
+        <div id="header_in">
+            <a href="#0" class="close_in "><i class="pe-7s-close-circle"></i></a>
+        </div>
+
+        <div class="wrapper_in">
+			
+            <div class="container-fluid">
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="tab_1">                                               
+                        <div class="subheader" id="quote"></div>
+                        
+                        <!-- Partie inscription -->
+                        {% if test == 'true' %}
+                            <script>swal('Votre inscription est bien enregistré !', '', 'success')</script> 
+                        {% elseif test == 'false' %}
+                            <script>swal('Votre inscription n\'est pas enregistré.. réessayer !', '', 'error')</script> 
+                        {% endif %}
+
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-8">
+                                <div id="wizard_container">
+                                    <div id="top-wizard">
+                                        <strong>Progress</strong>
+                                        <div id="progressbar"></div>
+                                    </div><!-- /top-wizard -->
+                        
+                                    <form method="POST" action="/nouvelleInscription" name="inscriptionFormulaire" id="inscriptionForm">
+                                        <input id="website" name="website" type="text" value="">
+                                        <div id="middle-wizard">
+                                        
+                                            <div class="step"> 
+                                                <center><h3 class="main_question"><strong>Informations sur le  projet (Etape 1/2 )</strong></h3></center><br/><br/>
+                        
+                                                <div class="row">                           
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <h4>Mon idée</h4>
+                                                            <input type="text" required name="monIdee" class="form-control" placeholder="titre, énoncé ou le nom du projet" />
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Description du problème</h4>
+                                                            <textarea name="descriptionProbleme" required class="form-control" style="height: 110px;" placeholder="Vous devez justifier de la pertinence de la problématique sociale à adresser et de l’intérêt de votre projet pour la population cible"></textarea>
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Description de ma solution</h4>
+                                                            <textarea name="descriptionSolution" required minlength="10" class="form-control" style="height: 110px;" placeholder="bien identifier et décrire ma solution envisagée pour le problème identifié)"></textarea>
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Qui sont mes cibles? et comment vont-ils participer au projet?</h4>
+                                                            <textarea name="cible" required minlength="10" class="form-control" style="height: 110px;" placeholder="bien identifier ma (es) population (s) cible (s), qui sont -ils? leur point commun ?..."></textarea>
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Moyens technique et financiers nécessaire à la réalisation du projet</h4>
+                                                            <textarea name="moyensTechniqueEtFinancier" required minlength="10" class="form-control" style="height: 110px;" placeholder="définir et décrire les moyens techniques et le montant financier estimatif nécessaires à la réalisation du projet"></textarea>
+                                                        </div>  
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Qu’est ce que je vais changer ?</h4>
+                                                            <textarea name="changement" required minlength="10" class="form-control" style="height: 110px;" placeholder="Décrire les avantages ou les bénéfices que votre projet doit générer pour la population cible. Ils doivent refléter un changement d’état des bénéficiaires et être exprimer de leur points de vue"></textarea>
+                                                        </div>                                                      
+                                                    </div><!-- /col-sm-12 -->
+                                                </div><!-- /row -->                        
+                                            </div><!-- /step 1-->
+                        
+                                            <div class="step">                        
+                                                <center><h3 class="main_question"><strong>Informations sur le  projet (Etape 2/2 )</strong></h3></center><br/><br/>
+                                                
+                                                <h4>Quelle est la valeur que je vais ajouter à mes populations cibles ?</h4><br/>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="titre" class="label"><b>1.  Valeur sociale</b></label>
+                                                            <textarea name="valeurSociale" required minlength="10" class="form-control" style="height: 110px;" placeholder="amélioration d’éducation ou de santé, création d’emploi, Bien être, loisirs, solidarité, autres"></textarea>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="titre" class="label"><b>2.  Valeur économique</b></label>
+                                                            <textarea name="valeurEconomique" required minlength="10" class="form-control" style="height: 110px;" placeholder="gains économiques de la solution, revenus générés)"></textarea>
+                                                        </div> 
+                                                    </div>
+                        
+                        
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <h4>Ressources humaines</h4>
+                                                            <textarea name="ressourcesHumaines" required minlength="10" class="form-control" style="height: 110px;" placeholder="Ressources humaines nécessaires à la réalisation du projet"></textarea>
+                                                        </div>    
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Activités</h4>
+                                                            <textarea name="activites" required minlength="10" class="form-control" style="height: 110px;" placeholder="décrire, dans un enchaînement logique, les activités à réaliser pour atteindre les résultats et l’objectif (s) prévus dans le cadre du projet"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /step 2-->
+                        
+                                            <div class="step">
+                                                <center><h3 class="main_question"><strong>Informations sur les porteurs du projet (Etape 1/2 )</strong></h3></center><br/><br/>
+                                                
+                                                <h4>Informations du lead du projet / équipe</h4><br/>
+                        
+                                                <div class="row">                       
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadNomPrenom" required class="form-control" placeholder="Nom et prénom du lead du projet/équipe" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="date" name="leadDateNaissance" required class="form-control" placeholder="Date de naissance" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="email" name="leadAdresseMail" required class="form-control" placeholder="adresse mail" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadTel" required class="form-control" placeholder="Téléphone : 0611111111" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="password" name="motDePasse" id="motDePasse" required class="form-control" placeholder="mot de passe" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="password" name="motDePasseDeux" required class="form-control" placeholder="retapez le mot de passe" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadEtablissement" required class="form-control" placeholder="Etablissement" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadNiveauDeFormation" required class="form-control" placeholder="Niveau de formation/études" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <textarea name="leadExperienceProfessionelles" required class="form-control" style="height: 110px;" placeholder="Expérience professionnelles"></textarea>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <textarea name="leadMotivation" required class="form-control" style="height: 110px;" placeholder="Motivation de participation à la compétition 'Social innovation projet'"></textarea>
+                                                        </div> 
+                                                    </div>
+                        
+                                                </div><!-- /row-->
+                                            </div><!-- /step 3-->
+                        
+                                            <div class="submit step">
+                                                <center><h3 class="main_question"><strong>Informations sur les porteurs du projet (Etape 2/2 )</strong></h3></center><br/><br/>
+                        
+                                                <h4>Liste des membres de l’équipe du projet</h4><br>
+                        
+                                                <div class="row">                           
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <input type="text" required name="membreNomPrenom[]" class="form-control" placeholder="nom & prénom">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <input type="date" required name="membreDateNaissance[]" class="form-control" placeholder="Date de naissance" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <input type="text" required name="membreEtablissement[]" class="form-control" placeholder="Etablissement" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <input type="text" required name="membreNiveauDeFormation[]" class="form-control" placeholder="Niveau de formation/études" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <input type="button" required class="btn btn-success" id="addNewPerson" value="Add" />
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <div id="addNewHere"></div>
+                                            </div><!-- /step 4-->
+                        
+                                        </div><!-- /middle-wizard -->
+                                        <div id="bottom-wizard">
+                                            <button type="button" name="backward" class="backward">Previous</button>
+                                            <button type="button" name="forward" class="forward">Next</button>
+                                            <button type="submit" name="process" class="submit">Submit</button>
+                                        </div><!-- /bottom-wizard -->
+                                    </form>
+                                </div><!-- /Wizard container -->
+                        
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+
+
+                        <!-- End partie inscription-->
+                    </div><!-- /TAB 1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+                    
+                    <div class="tab-pane fade" id="tab_2">
+                       <!-- Partie login -->
+
+                       <div class="subheader" id="about"></div>
+                       <div class="row">
+   <aside class="col-xl-3 col-lg-4">
+       <h2>Request a Quote and Compare prices!</h2>
+       <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
+       <ul class="list_ok">
+           <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
+       </ul>
+   </aside><!-- /aside -->
+
+   <div class="col-xl-9 col-lg-8">
+       <div id="wizard_container">
+           
+
+           <form name="example-1" method="POST" action="/editInscription">
+               <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
+               <div id="middle-wizard">
+        
+
+                   <div class="submit step">
+                       <h3 class="main_question">Vous avez un compte ?</h3>
+
+                       <!-- <div class="row">
+                           <div class="col-sm-12">
+                               <div class="form-group">
+                                   <input type="email" name="email" class="required form-control" placeholder="Votre email">
+                               </div>
+                           </div>
+
+                           <div class="col-sm-12">
+                               <div class="form-group">
+                                   <input type="password" name="email" class="required form-control" placeholder="Votre mot de passe">
+                               </div>
+                           </div>
+
+                       </div> -->
+                       
+                       
+
+                   </div><!-- /step 4-->
+
+               </div><!-- /middle-wizard -->
+               <div id="bottom-wizard">
+                   <button type="submit" name="process" class="submit">Se Connecter</button>
+               </div><!-- /bottom-wizard -->
+           </form>
+       </div><!-- /Wizard container -->
+
+   </div><!-- /col -->
+</div><!-- /row -->
+
+                       <!-- End partie login -->
+                    <!-- </div>
+                    
+                    <div class="tab-pane fade" id="tab_3">
+                        
+                        <div id="map_contact"></div>
+                        
+                        <div id="contact_info">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="box_contact">
+                                        <i class="pe-7s-map-marker"></i>
+                                        <h4>Address</h4>
+                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
+                                        <p>11 Fifth Ave - New York, 45 001238 - USA</p>
+										<a href="https://www.google.com/maps/dir//11+5th+Ave,+New+York,+NY+10003,+Stati+Uniti/@40.7322935,-73.9981148,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c25990b3af8bb9:0x854ae1d3553155!2m2!1d-73.9959261!2d40.7322935!3e0" class="btn_1" target="_blank">Get directions</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box_contact">
+                                        <i class="pe-7s-mail-open-file"></i>
+                                        <h4>Email and website</h4>
+                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
+                                        <p>
+                                            <strong>Email:</strong> <a href="#0"><span class="__cf_email__" data-cfemail="0e7d7b7e7e617c7a4e6a61636f6760206d6163">[email&#160;protected]</span></a><br>
+                                            <strong>Website:</strong> <a href="#0">www.quote.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box_contact">
+                                        <i class="pe-7s-call"></i>
+                                        <h4>Telephone</h4>
+                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
+                                        <p>
+                                        	<strong>Tel:</strong> <a href="#0">+44 543 53433</a><br>
+                                            <strong>Fax:</strong> <a href="#0">+44 543 5322</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div id="social">
+                                <ul>
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="icon-google"></i></a></li>
+                                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div><!-- /tab content -->
+            </div><!-- /container-fluid -->
+        </div><!-- /wrapper_in -->
+    </div><!-- /main_container -->
+
+    <div id="additional_links">
+        <ul>
+            <li>© 2018 Hackathon - Innovation Sociale</li>
+            <!-- <li><a href="https://goo.gl/iSDJf3" class="animated_link">Purchase this template</a></li>
+            <li><a href="index_2.html" class="animated_link">Demo Slider</a></li>
+			<li><a href="#0" class="animated_link">With UPLOAD</a></li>
+            <li><a href="index_4.html" class="animated_link">With Branch</a></li>
+            <li><a href="index_5.html" class="animated_link">Full Page View</a></li>
+            <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li>-->
+            <li>© 2018 Quote</li>
+        </ul>
+    </div><!-- /add links -->
+
+    <!-- Modal terms -->
+    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms and conditions</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+	<!-- SCRIPTS -->
+    <!-- Jquery-->
+    <script data-cfasync="false" src="js/email-decode.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Common script -->
+    <script src="js/common_scripts_min.js"></script>
+    <!-- Theme script -->
+	<script src="js/file-validator.js"></script>
+	<script src="js/functions_with_upload.js"></script>
+
+    <!-- Google map -->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/mapmarker.jquery.js"></script>
+    <script src="js/mapmarker_func.jquery.js"></script>
+
+    <script src="controlleurs/addNewPerson.js"></script>
+
+</body>
+
+</html>
