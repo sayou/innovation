@@ -34,7 +34,7 @@ class Error{
             error_log($message);
             /*if($code == 404){echo " Page not found ";}
             else{echo "<h1>Ooops !! something wrong</h2>";}*/
-            View::renderTemplate("$code.html");
+            View::getView("$code.html");
         }
     }
 }

@@ -27,7 +27,7 @@ class Inscription extends \Core\Controller{
 	
 
     protected function addNewAction(){
-		$this->after();
+		//$this->after();
     	if(isset($_POST['process'])){
 	    	try {
 	    		$idLead = InscriptionModel::addLeadInfos($_POST);
@@ -47,7 +47,9 @@ class Inscription extends \Core\Controller{
 	
 	//modification d'inscription
 	protected function editAction($id = 0){
-		if(isset($_POST['process']) && $id == 0){
+		$test = "stop";
+		View::getView('Home/index.html', ["test" => $test]); 
+		/*if(isset($_POST['process']) && $id == 0){
 			try{
 				//l'id est recuperé a l'aide d'une session apres auth normalement
 				$email = filter_input(INPUT_POST,"email");
@@ -84,10 +86,9 @@ class Inscription extends \Core\Controller{
 		else{
 			$this->after();
 			View::getView('Home/index.html');
-		}
+		}*/
 		
 		
-		/**/
 	}
 
 	protected function saveChangesAction(){

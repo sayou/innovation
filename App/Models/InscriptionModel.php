@@ -24,7 +24,7 @@ class InscriptionModel extends \Core\Model{
     public static function addLeadInfos($lead){
         try{
         	$db = static::getDB();
-           	$stmt = $db->prepare("INSERT INTO leadDuProjetInfos(nomPrenom, dateNaissance, email, tel, etablissement, niveauDeFormation, experienceProfessionnelles, motivations) VALUES(:np, :dn, :em, :t, :eb, :nf, :ep, :m)");				
+           	$stmt = $db->prepare("INSERT INTO leadduprojetinfos(nomPrenom, dateNaissance, email, tel, etablissement, niveauDeFormation, experienceProfessionnelles, motivations) VALUES(:np, :dn, :em, :t, :eb, :nf, :ep, :m)");				
 			$stmt->bindParam(':np',  $lead['leadNomPrenom']);
 			$stmt->bindParam(':dn',  $lead['leadDateNaissance']);
 			$stmt->bindParam(':em',  $lead['leadAdresseMail']);
@@ -42,7 +42,7 @@ class InscriptionModel extends \Core\Model{
     public static function addProjetInfos($projet, $idLead){
         try{
         	$db = static::getDB();
-           	$stmt = $db->prepare("INSERT INTO projetInfos(idee, descriptionProbleme, descriptionSolution, cibles, changement, valeurSociale, valeurEconomique, ressourcesHumaines, moyensTechniqueEtFinancier, activites, idLead) VALUES(:idee, :dp, :ds, :cibles, :changement, :vs, :ve, :rh, :mtf, :activites, :idLead)");				
+           	$stmt = $db->prepare("INSERT INTO projetinfos(idee, descriptionProbleme, descriptionSolution, cibles, changement, valeurSociale, valeurEconomique, ressourcesHumaines, moyensTechniqueEtFinancier, activites, idLead) VALUES(:idee, :dp, :ds, :cibles, :changement, :vs, :ve, :rh, :mtf, :activites, :idLead)");				
 			$stmt->bindParam(':idee', 		$projet['monIdee']);
 			$stmt->bindParam(':dp',   		$projet['descriptionProbleme']);
 			$stmt->bindParam(':ds',   		$projet['descriptionSolution']);
@@ -112,7 +112,7 @@ class InscriptionModel extends \Core\Model{
 	public static function editLeadInfos($lead, $idLead){
         try{
         	$db = static::getDB();
-           	$stmt = $db->prepare("UPDATE `leadDuProjetInfos` SET nomPrenom = :np, dateNaissance = :dn, email = :em, tel = :t, etablissement = :eb, niveauDeFormation = :nf, experienceProfessionnelles = :ep, motivations = :m WHERE id = " . $idLead);
+           	$stmt = $db->prepare("UPDATE `leadduprojetinfos` SET nomPrenom = :np, dateNaissance = :dn, email = :em, tel = :t, etablissement = :eb, niveauDeFormation = :nf, experienceProfessionnelles = :ep, motivations = :m WHERE id = " . $idLead);
 			$stmt->bindParam(':np',  $lead['leadNomPrenom']);
 			$stmt->bindParam(':dn',  $lead['leadDateNaissance']);
 			$stmt->bindParam(':em',  $lead['leadAdresseMail']);
@@ -129,7 +129,7 @@ class InscriptionModel extends \Core\Model{
     public static function editProjetInfos($projet, $idProjet, $idLead){
         try{
         	$db = static::getDB();					
-           	$stmt = $db->prepare("UPDATE `projetInfos` SET idee = :idee, descriptionProbleme = :dp, descriptionSolution = :ds, cibles = :cibles, changement = :changement, valeurSociale = :vs, valeurEconomique = :ve, ressourcesHumaines = :rh, moyensTechniqueEtFinancier = :mtf, activites = :activites, idLead = :idLead WHERE id = " . $idProjet);
+           	$stmt = $db->prepare("UPDATE `projetinfos` SET idee = :idee, descriptionProbleme = :dp, descriptionSolution = :ds, cibles = :cibles, changement = :changement, valeurSociale = :vs, valeurEconomique = :ve, ressourcesHumaines = :rh, moyensTechniqueEtFinancier = :mtf, activites = :activites, idLead = :idLead WHERE id = " . $idProjet);
 			$stmt->bindParam(':idee', 		$projet['monIdee']);
 			$stmt->bindParam(':dp',   		$projet['descriptionProbleme']);
 			$stmt->bindParam(':ds',   		$projet['descriptionSolution']);

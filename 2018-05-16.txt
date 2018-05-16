@@ -1,0 +1,17 @@
+[16-May-2018 09:41:43 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(39): Core\Router->dispatch('images/favicon....')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[16-May-2018 09:44:39 America/New_York] Error Uncaught Exception : 'PDOException'</p>
+Message : 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'innovation.projetInfos' doesn't exist'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/App/Models/InscriptionModel.php(57): PDOStatement->execute()
+#1 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/App/Controllers/Inscription.php(34): App\Models\InscriptionModel::addProjetInfos(Array, '9')
+#2 [internal function]: App\Controllers\Inscription->addNewAction()
+#3 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Controller.php(18): call_user_func_array(Array, Array)
+#4 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php(50): Core\Controller->__call('addNew', Array)
+#5 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(39): Core\Router->dispatch('nouvelleInscrip...')
+#6 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/App/Models/InscriptionModel.php' Line : '57'
+

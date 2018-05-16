@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="QUOTE - Request a quote for every type of companies">
     <meta name="author" content="Ansonika">
-    <title>Innovation Social SAFI</title>
+    <title>Innovation Sociale SAFI</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -45,7 +45,7 @@
 
     <header>
         <div id="logo_home">
-            <a href="#"><img src="../siteWebOutils/images/logo-v2.png"></a>
+            <a href="#"><img src="siteWebOutils/images/logo-v2.png"></a>
         </div>
         
         <a id="menu-button-mobile" class="cmn-toggle-switch cmn-toggle-switch__htx" href="javascript:void(0);"><span>Menu mobile</span></a>
@@ -58,7 +58,7 @@
     </header><!-- /header -->
 
     <div class="intro_txt animated fadeInUp">
-        <h2>Innovation Social SAFI</h2>
+        <h2>Innovation Sociale SAFI</h2>
         <p>Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées
             ou de l’Ecole Supérieure de Technologie à Safi.
             Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux.
@@ -94,6 +94,8 @@
                             <script>swal('Votre inscription n\'est pas enregistré.. réessayer !', '', 'error')</script> 
                         {% elseif test == 'error' %}
                             <script>swal('Email ou mot de passe est incorrect !', '', 'error')</script>
+                        {% elseif test == 'stop' %}
+                            <script>swal('Désolé ! La page login n\'est pas ouverte pour le moment !', '', 'error')</script>
                         {% endif %}
 
                         <div class="row">
@@ -288,20 +290,12 @@
 
                        <div class="subheader" id="about"></div>
                        <div class="row">
-<<<<<<< HEAD
-   <aside class="col-xl-3 col-lg-4">
-       <h2>Request a Quote and Compare prices!</h2>
-       <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-       <ul class="list_ok">
-           <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-       </ul>
-   </aside><!-- /aside -->
 
-   <div class="col-xl-9 col-lg-8">
+   <div class="col-xl-12 col-lg-8">
        <div id="wizard_container">
            
 
-           <form name="example-1" method="POST" action="/editInscription">
+           <form name="example-1" method="POST" action="/innovation/editInscription">
                <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                <div id="middle-wizard">
         
@@ -324,52 +318,9 @@
 
                        </div> 
                        
-                       
-=======
-                           <aside class="col-xl-3 col-lg-4">
-                               <h2>Request a Quote and Compare prices!</h2>
-                               <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-                               <ul class="list_ok">
-                                   <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-                               </ul>
-                           </aside><!-- /aside -->
-
-                            <div class="col-xl-9 col-lg-8">
-                            <div id="wizard_container">
-                               <form name="example-1" method="POST" action="/editInscription">
-                                   <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
-                                   <div id="middle-wizard">
-                            
-
-                                       <div class="submit step">
-                                           <h3 class="main_question">Vous avez un compte ?</h3>
-
-                                           <!-- <div class="row">
-                                               <div class="col-sm-12">
-                                                   <div class="form-group">
-                                                       <input type="email" name="email" class="required form-control" placeholder="Votre email">
-                                                   </div>
-                                               </div>
-
-                                               <div class="col-sm-12">
-                                                   <div class="form-group">
-                                                       <input type="password" name="email" class="required form-control" placeholder="Votre mot de passe">
-                                                   </div>
-                                               </div>
-
-                                           </div> -->
-                                           
-                                           
-
-                                       </div><!-- /step 4-->
-
-                                   </div><!-- /middle-wizard -->
-                                   <div id="bottom-wizard">
-                                       <button type="submit" name="process" class="submit">Se Connecter</button>
-                                   </div><!-- /bottom-wizard -->
-                               </form>
-                            </div><!-- /Wizard container -->
->>>>>>> a32609edba35355a9be025357dd82747302e9fda
+                       <div id="bottom-wizard">
+                        <button type="submit" name="process" class="submit">Se Connecter</button>
+                    </div>
 
                             </div><!-- /col -->
                         </div><!-- /row -->
@@ -434,17 +385,6 @@
 
     <div id="additional_links">
         <ul>
-<<<<<<< HEAD
-=======
-            <li>© 2018 Hackathon - Innovation Sociale</li>
-            <!-- <li><a href="https://goo.gl/iSDJf3" class="animated_link">Purchase this template</a></li>
-            <li><a href="index_2.html" class="animated_link">Demo Slider</a></li>
-			<li><a href="#0" class="animated_link">With UPLOAD</a></li>
-            <li><a href="index_4.html" class="animated_link">With Branch</a></li>
-            <li><a href="index_5.html" class="animated_link">Full Page View</a></li>
-            <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li>-->
-            <li>© 2018 Quote</li>
->>>>>>> e0cb54ef265ee670dc1a16eb572aeac45010a1fd
         </ul>
     </div><!-- /add links -->
 
