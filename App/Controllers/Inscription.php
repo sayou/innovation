@@ -4,31 +4,43 @@ namespace App\Controllers;
 use \Core\View;
 use App\Models\InscriptionModel;
 use App\Models\ProjectPDF;
+session_start();
 
 class Inscription extends \Core\Controller{
 	
 	protected function before(){
         //echo "(Before)";
     }
-    
-    protected function after(){
-
-		if(isset($_SESSION['id'])){
-			$this->editAction($_SESSION['id']);
-			return $test="error";
-			//exit();
-		}
+	
+	protected function after(){
+		
 	}
+    
 
 	protected function indexAction(){
-		$test = $this->after();
-        View::getView('Home/index.html',["test"=>$test]);
+		if(isset($_SESSION['id'])){
+			$data = self::findProject($_SESSION['id']);
+					View::getView('Home/editInscription.html', [
+					"lead" => $data["lead"],
+					 "projet" => $data["projet"],
+				  "membres" => $data["membres"]
+			 		]);
+		}else{
+			View::getView('Home/index.html');
+		}
     }
 	
 
     protected function addNewAction(){
-		//$this->after();
-    	if(isset($_POST['process'])){
+		if(isset($_SESSION['id'])){
+			$data = self::findProject($_SESSION['id']);
+					View::getView('Home/editInscription.html', [
+					"lead" => $data["lead"],
+					 "projet" => $data["projet"],
+				  "membres" => $data["membres"]
+			 		]);
+		}
+    	else if(isset($_POST['process'])){
 	    	try {
 	    		$idLead = InscriptionModel::addLeadInfos($_POST);
 				$idProjet = InscriptionModel::addProjetInfos($_POST, $idLead);
@@ -37,19 +49,26 @@ class Inscription extends \Core\Controller{
 				$test = 'true';
 	    	} catch (Exception $e) {
 	    		$test = 'false';
-	    	}  
+			}  
+			View::getView('Home/index.html', ["test" => $test]);
 	    }  
-	    else
-	    	$test = null;
-
-        View::getView('Home/index.html', ["test" => $test]);   		
+	    else{
+	    	$test = null;	
+			View::getView('Home/index.html', ["test" => $test]);
+		}   		
 	}
 	
 	//modification d'inscription
-	protected function editAction($id = 0){
-		$test = "stop";
-		View::getView('Home/index.html', ["test" => $test]); 
-		/*if(isset($_POST['process']) && $id == 0){
+	protected function editAction(){
+		if(isset($_SESSION['id'])){
+			$data = self::findProject($_SESSION['id']);
+					View::getView('Home/editInscription.html', [
+					"lead" => $data["lead"],
+					 "projet" => $data["projet"],
+				  "membres" => $data["membres"]
+			 		]);
+		}
+		else if(isset($_POST['process']) && !isset($_SESSION['id'])){
 			try{
 				//l'id est recuperé a l'aide d'une session apres auth normalement
 				$email = filter_input(INPUT_POST,"email");
@@ -57,11 +76,9 @@ class Inscription extends \Core\Controller{
 				$role = "lead";
 				$result = InscriptionModel::getByEmailAndPassword($email,$password,$role);
 				if($result){
-					//echo $result[0];
 					$id = $result[0]["id"];
-					session_start();
 					$_SESSION['id']=$id;
-					$data = self::findProject($id);
+					$data = self::findProject($_SESSION['id']);
 					View::getView('Home/editInscription.html', [
 					"lead" => $data["lead"],
 					 "projet" => $data["projet"],
@@ -75,23 +92,16 @@ class Inscription extends \Core\Controller{
 				
 			}catch(Exception $e){
 			}
-		}else if($id != 0){
-			$data = self::findProject($id);
-					View::getView('Home/editInscription.html', [
-					"lead" => $data["lead"],
-					 "projet" => $data["projet"],
-				  "membres" => $data["membres"]
-			 		]);
 		}
 		else{
-			$this->after();
 			View::getView('Home/index.html');
-		}*/
+		}
 		
 		
 	}
 
 	protected function saveChangesAction(){
+		if(isset($_SESSION['id'])){
 		$test = 'false';
 		if(isset($_POST["process"])){
 			try{
@@ -115,6 +125,9 @@ class Inscription extends \Core\Controller{
 			"membres" => $data["membres"],
 			"test" => $test
 		]);
+	}else{
+		View::getView('Home/index.html');
+	}
 	}
 
 	protected function findProject($idLead){
@@ -135,46 +148,76 @@ class Inscription extends \Core\Controller{
 
 	// impression pdf
 	protected function printPDFAction(){
-		$pdf = new ProjectPDF();
-		$titre = 'Projet Innovation Sociale';
-		$pdf->SetTitle($titre);
-		$pdf->SetAuthor('Hackathon - Innovation Sociale');
-
-		//getting data
-		session_start();
-		$data = self::findProject($_SESSION['id']);
-
-		unset($data["lead"]["id"], $data["projet"]["id"], $data["projet"]["idLead"]);
-		$membres = $data["membres"];
-		foreach($membres as $key => $value){
-			unset($membres[$key]["id"], $membres[$key]["idProjet"]);
+		if(!isset($_SESSION['id'])){
+			View::getView('Home/index.html');
 		}
+		else{
+			$pdf = new ProjectPDF();
+			$titre = 'Projet Innovation Sociale';
+			$pdf->SetTitle($titre);
+			$pdf->SetAuthor('Hackathon - Innovation Sociale');
 
-		$pdf->AjouterSection(1, 'Projet', $data["projet"]);
-		$pdf->AjouterSection(2, 'Leader', $data["lead"]);
-		$pdf->AjouterSection(3, 'Membres', $membres);
-		$pdf->Output();
+			//getting data
+			$data = self::findProject($_SESSION['id']);
+
+			unset($data["lead"]["id"], $data["projet"]["id"], $data["projet"]["idLead"]);
+			$membres = $data["membres"];
+			foreach($membres as $key => $value){
+				unset($membres[$key]["id"], $membres[$key]["idProjet"]);
+			}
+
+			$pdf->AjouterSection(1, 'Projet', $data["projet"]);
+			$pdf->AjouterSection(2, 'Leader', $data["lead"]);
+			$pdf->AjouterSection(3, 'Membres', $membres);
+			$pdf->Output();
+		}
 	}
 	// fin impression pdf
 
 	// etat d'avancement
 	protected function progressAction(){
-		if(isset($_POST["etat"])){
-			try{
-				$progress = InscriptionModel::addProgress(5, $_POST["etat"]);
-				$testProgress = 'true';
-			}catch(Exception $e){
-				$testProgress = 'false';
-			}
-		}else $testProgress = 'false';
+		if(isset($_SESSION['id'])){
+			if(isset($_POST["submit"])){
+				try{
+					$progress = InscriptionModel::addProgress($_SESSION['id'], $_POST);
+					$testProgress = 'true';
+				}catch(Exception $e){
+					$testProgress = 'false';
+				}
+			}else $testProgress = 'false';
 
-		$data = self::findProject(5);
-		View::getView('Home/editInscription.html', [
-			"lead" => $data["lead"],
-		 	"projet" => $data["projet"],
-			"membres" => $data["membres"],
-			"testProgress" => $testProgress
-		]);
+			$data = self::findProject($_SESSION['id']);
+			View::getView('Home/editInscription.html', [
+				"lead" => $data["lead"],
+				"projet" => $data["projet"],
+				"membres" => $data["membres"],
+				"testProgress" => $testProgress
+			]);
+		}else{
+			View::getView('Home/index.html');
+		}
+	}
+
+	protected function verifyEmailAction(){
+		if(isset($_POST["email"])){
+			$email = $_POST["email"];
+			$result = InscriptionModel::findLeadByEmail($email);
+			if($result == 0){
+				echo "yes";
+			}else{echo "no";}
+		}else{
+			$this->indexAction();
+		}
+	}
+
+	protected function logoutAction(){
+		if(isset($_SESSION['id'])){
+			unset($_SESSION['id']);
+			session_destroy();
+			View::getView('Home/index.html');
+		}else{
+			View::getView('Home/index.html');
+		}
 	}
 	// fin etat d'avancement
 }

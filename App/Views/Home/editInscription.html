@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
+    {{number}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="QUOTE - Request a quote for every type of companies">
-    <meta name="author" content="Ansonika">
+    <meta name="description" content="Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées ou de l’Ecole Supérieure de Technologie à Safi. Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux. Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.">
+    <meta name="author" content="Innovation Sociale Safi">
     <title>Innovation Sociale SAFI</title>
 
     <!-- Favicons-->
@@ -45,16 +45,17 @@
 
     <header>
         <div id="logo_home">
-            <h1><a href="index.html" title="Quote">Quote - Request a quote for every type of companies</a></h1>
+                <a href="#"><img src="siteweb/img/logo-light.png"></a>
         </div>
         
         <a id="menu-button-mobile" class="cmn-toggle-switch cmn-toggle-switch__htx" href="javascript:void(0);"><span>Menu mobile</span></a>
         <nav class="main_nav">
             <ul class="nav nav-tabs">
+                <li><a href="https://aracpi.com/innovation/">Visiter le site</a></li>
                 <li><a href="#tab_1" data-toggle="tab">Modifier votre inscription</a></li>
-                <li><a href="/imprimerPDF" target="_blank">Imprimer votre PDF</a></li>
+                <li><a href="imprimerPDF" target="_blank">Imprimer votre PDF</a></li>
                 <li><a href="#tab_3" data-toggle="tab">Etat d'avancenment</a></li>
-                <li><a href="/">Logout</a></li>
+                <li><a href="logout">Logout</a></li>
             </ul>
         </nav>
     </header><!-- /header -->
@@ -110,7 +111,7 @@
                                         <div id="progressbar"></div>
                                     </div><!-- /top-wizard -->
                         
-                                    <form name="inscriptionFormulaire" method="POST" action="/saveInscription" id="inscriptionForm">
+                                    <form name="inscriptionFormulaire" method="POST" action="saveInscription" id="inscriptionForm">
                                         <input id="website" name="website" type="text" value="">
                                         <div id="middle-wizard">
                                         
@@ -281,55 +282,6 @@
                         <!-- End partie Modification-->
                     </div><!-- /TAB 1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
                     
-                    <div class="tab-pane fade" id="tab_2">
-                       <!-- Partie login -->
-
-                       <div class="subheader" id="about"></div>
-                       <div class="row">
-                            <aside class="col-xl-3 col-lg-4">
-                                <h2>Request a Quote and Compare prices!</h2>
-                                <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi.</p>
-                                <ul class="list_ok">
-                                    <li>Delicata persecuti ei nec, et his minim omnium, aperiam placerat ea vis.</li>
-                                </ul>
-                            </aside><!-- /aside -->
-
-                            <div class="col-xl-9 col-lg-8">
-                                <div id="wizard_container">
-                                    <form name="example-1" id="wrapped" method="POST" enctype="multipart/form-data">
-                                        <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
-                                        <div id="middle-wizard">
-                                            <div class="submit step">
-                                                <h3 class="main_question">Vous avez un compte ?</h3>
-
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="form-group">
-                                                            <input type="email" name="email" class="required form-control" placeholder="Votre email">
-                                                        </div>
-                                                    </div><!-- /col-sm-6 -->
-
-                                                    <div class="col-sm-12">
-                                                        <div class="form-group">
-                                                            <input type="password" name="email" class="required form-control" placeholder="Votre mot de passe">
-                                                        </div>
-                                                    </div><!-- /col-sm-6 -->
-
-                                                </div><!-- /row -->
-                                            </div><!-- /step 4-->
-
-                                        </div><!-- /middle-wizard -->
-                                        <div id="bottom-wizard">
-                                            <button type="submit" name="process" class="submit">Connecté</button>
-                                        </div><!-- /bottom-wizard -->
-                                    </form>
-                                </div><!-- /Wizard container -->
-
-                            </div><!-- /col -->
-                            </div><!-- /row -->
-
-                       <!-- End partie login -->
-                    </div><!-- /TAB 2:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
                     
                     <div class="tab-pane fade" id="tab_3">
                             <!-- Partie Etat Avancement -->
@@ -346,7 +298,7 @@
                                  
                                  <div class="col-xl-9 col-lg-8">
                                      <div id="wizard_container">
-                                        <form method="POST" action="/progress">
+                                        <form method="POST" action="progress">
                                                 <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                                                 <div id="middle-wizard">
                                                     <div class="submit step">
@@ -356,13 +308,25 @@
                                                                 <div class="form-group">
                                                                     <textarea name="etat" style="height: 110px;" class="required form-control" placeholder="Vos avancements dans le projet..." required></textarea>
                                                                 </div>
-                                                            </div><!-- /col-sm-6 -->
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group">
+                                                                    <select name="pourcentage" class="required form-control" required>
+                                                                        <option value="">Pourcentage</option>
+                                                                        {% for i in 0..19 %}
+                                                                            {% set myVal = myVal + 5 %}
+                                                                            <option>{{myVal}}%</option>
+                                                                            {% set i = i + 5 %}
+                                                                        {% endfor %}
+                                                                    </select>
+                                                                </div>
+                                                            </div>
                                                         </div><!-- /row -->
 
                                                     </div><!-- /step 4-->
                                                 </div><!-- /middle-wizard -->
                                                 <div id="bottom-wizard">
-                                                    <button type="submit" class="submit">Sauvegarder</button>
+                                                    <button type="submit" name="submit" class="submit">Sauvegarder</button>
                                                 </div><!-- /bottom-wizard -->
                                             </form>
                                      </div><!-- /Wizard container -->
@@ -384,27 +348,7 @@
         </ul>
     </div><!-- /add links -->
 
-    <!-- Modal terms -->
-    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Terms and conditions</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+
 
 	<!-- SCRIPTS -->
     <!-- Jquery-->

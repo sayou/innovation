@@ -47,17 +47,65 @@
                     <td>{{projet.tel}}</td>
                     <td>{{projet.email}}</td>
 
-                    {% for coach in coachs %}
-                      {% if projet.idCoach is null %}
+                    
                         <td>No one</td>
-                      {% elseif projet.idCoach == coach.id %}
-                        <td>{{coach.email}}</td>
-                      {% endif %}
-                    {% endfor %}
+                      
 
                     
                   </tr>
                   {% endfor %}
+                </tbody>
+              </table>
+              
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>La liste des projets séléctionnées par vous et autre coachs</h2>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              
+              <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>Suivi ce projet</th>
+                    <th>Lead du projet</th>
+                    <th>Idee</th>
+                    <th>Tele lead</th>
+                    <th>Email Lead</th>
+                    <th>Coach</th>
+                  </tr>
+                </thead>
+                <tbody style="text-align: center">
+                  <tr>
+                    <td><input class="js-switch" type="checkbox" value="{{projet.id}}" name="Adding[]" checked /></td>
+                    <td>Redondo Amine</td>
+                    <td>we try to test project</td>
+                    <td>0601288954</td>
+                    <td>Redondo@gmail.com</td>
+                    <td>Amine</td>
+                  </tr>
+                  <tr>
+                      <td><input class="js-switch" type="checkbox" value="{{projet.id}}" name="Adding[]" checked /></td>
+                      <td>Mohamed Anas</td>
+                      <td>we try to test project</td>
+                      <td>0601288954</td>
+                      <td>anas@gmail.com</td>
+                      <td>Saad</td>
+                    </tr>
+                    <tr>
+                        <td><input class="js-switch" type="checkbox" value="{{projet.id}}" name="Adding[]" checked /></td>
+                        <td>Ghassan Aymane</td>
+                        <td>we try to test project</td>
+                        <td>0601288954</td>
+                        <td>Ghassan@gmail.com</td>
+                        <td>Hassan</td>
+                      </tr>
                 </tbody>
               </table>
               

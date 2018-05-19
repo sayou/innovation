@@ -65,7 +65,7 @@ class InscriptionModel extends \Core\Model{
 
         	$db = static::getDB();
 			$stmt = $db->prepare("INSERT INTO membres(nomPrenom, dateNaissance, niveauDeFormation, etablissement, idProjet) VALUES(:np, :dn, :nf, :et, :id)");	
-
+			if(isset($membres['membreNomPrenom'])){
            	for ($i=0; $i < count($membres['membreNomPrenom']); $i++) { 
 				$stmt->bindParam(':np', 		$membres['membreNomPrenom'][$i]);
 				$stmt->bindParam(':dn',   		$membres['membreDateNaissance'][$i]);
@@ -74,6 +74,7 @@ class InscriptionModel extends \Core\Model{
 				$stmt->bindParam(':id', 		$idProjet);
 				$stmt->execute();
 			}
+		}
 			return true;
         }catch(PDOException $e){echo $e->getMessage();}
 	}
@@ -84,6 +85,17 @@ class InscriptionModel extends \Core\Model{
             $db = static::getDB();
             $result = $db->query("SELECT * FROM `leadduprojetinfos` WHERE id = " . $idLead);
             return $result->fetchAll(PDO::FETCH_ASSOC)[0];
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+	}
+
+	public static function findLeadByEmail($email){
+		try{
+            $db = static::getDB();
+			$result = $db->query("SELECT * FROM `leadduprojetinfos` WHERE email = '$email' LIMIT 1");
+			$count = $result->rowCount();
+            return $count;
         }catch(PDOException $e){
             echo $e->getMessage();
         }
@@ -153,14 +165,15 @@ class InscriptionModel extends \Core\Model{
 
 			$db = static::getDB();
         	$stmt = $db->prepare("INSERT INTO membres(nomPrenom, dateNaissance, niveauDeFormation, etablissement, idProjet) VALUES(:np, :dn, :nf, :et, :id)");	
-
-           	for ($i=0; $i < count($membres['membreNomPrenom']); $i++) { 
-				$stmt->bindParam(':np', 		$membres['membreNomPrenom'][$i]);
-				$stmt->bindParam(':dn',   		$membres['membreDateNaissance'][$i]);
-				$stmt->bindParam(':nf',   		$membres['membreEtablissement'][$i]);
-				$stmt->bindParam(':et',     	$membres['membreNiveauDeFormation'][$i]);
-				$stmt->bindParam(':id', 		$idProjet);
-				$stmt->execute();
+			if(isset($membres['membreNomPrenom'])){
+				for ($i=0; $i < count($membres['membreNomPrenom']); $i++) { 
+					$stmt->bindParam(':np', 		$membres['membreNomPrenom'][$i]);
+					$stmt->bindParam(':dn',   		$membres['membreDateNaissance'][$i]);
+					$stmt->bindParam(':nf',   		$membres['membreEtablissement'][$i]);
+					$stmt->bindParam(':et',     	$membres['membreNiveauDeFormation'][$i]);
+					$stmt->bindParam(':id', 		$idProjet);
+					$stmt->execute();
+				}
 			}
 			return true;
         }catch(PDOException $e){echo $e->getMessage();}
@@ -183,8 +196,9 @@ class InscriptionModel extends \Core\Model{
 			$dateAjout = Date('d/m/Y H:i:s');
 
         	$db = static::getDB();
-           	$stmt = $db->prepare("INSERT INTO `etatavancement`(etat, dateAjout, idProjet) VALUES(:e, :da, :idp)");				
-			$stmt->bindParam(':e',  $progress);
+           	$stmt = $db->prepare("INSERT INTO `etatavancement`(etat, commentaire, dateAjout, idProjet) VALUES(:e, :c, :da, :idp)");				
+			$stmt->bindParam(':e',  $progress["etat"]);
+			$stmt->bindParam(':c',  $progress["pourcentage"]);
 			$stmt->bindParam(':da',  $dateAjout);
 			$stmt->bindParam(':idp',  $projet["id"]);
 			$stmt->execute();

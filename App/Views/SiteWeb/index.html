@@ -1,585 +1,736 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Hackathon de l'Innovation Sociale</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Your description">
-	<meta name="keywords" content="Your keywords">
-	<meta name="author" content="Your name">
+ <html lang="zxx">
 
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <head>
 
-	<link rel="stylesheet" href="siteWebOutils/css/bootstrap.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="siteWebOutils/css/bootstrap-responsive.css" type="text/css" media="screen">    
-	<link rel="stylesheet" href="siteWebOutils/css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="siteWebOutils/css/camera.css" type="text/css" media="screen">
+    	<!-- Metas -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="keywords" content="Hackathon,Innovation,Sociale,Safi" />
+		<meta name="description" content="Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées ou de l’Ecole Supérieure de Technologie à Safi. Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux. Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet." />
+		<meta name="author" content="" />
 
-	<!-- time line css-->
-	<link rel="stylesheet" href="siteWebOutils/timeLineOutils/css/font.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="siteWebOutils/timeLineOutils/css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="siteWebOutils/timeLineOutils/css/demo.css"> <!-- Demo style -->
-	<!-- end time line css-->
+		<!-- Title  -->
+		<title>Hackathon de l'innovation Sociale</title>
 
-	<!-- prix css-->
-	<link rel="stylesheet" href="siteWebOutils/prixCss/style.css">
-	<!-- end prix css-->
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" />
 
-	<script type="text/javascript" src="siteWebOutils/js/jquery.js"></script>  
-	<script type="text/javascript" src="siteWebOutils/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="siteWebOutils/js/superfish.js"></script>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet">
+		
+		<!-- Plugins -->
+		<link rel="stylesheet" href="siteweb/css/plugins.css" />
 
-	<script type="text/javascript" src="siteWebOutils/js/jquery.ui.totop.js"></script>
+        <!-- Core Style Css -->
+        <link rel="stylesheet" href="siteweb/css/style.css" />
+        <link rel="stylesheet" href="siteweb/css/custom.css" />
 
-	<script type="text/javascript" src="siteWebOutils/js/camera.js"></script>
-	<script type="text/javascript" src="siteWebOutils/js/jquery.mobile.customized.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			// camera
-			$('#camera_wrap').camera({
-				//thumbnails: true
-				autoAdvance			: true,		
-				mobileAutoAdvance	: true,
-				height: '55%',
-				hover: false,
-				loader: 'none',
-				navigation: false,
-				navigationHover: false,
-				mobileNavHover: false,
-				playPause: false,
-				pauseOnClick: false,
-				pagination			: true,
-				time: 7000,
-				transPeriod: 1000
-			});
+    </head>
 
+    <body>
 
-		}); 
-		$(window).load(function() {}); 
-	</script>
-</head>
+    	<!-- =====================================
+    	==== Start Loading -->
 
-	<body class="main">
-		<div id="main">
+    	<div class="loading">
+    		<div class="text-center middle">
+    			<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    		</div>
+    	</div>
+        
+    	<!-- End Loading ====
+    	======================================= -->
 
-			<header>
-				<div class="top1">
-					<div class="container">
-						<div class="row">
-							<div class="span12">
-								<div class="top1_inner clearfix">
-									<div class="logo_wrapper"><a href="#accueil" class="logo"><img src="siteWebOutils/images/logo-v2.png" alt="HACKATHON DE L’INNOVATION SOCIALE"></a></div>
-									<div class="social_wrapper">
-										<ul class="social clearfix">
-										    <li><a href="https://www.facebook.com/Hackathon-sur-lInnovation-sociale-1ère-Edition-Safi-2018-2144863815774599/"><img src="siteWebOutils/images/social_ic_top1.png"></a></li>	    	    
-										</ul>
-									</div>
-								</div>	
-							</div>	
-						</div>	
-					</div>
-				</div>	
-				<div class="top2">
-					<div class="menu_wrapper">
-						<div class="navbar navbar_ ">
-							<div class="navbar-inner navbar-inner_">
-								<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</a>
-								<div class="nav-collapse nav-collapse_ collapse">
-									<ul class="nav sf-menu clearfix">
-										<li class="active"><a href="#accueil">Accueil</a></li>
-										<li><a href="/innovation/inscriptionPlatform">Inscription</a></li>
-										<li><a href="#programme">Programme</a></li>
-										<li><a href="#prix">Prix</a></li>
-										<li><a href="#api">Ressources Utiles</a></li>
-										<li><a href="#projet">Projets</a></li>
-										<li><a href="#faq">FAQ</a></li>
-										<li><a href="#partenaires">Partenaires</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="slider_wrapper">
-						<div id="slider">
-							<div id="camera_wrap">
-								<div data-src="siteWebOutils/images/slide01.jpg">
-									<div class="camera_caption fadeIn">
-										<div class="txt1">
-											l'inscription est ouverte
-										</div>	
-										<div class="txt2">
-											les inscriptions au compétition Hackathon de l'Innovation Sociale sont ouvertes jusqu'à <span class="dateLimite">le 20 Mai 2018.</span>
-										</div>											
-										<a href="/innovation/inscriptionPlatform" class="button0">rejoignez la compétition<em></em></a>			
-									</div>
-								</div>
-								<div data-src="siteWebOutils/images/slide02.jpg">
-									<div class="camera_caption fadeIn">
-										<div class="txt1">
-											l'inscription est ouverte
-										</div>	
-										<div class="txt2">
-											les inscriptions au compétition Hackathon de l'Innovation Sociale sont ouvertes jusqu'à <span class="dateLimite">le 20 Mai 2018.</span>
-										</div>											
-										<a href="/innovation/inscriptionPlatform" class="button0">rejoignez la compétition<em></em></a>			
-									</div>
-								</div>
-								<div data-src="siteWebOutils/images/slide03.jpg">
-									<div class="camera_caption fadeIn">
-										<div class="txt1">
-											l'inscription est ouverte
-										</div>	
-										<div class="txt2">
-											les inscriptions au compétition Hackathon de l'Innovation Sociale sont ouvertes jusqu'à <span class="dateLimite">le 20 Mai 2018.</span>
-										</div>											
-										<a href="/inscriptionPlatform" class="button0">rejoignez la compétition<em></em></a>			
-									</div>
-								</div>
-								<div data-src="siteWebOutils/images/slide04.jpg">
-									<div class="camera_caption fadeIn">
-										<div class="txt1">
-											l'inscription est ouverte
-										</div>	
-										<div class="txt2">
-											les inscriptions au compétition Hackathon de l'Innovation Sociale sont ouvertes jusqu'à <span class="dateLimite">le 20 Mai 2018.</span>
-										</div>											
-										<a href="/inscriptionPlatform" class="button0">rejoignez la compétition<em></em></a>			
-									</div>
-								</div>			
-							</div>	
-						</div>	
-					</div>
-				</div>
-			</header>	
+       
+    	<!-- =====================================
+    	==== Start Navbar -->
 
-			<div id="content">
-				<div class="container">
-				
-					<section id="programme">
-						<div class="row"><br><br>
-								<h1>Programme</h1>
-								<section class="cd-timeline js-cd-timeline">
-									<div class="cd-timeline__container">
-										
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/creative.svg" alt="Picture">
-											</div> <!-- cd-timeline__img -->
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
 
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Séance de sensibilisation (1)</h2>
-												<p>Séance de sensibilisation et de démarrage du projet au niveau de : ENSA Safi.</p>
-												<span class="cd-timeline__date">14 Mai 2018 (Matinée)</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="siteweb/img/logo-light.png" alt="logo">          
+            </a>
 
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/creative.svg" alt="Movie">
-											</div> <!-- cd-timeline__img -->
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="icon-bar"><i class="fas fa-bars"></i></span>
+			  </button>
 
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Séance de sensibilisation (2)</h2>
-												<p>Séance de sensibilisation et de démarrage du projet au niveau de : FPS Safi.</p>
-												<span class="cd-timeline__date">14 Mai 2018 (Après-Midi)</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/creative.svg" alt="Picture">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Séance de sensibilisation (3)</h2>
-												<p>Séance de sensibilisation et de démarrage du projet au niveau de : EST Safi.</p>
-												<span class="cd-timeline__date">15 Mai 2018 (Matinée)</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/internet.svg" alt="Location">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Inscription des projets en ligne</h2>
-												<p>Dès le 16 Mai jusqu'à 20 Mai 2018.</p>
-												<span class="cd-timeline__date">16 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/paper-plane.svg" alt="Location">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Présélection des projets - Affectation des coaches</h2>
-												<span class="cd-timeline__date">21 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/creative.svg" alt="Movie">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Formation et Immersion</h2>
-												<p>Dès le 22 Mai jusqu'à 23 Mai 2018.</p>
-												<span class="cd-timeline__date">22 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/profits.svg" alt="Location">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Mise en oeuvre des projets</h2>				
-												<p>Dès le 24 Mai jusqu'à 27 Mai 2018.</p>
-												<span class="cd-timeline__date">24 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/clock.svg" alt="Movie">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Bootcamp à l'ENSA Safi</h2>
-												<p>Dès le 28 Mai jusqu'à 29 Mai 2018.</p>
-												<span class="cd-timeline__date">28 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/microphone.svg" alt="Location">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Compétition</h2>				
-												<span class="cd-timeline__date">30 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-										<div class="cd-timeline__block js-cd-block">
-											<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
-												<img src="siteWebOutils/timeLineOutils/img/paper-plane.svg" alt="Movie">
-											</div> <!-- cd-timeline__img -->
-
-											<div class="cd-timeline__content js-cd-content">
-												<h2>Cérémonie - Remise des prix</h2>
-												<span class="cd-timeline__date">30 Mai 2018</span>
-											</div> <!-- cd-timeline__content -->
-										</div> <!-- cd-timeline__block -->
-
-
-									</div>
-								</section> <!-- cd-timeline -->
-						</div>
-					</section>
-
-
-					<section id="prix" class="fixedImg">
-						<div class="row"><br><br>
-							<h1>Prix</h1>
-							<center>
-								<div class="promos" style="margin-left: 20%;"> 
-								    <div class="promo down">
-								      	<div class="deal">
-								      		<center>
-								      			<img src="siteWebOutils/images/prix-2.png">
-								      			<span class="txtPrice">Deuxième prix</span>							     
-										      	<span class="txtPoint">.............</span>							     
-									      		<span class="txtPriceValue">10.000 MAD</span>	
-								      		</center>
-								      	</div>					     
-								    </div>
-
-								    <div class="promo scale">
-								     	<div class="deal">							      	
-									        <center>
-									        	<img src="siteWebOutils/images/prix-1.png">
-									      		<span class="txtPrice">Premier prix</span>							     
-											    <span class="txtPoint">.............</span>							     
-										      	<span class="txtPriceValue">15.000 MAD</span>	
-									        </center>
-								      	</div> 
-								  	</div>
-
-								    <div class="promo down"> 
-								    	<div class="deal">							      	
-									        <center>
-									        	<img src="siteWebOutils/images/prix-3.png">
-									        	<span class="txtPrice">Troisième prix</span>							     
-										   	 	<span class="txtPoint">.............</span>							     
-									      		<span class="txtPriceValue">7.000 MAD</span>	
-									        </center>
-									     </div>
-								    </div>
-								</div>
-							</center>
-						</div>
-					</section>
-
-
-					<section id="api">
-						<div class="row"><br><br>
-							<h1>Ressources Utiles</h1>
-
-							<center>
-								<div class="section-group">
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/Playbasis.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Playbasis pose les fondations de votre stratégie pour impliquer l'utilisateur.</p>
-										</div>
-									</div>
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/Dygraphs.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Dygraphs est capable d'explorer et d'interpréter des jeux de données très denses.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="section-group">
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/InstantAtlas.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Instantatlas permet de combiner facilement des statistiques et des cartes.</p>
-										</div>
-									</div>
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/inetsoft.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Visualizefree passe au crible des données multi-dimensionnelles et détecte ainsi les tendances.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="section-group">
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/Google.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">permet de visualiser des données via un grand nombre de graphiques prêts à l'emploi.</p>
-										</div>
-									</div>
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/BetterWorld.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">communique visuellement l'état du monde en termes de niveau et de qualité de vie.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="section-group">
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/polymaps.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Polymaps est une bibliothèque JavaScript qui permet de réaliser des cartes interactives.</p>
-										</div>
-									</div>
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/Maps.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">permet de construire une carte personnalisée via l'utilisation de bâtiments en 3D.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="section-group">
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/callr.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">The callr est une API pour la gestion de services vocaux et SMS.</p>
-										</div>
-									</div>
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/data-gov.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Les données ouvertes de l'Administration Marocaines.
-											<a href="http://data.gov.ma/fr" target="_blanck">#data.gov.ma</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="section-group">
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/mod.png">
-										</div>
-										<div class="apiDivContent apiTxt"><br/>
-											<p class="apiText">Haut Commissariat au Plan.
-												<a href="http://www.hcp.ma" target="_blanck">#hcp.ma</a>
-											</p>								
-										</div>
-									</div>
-									<div class="apiDiv">
-										<div class="apiDivContent">
-											<img src="siteWebOutils/images/api/logoc.png">
-										</div>
-										<div class="apiDivContent apiTxt">
-											<p class="apiText">Conseil Economique Social et Environnemental du Maroc.
-											<a href="http://www.ces.ma/Pages/Accueil.aspx" target="_blanck">#ces.ma</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
-							</center>
-						</div>	   
-					</section>
-						
-
-					<section id="projet">
-						<div class="row">
-							<h1>List des projets</h1>	
-							<br/><br/><br/><br/>													
-							<div class="section-group upLeft">
-								<table class="table ProjectTable">
-									<thead>
-										<tr>
-											<th class="thTable rad">Libellé de projet</th>
-											<th class="thTable">Description</th>
-											<th class="thTable">Lead</th>
-											<th class="thTable rad">Contact</th>
-										</tr>
-									</thead>
-									
-									<tbody>
-										{% if nbrProjects == 0 %}
-											<tr>
-												<td colspan="4"><center>la liste est en cours vide !</center></td>
-											</tr>
-										{% endif %}
-										
-										{% for item in  projectList %}
-											<tr>
-												<td>{{ item.idee }}</td>
-												<td>{{ item.descriptionProbleme }}</td>
-												<td>{{ item.nomPrenom }}</td>
-												<td>{{ item.email }}</td>
-											</tr>
-										{% endfor %}
-									</tbody>
-								</table>
-
-							</div>
-						</div>
-					</section>	
-
-
-					<section id="faq">
-						<div class="row">
-							<h1>FAQ</h1> <br/><br/>
-							<div class="section-group upLeft">
-								<h2>Pourquoi y participer ?</h2>
-								<p class="upLeftText">Pour développer son réseau, gagner un prix, échanger avec des experts, bénéficier de l’accompagnement d’un grand Groupe, être coaché par des ingénieurs spécialisés, et surtout, avoir la possibilité de partir en incubation afin de transformer une idée en réalité opérationnelle. Un weekend fun et des rencontres uniques !</p>
-							</div>
-
-							<div class="section-group upLeft">
-								<h2>Qui peut participer ?</h2>
-								<p class="upLeftText">L'événement est ouvert à tous. Quel que soit votre profil ou vos compétences, vous pouvez prendre part au challenge en équipe.</p>
-							</div>
-
-							<div class="section-group upLeft">
-								<h2>La participation à l'événement est-elle payante ?</h2>
-								<p class="upLeftText">Non, l’événement est complètement gratuit. Vous avez seulement à vous inscrire en ligne.</p>
-							</div>
-
-							<div class="section-group upLeft">
-								<h2>Jusqu’à quand puis-je m’inscrire ?</h2>
-								<p class="upLeftText">Jusqu'à le 20 Mai 2018.</p>
-							</div>
-
-
-							<div class="section-group upLeft">
-								<h2>Y a t-il une limite de participants ?</h2>
-								<p class="upLeftText">La limite est fixée sur les capacités d'accueil du lieu.</p>
-							</div>
-
-							<div class="section-group upLeft">
-								<h2>Quel genre d'idée peut-on développer ?</h2>
-								<p class="upLeftText">Toutes les idées sont les bienvenues à partir du moment où elles rentrent dans la thématique et répondent aux défis posés.</p>
-							</div>
-
-							<div class="section-group upLeft">
-								<h2>Quel matériel dois-je ramener pour le hackathon ?</h2>
-								<p class="upLeftText">Ramenez vos ordis, tablettes, tout ce dont vous pourriez avoir besoin ; il n'y aura pas de prêt de matériel sur place.</p>
-							</div>
-
-
-						</div>
-					</section>
-
-
-					<section id="partenaires">
-						<div class="row">
-							<h1>Partenaires</h1>	
-							<br/><br/><br/><br/><br/><br/>							
-							<center>
-								<div class="partenairesGroupSection">
-									<img class="partenairesImg" src="siteWebOutils/images/partenaires/uca.png">
-									<img class="partenairesImg" src="siteWebOutils/images/partenaires/ensasafi.png">
-									<img class="partenairesImg" src="siteWebOutils/images/partenaires/ocp.png">
-									<img class="partenairesImg" src="siteWebOutils/images/partenaires/fps.png">
-									<img class="partenairesImg" src="siteWebOutils/images/partenaires/ests.png">
-								</div>
-							</center>
-						</div>
-					</section>
-
-				</div>
+			  <!-- navbar links -->
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item">
+			        <a class="nav-link active" href="#" data-scroll-nav="0">Home</a>
+			      </li>
+			      <li class="nav-item">
+                    <a class="nav-link" href="#" data-scroll-nav="1">Programme</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-scroll-nav="3">APIs suggérées</a>
+                  </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="4">Prix</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="5">List des projets</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
+			      </li>
+			    </ul>
+			  </div>
 			</div>
+		</nav>
 
-			<footer>	
-				<div class="bot2">
-					<div class="container">
-						<div class="row">
-							<div class="span12">
-								<div class="copyright">Copyright © 2018. "Hackathon de l'Innovation Sociale" Tous droits réservés.</div>
-							</div>	
-						</div>	
-					</div>	
-				</div>
-			</footer>
-		</div>
+    	<!-- End Navbar ====
+    	======================================= -->
 
-		<script type="text/javascript" src="siteWebOutils/js/bootstrap.js"></script>
-		<!-- time line outils script -->
-		<script src="siteWebOutils/timeLineOutils/js/main.js"></script>
-		<!-- end time line outils script -->
-	</body>
+
+    	<!-- =====================================
+    	==== Start Header -->
+
+    	<header class="header valign bg-img" data-scroll-index="0" data-overlay-dark="5" data-background="siteweb/img/bg.jpg" data-stellar-background-ratio="0.5">
+    		<div class="container">
+    			<div class="row">
+    				<div class="full-width text-center caption mt-30">
+    					<h3>Innovation Sociale Safi</h3>
+                        <h1 class="cd-headline clip">
+                            <span class="blc">The Way Of </span>
+                            <span class="cd-words-wrapper">
+                              <b class="is-visible">Success</b>
+                              <b>Grow Up</b>
+                              <b>Dream</b>
+                            </span>
+                        </h1>
+                        <p>Les Inscriptions au compétition HACKATHON DE L'INNOVATION SOCIALE sont ouvertes jusqu'à le <b style="color: #accd0d;">20 MAI 2018.</b> </p>
+                        <a href="inscriptionPlatform" class="butn butn-bg">
+                            <span>Inscription</span>
+                        </a>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="arrow">
+				<a href="#" data-scroll-nav="1">
+					<i class="fas fa-chevron-down"></i>
+				</a>
+			</div>
+    	</header>
+
+    	<!-- End Header ====
+    	======================================= -->
+
+
+    	<!-- =====================================
+    	==== Start Hero -->
+    	
+        <section class="hero section-padding pb-0" data-scroll-index="1">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8 text-center mb-80">
+                        <h4 class="extra-text">Innovation <span>Sociale</span> Safi.</h4>
+                        <p>Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées ou de l’Ecole Supérieure de Technologie à Safi. Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux. Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.</p>
+                    </div>
+
+                
+
+                    <div class="container">
+                            <ul class="timeline">
+                              <li>
+                                <div class="timeline-badge"><i class="fa fa-lightbulb"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">Séance de sensibilisation (1)</h4>
+                                    <p><small class="text-muted"><i class="fa fa-clock"></i> 14 Mai 2018 (Matinée)</small></p>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p>Séance de sensibilisation et de démarrage du projet au niveau de : ENSA Safi.</p>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li class="timeline-inverted">
+                                    <div class="timeline-badge"><i class="fa fa-lightbulb"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                      <div class="timeline-heading">
+                                        <h4 class="timeline-title">Séance de sensibilisation (2)</h4>
+                                        <p><small class="text-muted"><i class="fa fa-clock"></i> 14 Mai 2018 (Après-Midi)</small></p>
+                                      </div>
+                                      <div class="timeline-body">
+                                        <p>Séance de sensibilisation et de démarrage du projet au niveau de : FPS Safi</p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                        <div class="timeline-badge"><i class="fa fa-lightbulb"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                          <div class="timeline-heading">
+                                            <h4 class="timeline-title">Séance de sensibilisation (3)</h4>
+                                            <p><small class="text-muted"><i class="fa fa-clock"></i> 14 Mai 2018 (Matinée)</small></p>
+                                          </div>
+                                          <div class="timeline-body">
+                                            <p>Séance de sensibilisation et de démarrage du projet au niveau de : EST Safi.</p>
+                                          </div>
+                                        </div>
+                                    </li>
+                              <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-globe"></i></div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">Inscription des projets en ligne</h4>
+                                    <p><small class="text-muted"><i class="fa fa-clock"></i> 16 Mai 2018</small></p>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p>Dès le 16 Mai jusqu'à 20 Mai 2018</p>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="timeline-badge danger"><i class="fa fa-filter"></i></div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">Présélection des projets - Affectation des coaches</h4>
+                                    <p><small class="text-muted"><i class="fa fa-clock"></i> 21 Mai 2018</small></p>
+                                </div>
+                                  <div class="timeline-body">
+                                  </div>
+                                </div>
+                              </li>
+                              
+                              <li class="timeline-inverted">
+                                <div class="timeline-badge info"><i class="fa fa-lightbulb"></i></div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">Formation et Immersion</h4>
+                                    <p><small class="text-muted"><i class="fa fa-clock"></i> 22 Mai 2018</small></p>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p>Dès le 22 Mai jusqu'à 23 Mai 2018.</p>                                    
+                                  </div>
+                                </div>
+                              </li>
+                              
+                              <li>
+                                <div class="timeline-badge success"><i class="fa fa-thumbtack"></i></div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mise en oeuvre des projets</h4>
+                                    <p><small class="text-muted"><i class="fa fa-clock"></i> 24 Mai 2018</small></p>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p>Dès le 24 Mai jusqu'à 27 Mai 2018..</p>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li class="timeline-inverted">
+                                    <div class="timeline-badge danger"><i class="fa fa-clock"></i></div>
+                                    <div class="timeline-panel">
+                                      <div class="timeline-heading">
+                                        <h4 class="timeline-title">Bootcamp à l'ENSA Safi</h4>
+                                        <p><small class="text-muted"><i class="fa fa-clock"></i> 26 Mai 2018.</small></p>
+                                      </div>
+                                      <div class="timeline-body">
+                                        <p>Dès le 26 Mai jusqu'à 27 Mai 2018..</p>                                    
+                                      </div>
+                                    </div>
+                                </li>
+
+                                <li >
+                                        <div class="timeline-badge success"><i class="fa fa-microphone"></i></div>
+                                        <div class="timeline-panel">
+                                          <div class="timeline-heading">
+                                            <h4 class="timeline-title">Compétition</h4>
+                                            <p><small class="text-muted"><i class="fa fa-clock"></i> 30 Mai 2018.</small></p>
+                                          </div>
+                                          <div class="timeline-body">
+                                          </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="timeline-inverted">
+                                            <div class="timeline-badge info"><i class="fa fa-trophy"></i></div>
+                                            <div class="timeline-panel">
+                                              <div class="timeline-heading">
+                                                <h4 class="timeline-title">Cérémonie - Remise des prix</h4>
+                                                <p><small class="text-muted"><i class="fa fa-clock"></i> 30 Mai 2018.</small></p>
+                                              </div>
+                                              <div class="timeline-body">
+                                              </div>
+                                            </div>
+                                        </li>
+                            </ul>
+                          </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    	<!-- End Hero ====
+    	======================================= -->
+
+
+
+
+
+
+
+
+    	<!-- =====================================
+    	==== Start Services -->
+    	
+        <section class="services section-padding pb-70" data-scroll-index="3">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="section-head col-sm-12">
+                        <h4>
+                            <span>APIs</span><br>
+                            Suggérées
+                        </h4>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/Playbasis.png" style="width:40%;height: 40%;"></span>
+                            <p>Playbasis pose les fondations de votre stratégie pour impliquer l'utilisateur.Playbasis pose les fondations de votre stratégie pour impliquer l'utilisateur.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/Google.png" style="width:40%;height: 40%;"></span>
+                            <p>permet de visualiser des données via un grand nombre de graphiques prêts à l'emploi. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/InstantAtlas.png" style="width:40%;height: 40%;"></span>
+                            <p>Instantatlas permet de combiner facilement des statistiques et des cartes. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/Dygraphs.png" style="width:50%;height: 50%;"></span>
+                            <p>Dygraphs est capable d'explorer et d'interpréter des jeux de données très denses. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/BetterWorld.png" style="width:50%;height: 50%;"></span>
+                            <p>communique visuellement l'état du monde en termes de niveau et de qualité de vie.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/inetsoft.png" style="width:50%;height: 50%;"></span>
+                            <p>Visualizefree passe au crible des données multi-dimensionnelles et détecte ainsi les tendances.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/polymaps.png" style="width:50%;height: 50%;"></span>
+                            <p>Polymaps est une bibliothèque JavaScript qui permet de réaliser des cartes interactives.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/data-gov.png" style="width:50%;height: 50%;"></span>
+                            <p>Les données ouvertes de l'Administration Marocaines. <a href="http://data.gov.ma/fr" target="_blank" style="color: #accd0d"> #data.gov.ma </a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/callr.png" style="width:50%;height: 50%;"></span>
+                            <p>The callr est une API pour la gestion de services vocaux et SMS.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/mod.png" style="width:30%;height: 30%;"></span>
+                            <p>Haut Commissariat au Plan. <a href="https://www.hcp.ma/" target="_blank" style="color: #accd0d"> #hcp.ma </a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/Maps.png" style="width:30%;height: 30%;"></span>
+                            <p>permet de construire une carte personnalisée via l'utilisation de bâtiments en 3D.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon"><img src="siteweb/img/api/logoc.png" style="width:50%;height: 50%;"></span>
+                            <p>Conseil Economique Social et Environnemental du Maroc. <a href="http://www.ces.ma/Pages/Accueil.aspx" target="_blank" style="color: #accd0d"> #ces.ma </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    	<!-- End Services ====
+    	======================================= -->
+
+
+
+
+    	<!-- =====================================
+    	==== Start Price -->
+
+    	<section class="price section-padding bg-gray" data-scroll-index="4">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="section-head col-sm-12">
+                        <h4>
+                            Prix
+                        </h4>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="item text-center mb-md50">
+                            <img src="siteweb/img/prix-3.png" style="width: 50%;height: 50%;"/>
+                            <div class="type">
+                                <span class="icon"><i class="icofont icofont-rocket-alt-2"></i></span>
+                                <h4>Troisième prix</h4>
+                            </div>
+                            <div class="value">
+                                <h3>7.000 <span>MAD</span></h3>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                            <div class="item text-center mb-md50">
+                                <img src="siteweb/img/prix-1.png" style="width: 50%;height: 50%;"/>
+                                <div class="type">
+                                    <span class="icon"><i class="icofont icofont-rocket-alt-2"></i></span>
+                                    <h4>Premier prix</h4>
+                                </div>
+                                <div class="value">
+                                    <h3>15.000 <span>MAD</span></h3>
+                                </div>
+                                
+                            </div>
+                    </div>
+                    <div class="col-lg-4">
+                            <div class="item text-center mb-md50">
+                                <img src="siteweb/img/prix-2.png" style="width: 50%;height: 50%;"/>
+                                <div class="type">
+                                    <span class="icon"><i class="icofont icofont-rocket-alt-2"></i></span>
+                                    <h4>Deuxième prix</h4>
+                                </div>
+                                <div class="value">
+                                    <h3>10.000 <span>MAD</span></h3>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    	<!-- End Price ====
+    	======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Testimonails -->
+        
+        <div class="testimonails bg-img" data-overlay-dark="9" data-background="siteweb/img/3.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 over">
+
+                        <div class="section-head mb-50">
+                            <h4>
+                                FAQ
+                            </h4>
+                        </div>
+
+                        <div class="owl-carousel owl-theme">
+                            <div class="citem">
+                                <h5>Pourquoi y participer ?</h5>
+                                <p>Pour développer son réseau, gagner un prix, échanger avec des experts, bénéficier de l’accompagnement d’un grand Groupe, être coaché par des ingénieurs spécialisés, et surtout, avoir la possibilité de partir en incubation afin de transformer une idée en réalité opérationnelle. Un weekend fun et des rencontres uniques !</p>   
+                            </div>
+                            <div class="citem">
+                                <h5>Qui peut participer ?</h5>
+                                <p>L'événement est ouvert à tous. Quel que soit votre profil ou vos compétences, vous pouvez prendre part au challenge en équipe.</p>   
+                            </div>
+                            <div class="citem">
+                                <h5>La participation à l'événement est-elle payante ?</h5>
+                                <p>Non, l’événement est complètement gratuit. Vous avez seulement à vous inscrire en ligne.</p>   
+                            </div>
+                            <div class="citem">
+                                <h5>Jusqu’à quand puis-je m’inscrire ?</h5>
+                                <p>Jusqu'à le 20 Mai 2018.</p>   
+                            </div>
+                            <div class="citem">
+                                <h5>Y a t-il une limite de participants ?</h5>
+                                <p>La limite est fixée sur les capacités d'accueil du lieu.</p>   
+                            </div>
+                            <div class="citem">
+                                <h5>Quel genre d'idée peut-on développer ?</h5>
+                                <p>Toutes les idées sont les bienvenues à partir du moment où elles rentrent dans la thématique et répondent aux défis posés.</p>   
+                            </div>
+                            <div class="citem">
+                                    <h5>Quel matériel dois-je ramener pour le hackathon ?</h5>
+                                    <p>Ramenez vos ordis, tablettes, tout ce dont vous pourriez avoir besoin ; il n'y aura pas de prêt de matériel sur place.</p>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Testimonails ====
+        ======================================= -->
+
+
+    	<!-- =====================================
+    	==== Start Blog -->
+    	<section class="blog section-padding" data-scroll-index="5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head col-sm-12">
+                        <h4>
+                            <span>List</span><br>
+                            Des projets
+                        </h4>
+                    </div>
+                    {% if nbrProjects == 0 %}
+                    <div class="col-lg-12">
+                        <div class="item text-center mb-md50">
+                            <div class="content">
+                                <h5><a href="inscriptionPlatform" style="color: #accd0d">Inscrire maintenant</a></h5>
+                                <p>la liste est en cours vide !</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+										
+					{% for key,item in  projectList %}
+                    <div class="col-lg-4">
+                        <div class="item text-center mb-md50">
+                            <div class="content">
+                                <span class="tag">
+                                    {{ item.nomPrenom }} / {{ item.email }}
+                                </span>
+                                <h5><a href="#0" onclick="verify({{key}})" ondblclick="hide({{key}})"><i class="icofont icofont-hand-drawn-down" id="icon{{key}}"></i>{{ item.idee }}</a></h5>
+                                <p id="textShow{{key}}" style="display: none">{{ item.descriptionProbleme }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+
+                </div>
+            </div>
+        </section>
+    	<!-- End Blog ====
+    	======================================= -->
+
+
+    	<!-- =====================================
+    	==== Start Clients -->
+    	<div class="clients bg-gray text-center center-block">
+            <div class="container text-center center-block">
+                <div class="row">
+                    <div class="col" >
+                        <div class="brand">
+                            <img src="siteweb/img/partenaires/ocp.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand">
+                            <img src="siteweb/img/partenaires/ests.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand">
+                            <img src="siteweb/img/partenaires/ensasafi.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand">
+                            <img src="siteweb/img/partenaires/fps.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand">
+                            <img src="siteweb/img/partenaires/uca.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    	<!-- End Clients ====
+    	======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Contact -->
+        <section class="contact" data-scroll-index="6">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 map">
+                        <div id="ieatmaps"></div>
+                        <div class="info valign">
+                            <span class="icon-toggle"><i class="icofont icofont-social-google-map"></i></span>
+
+                            <div class="vertical-center">
+                               
+                                <div class="item">
+                                    <span class="icon"><i class="icofont icofont-map"></i></span>
+                                    <div class="cont">
+                                        <h6>Address : </h6>
+                                        <p>Route Sidi Bouzid BP 63, 46000 - Safi, Maroc</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <span class="icon"><i class="icofont icofont-email"></i></span>
+                                    <div class="cont">
+                                        <h6>Email : </h6>
+                                        <p>Khalid EL OUAFA (Prof à la FP Safi). email : Kh_elo@yahoo.fr</p>
+                                        <p>Said ECHCHADI (Prof à l'ENSA Safi). email : s.echchadi@uca.ma</p>
+                                        <p>BENHIDA KHALID (Prof EST Safi). email : kbenhida@gmail.com</p>
+                                        <p>Said CHERGHOU (Volontaire). email : Said.CHERGHOU@ocpfoundation.org</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 contact-form">
+                        <form class='form' id='contact-form' method='post'><input type='hidden' name='form-name' value='contact-form' />
+
+                            <div class="messages"></div>
+
+                            <div class="controls">
+
+                                <div class="row">
+
+                                    <div class="section-head col-sm-12">
+                                        <h4>
+                                            <span>Les Inscriptions</span><br>
+                                            Sont ouvertes 
+                                        </h4>
+                                    </div>
+
+                                    
+                                    <a href="inscriptionPlatform" class="butn butn-bg" style="color: white;background:#accd0d;padding: 10px 30px;width: 100%;text-align: center">
+                                        <span>Inscription</span>
+                                    </a>
+
+                                </div>                             
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact ====
+        ======================================= -->
+
+
+    	<!-- =====================================
+    	==== Start Footer -->
+    	<footer class="text-center">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="logo" href="#">
+                    <img src="siteweb/img/logo-light.png" alt="logo">          
+                </a>
+                
+                <div class="social">
+                    <a href="https://www.facebook.com/InnovationSocialeSafi/" target="_blank"><i class="icofont icofont-social-facebook"></i></a>
+                </div>
+
+                <p>&copy; 2018 Hackathon de l'Innovation Sociale. All Rights Reserved.</p>
+
+            </div>
+        </footer>
+    	<!-- End Footer ====
+    	======================================= -->
+
+
+
+
+       
+        <!-- jQuery -->
+		<script src="siteweb/js/jquery-3.0.0.min.js"></script>
+		<script src="siteweb/js/jquery-migrate-3.0.0.min.js"></script>
+
+		<!-- popper.min -->
+		<script src="siteweb/js/popper.min.js"></script>
+
+	  	<!-- bootstrap -->
+		<script src="siteweb/js/bootstrap.min.js"></script>
+
+		<!-- scrollIt -->
+		<script src="siteweb/js/scrollIt.min.js"></script>
+
+		<!-- animated.headline -->
+		<script src="siteweb/js/animated.headline.js"></script>
+
+		<!-- jquery.waypoints.min -->
+		<script src="siteweb/js/jquery.waypoints.min.js"></script>
+
+		<!-- jquery.counterup.min -->
+		<script src="siteweb/js/jquery.counterup.min.js"></script>
+
+		<!-- owl carousel -->
+		<script src="siteweb/js/owl.carousel.min.js"></script>
+
+		<!-- jquery.magnific-popup js -->
+		<script src="siteweb/js/jquery.magnific-popup.min.js"></script>
+
+		<!-- stellar js -->
+		<script src="siteweb/js/jquery.stellar.min.js"></script>
+
+      	<!-- isotope.pkgd.min js -->
+      	<script src="siteweb/js/isotope.pkgd.min.js"></script>
+
+        <!-- YouTubePopUp.jquery -->
+        <script src="siteweb/js/YouTubePopUp.jquery.js"></script>
+
+        <!-- Map -->
+        <script src="siteweb/js/map.js"></script>
+
+      	<!-- validator js -->
+      	<script src="siteweb/js/validator.js"></script>
+
+      	<!-- custom scripts -->
+        <script src="siteweb/js/scripts.js"></script>
+
+        <script src="controlleurs/more.js"></script>
+
+        <!-- google map api -->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK7lXLHQgaGdP3IvMPi1ej0B9JHUbcqB0&callback=initMap">
+        </script>
+
+    </body>
 </html>

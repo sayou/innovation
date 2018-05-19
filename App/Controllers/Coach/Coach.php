@@ -53,7 +53,7 @@ class Coach extends \Core\Controller{
                   
         }
         else{
-            $allproject = Projet::getProjetDataByCoach(2);
+            $allproject = Projet::getProjetDataByCoach(8);
         View::getView('Coach/mesprojets.html',["projects"=>$allproject,"datas"=>$datas,"countdata"=>$countdata]);
         }
         
@@ -64,20 +64,20 @@ class Coach extends \Core\Controller{
             $type = filter_input(INPUT_POST,'type');
             if($type === 'true'){
                 
-                $result = Projet::getCountProjetByCoach($id,2);
+                $result = Projet::getCountProjetByCoach($id,8);
                 if($result > 0){
                     echo "new PNotify({
                         title: 'Ooops',
-                        text: 'Sorry, ce projet est déjà suivit par un coach!',
+                        text: 'Malheureusement ce projet a déà un coach',
                         type: 'error',
                         styling: 'bootstrap3'
                     });";
                 }else{ 
-                    $res = Projet::addingCoachToProject($id,2);
+                    $res = Projet::addingCoachToProject($id,8);
                     if($res > 0){
                         echo "<script>new PNotify({
-                            title: 'Cool',
-                            text: 'Vous pouvez maintenent suivit ce projet',
+                            title: 'Super',
+                            text: 'Vous êtes maintenant le coach de ce projet, vous permet le suivre maintenant',
                             type: 'success',
                             styling: 'bootstrap3'
                         });</script>";
@@ -93,7 +93,7 @@ class Coach extends \Core\Controller{
                 if($result > 0){
                     echo "<script>new PNotify({
                         title: 'Cool',
-                        text: 'Vous pouvez maintenent suivit ce projet',
+                        text: 'Le projet est supprimé de votre listes des projets que vous suivez',
                         type: 'success',
                         styling: 'bootstrap3'
                     });</script>";
@@ -106,13 +106,11 @@ class Coach extends \Core\Controller{
             }
             
         }else{
-        $allprojectofcoach = Projet::getProjetByCoach(2);
+        $allprojectofcoach = Projet::getProjetByCoach(8);
         $allproject = Projet::getAllProjects();
         $coachs = Projet::getAllCoachs();
-        $data = sizeof($allproject);
         View::getView('Coach/projets.html',[
             "projects"=>$allproject,
-            "data"=>$data,
             "projectsofcoach"=>$allprojectofcoach,
             "coachs"=>$coachs
             ]);

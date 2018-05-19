@@ -50,15 +50,30 @@ class ProjectPDF extends FPDF
 
     function CorpsSectionProjet($projet)
     {
-        $attributs = ["Idee", "Description du probleme", "Description de la solution", "Cibles", "Changement", "Valeur sociale", "Valeur economique", "Ressources humaines", "Moyens techniques et financiers", "Activites"];
+        
+        $attributs = [
+            "Idee",
+            "Description du probleme",
+            "Description de la solution",
+            "Cibles",
+            "Changement",
+            "Valeur sociale",
+            "Valeur economique",
+            "Ressources humaines",
+            "Moyens techniques et financiers",
+            "Activites"
+        ];
         $nbr = 0;
         foreach($projet as $key => $value){
-            // Arial 12 BOLD
+            if($nbr == 10){
+                break;
+            }else{
+                // Arial 12 BOLD
             $this->SetFont('Arial','B',12);
             // Couleur de fond
             $this->SetFillColor(224,224,224);
             //attribut en gras
-            $this->Cell(0,6,$attributs[$nbr],0,1,'C',true);
+            $this->Cell(0,6,iconv('UTF-8', 'windows-1252',stripslashes($attributs[$nbr])),0,1,'C',true);
             // Saut de ligne
             $this->Ln();
             // Times 12
@@ -68,6 +83,8 @@ class ProjectPDF extends FPDF
             // Saut de ligne
             $this->Ln();
             $nbr++;
+            }
+            
         }
     }
 
@@ -81,7 +98,7 @@ class ProjectPDF extends FPDF
             // Couleur de fond
             $this->SetFillColor(224,224,224);
             //attribut en gras
-            $this->Cell(0,6,$attributs[$nbr],0,1,'C',true);
+            $this->Cell(0,6,iconv('UTF-8', 'windows-1252',stripslashes($attributs[$nbr])),0,1,'C',true);
             // Saut de ligne
             $this->Ln();
             // Times 12
@@ -119,7 +136,7 @@ class ProjectPDF extends FPDF
                 // Couleur de fond
                 $this->SetFillColor(224,224,224);
                 //attribut en gras
-                $this->Cell(0,6,$attributs[$cmp],0,1,'C',true);
+                $this->Cell(0,6,iconv('UTF-8', 'windows-1252',stripslashes($attributs[$cmp])),0,1,'C',true);
                 // Saut de ligne
                 $this->Ln();
                 // Times 12
