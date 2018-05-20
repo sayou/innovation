@@ -106,7 +106,7 @@ class Inscription extends \Core\Controller{
 		if(isset($_POST["process"])){
 			try{
 				//l'id est recuperé a l'aide d'une session apres auth normalement
-				$data = self::findProject(5);
+				$data = self::findProject($_SESSION['id']);
 				extract($data);
 
 				$editedLead = InscriptionModel::editLeadInfos($_POST, $lead["id"]);
@@ -118,7 +118,7 @@ class Inscription extends \Core\Controller{
 				$test = null;
 			}
 		}
-		$data = self::findProject(5);
+		$data = self::findProject($_SESSION['id']);
 		View::getView('Home/editInscription.html', [
 			"lead" => $data["lead"],
 		 	"projet" => $data["projet"],
@@ -166,9 +166,9 @@ class Inscription extends \Core\Controller{
 				unset($membres[$key]["id"], $membres[$key]["idProjet"]);
 			}
 
-			$pdf->AjouterSection(1, 'Projet', $data["projet"]);
-			$pdf->AjouterSection(2, 'Leader', $data["lead"]);
-			$pdf->AjouterSection(3, 'Membres', $membres);
+			$pdf->AjouterSection($data["projet"]["idee"], $data["lead"], $membres);
+			// $pdf->AjouterSection(2, 'Leader', $data["lead"]);
+			// $pdf->AjouterSection(3, 'Membres', $membres);
 			$pdf->Output();
 		}
 	}

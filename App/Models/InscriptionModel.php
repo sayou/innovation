@@ -83,8 +83,9 @@ class InscriptionModel extends \Core\Model{
 	public static function findLeadById($idLead){
 		try{
             $db = static::getDB();
-            $result = $db->query("SELECT * FROM `leadduprojetinfos` WHERE id = " . $idLead);
-            return $result->fetchAll(PDO::FETCH_ASSOC)[0];
+            $result = $db->query("SELECT * FROM `leadduprojetinfos` WHERE id = " . $idLead . " LIMIT 1");
+			$data = $result->fetchAll(PDO::FETCH_ASSOC)[0];
+			return $data;
         }catch(PDOException $e){
             echo $e->getMessage();
         }
@@ -104,8 +105,9 @@ class InscriptionModel extends \Core\Model{
 	public static function findProjectByLead($idLead){
 		try{
             $db = static::getDB();
-            $result = $db->query("SELECT * FROM `projetinfos` WHERE idLead = " . $idLead);
-            return $result->fetchAll(PDO::FETCH_ASSOC)[0];
+            $result = $db->query("SELECT * FROM `projetinfos` WHERE idLead = " . $idLead ." LIMIT 1");
+			$data = $result->fetchAll(PDO::FETCH_ASSOC)[0];
+			return $data;
         }catch(PDOException $e){
             echo $e->getMessage();
         }
