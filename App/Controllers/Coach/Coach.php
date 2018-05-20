@@ -13,50 +13,22 @@ class Coach extends \Core\Controller{
     protected function mesprojetsAction(){
         $datas = null;
         $countdata = null;
-        if($id = filter_input(INPUT_POST,'id')){
-            $datas = Projet::getEtatAvancement(10);
-            $countdata = Projet::getCountEtatAvancement(10);
-            echo '<div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>L\'etat d\'avencement<small>Progression hebdomadaire</small></h2>
-                
-                <div class="clearfix"></div>
-                </div>';
-                if($countdata > 0){
-                    foreach($datas as $data){
-                        echo '
-                <div>
-                  <div class="clearfix"></div>
-                    <p>'.$data['date'].' | '.$data['etat'].' %</p>
-                    <div class="">
-                      <div class="progress progress_sm" style="width: 100%;">
-                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="'.$data['etat'].'"></div>
-                      </div>
-                    </div>
-                </div>';
-                    }
-                }else{
-                    echo '
-                    <div class="alert alert-info alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>Ooops</strong> No data found.
-                  </div>
-                    
-                <div class="clearfix"></div>
-              </div>
-            </div>
-        </div>';
-                }
-                
-                  
-        }
-        else{
-            $allproject = Projet::getProjetDataByCoach(8);
-        View::getView('Coach/mesprojets.html',["projects"=>$allproject,"datas"=>$datas,"countdata"=>$countdata]);
-        }
+        $id = isset($this->route_params['id']) ? $this->route_params['id'] : null; 
         
+        
+        if(!empty($id)){
+            $result = "yes";
+            $datas = Projet::getEtatAvancement($id);
+            $countdata = Projet::getCountEtatAvancement($id);
+        }else{$result = "no";}
+        $allproject = Projet::getProjetDataByCoach(8);
+            View::getView('Coach/mesprojets.html',[
+                "projects"=>$allproject,
+                "datas"=>$datas,
+                "countdata"=>$countdata,
+                "result"=>$result
+                ]);
+                
     }
 
     protected function projetAction(){
@@ -89,7 +61,7 @@ class Coach extends \Core\Controller{
                     });</script>";}
                  }
             }else{
-                $result = Projet::deleteCoachFromProject($id,2);
+                $result = Projet::deleteCoachFromProject($id,8);
                 if($result > 0){
                     echo "<script>new PNotify({
                         title: 'Cool',
@@ -115,6 +87,10 @@ class Coach extends \Core\Controller{
             "coachs"=>$coachs
             ]);
     }
+    }
+
+    protected function moncompteAction(){
+        View::getView('Coach/moncompte.html');
     }
     
 }

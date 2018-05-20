@@ -34,7 +34,7 @@
                   {% for projet in projects %}
                   <tr>
                     <td>
-                       <button class="btn btn-success avenecement" value="{{projet.id}}" >L'avenecement</button>
+                       <a href="/coach/{{projet.id}}/mesprojets" class="btn btn-success avenecement"  >L'avenecement</a>
                     </td>
                     <td>{{projet.nomPrenom}}</td>
                     <td>{{projet.idee}}</td>
@@ -49,6 +49,51 @@
             </div>
           </div>
         </div>
+
+        {% if result == 'yes'%}
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>L'avenecement du projet</h2>
+              
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <table class="table table-striped" style="text-align: center">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Commentaire</th>
+                    <th>Etat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% if countdata > 0 %}
+                    {% for data in datas %}
+                      <tr>
+                        <td>{{data.date}}</td>
+                        <td>{{data.commentaire}}</td>
+                        <td>
+                          <div class="progress progress_sm" style="width: 100%;">
+                            <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{data.etat}}"></div>
+                          </div>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  {% else %}
+                  <tr>
+                      <td colspan="3" >Aucun avancement pour le moment</td>
+                    </tr>
+                  {% endif %}
+                  
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        {% endif %}
 
 
         

@@ -33,6 +33,7 @@ $router->add('{controller}/{id:\d+}/{action}');
 //Route of coach
 $router->add('coach/{controller}/{action}',['namespace' => 'Coach']);
 $router->add('{controller}/{action}',['namespace' => 'Coach']);
+$router->add('{controller}/{id:\d+}/{action}',['namespace' => 'Coach']);
 //$router->add('coach/{controller}/{id:\d+}/{action}',['namespace' => 'Coach']);
 $url = "";
 if(isset($_SERVER['QUERY_STRING'])){
