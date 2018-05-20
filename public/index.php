@@ -21,6 +21,7 @@ $router->add('imprimerPDF',['controller'=>'Inscription','action'=>'printPDF']);
 $router->add('logout',['controller'=>'Inscription','action'=>'logout']);
 $router->add('posts',['controller'=>'Posts','action'=>'index']);
 $router->add('verifyEmail',['controller'=>'Inscription','action'=>'verifyEmail']);
+$router->add('verifyEditEmail',['controller'=>'Inscription','action'=>'verifyEditEmail']);
 $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
 

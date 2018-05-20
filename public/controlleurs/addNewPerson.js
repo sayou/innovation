@@ -28,6 +28,21 @@ jQuery.validator.addMethod("verifyEmail", function(value, element) {
 
 }, "Email déjà existe");
 
+// jQuery.validator.addMethod("verifyEditEmail", function(value, element) {
+
+//   var email = $("#verifyEditEmail").val();
+//   $.ajax({
+//     type: "POST",
+//     data: {email:email},
+//     url: "http://localhost/verifyEditEmail",
+//     success: function(msg){
+//       response = (msg == 'no') ? false : true;
+//     }
+//   });
+//   return response;
+
+// }, "Vous devez continuer avec votre Email initial !");
+
 $( "#inscriptionForm" ).validate({
   rules: {
     monIdee: {
@@ -66,7 +81,8 @@ $( "#inscriptionForm" ).validate({
       maxlength: 50
     },
     leadAdresseMail:{
-      verifyEmail : true
+      verifyEmail : true,
+      //verifyEditEmail : true
       },
     leadTel: {
       required: true,
