@@ -102,32 +102,32 @@ class Inscription extends \Core\Controller{
 
 	protected function saveChangesAction(){
 		if(isset($_SESSION['id'])){
-		$test = 'false';
-		if(isset($_POST["process"])){
-			try{
-				//l'id est recuperé a l'aide d'une session apres auth normalement
-				$data = self::findProject($_SESSION['id']);
-				extract($data);
+			$test = 'false';
+			if(isset($_POST["process"])){
+				try{
+					//l'id est recuperé a l'aide d'une session apres auth normalement
+					$data = self::findProject($_SESSION['id']);
+					extract($data);
 
-				$editedLead = InscriptionModel::editLeadInfos($_POST, $lead["id"]);
-				$editedProjet = InscriptionModel::editProjetInfos($_POST, $projet["id"], $lead["id"]);
-				$editedMembres = InscriptionModel::editMembresInfos($_POST, $projet["id"]);
-				$test = 'true';
-				
-			}catch(Exception $e){
-				$test = null;
+					$editedLead = InscriptionModel::editLeadInfos($_POST, $lead["id"]);
+					$editedProjet = InscriptionModel::editProjetInfos($_POST, $projet["id"], $lead["id"]);
+					$editedMembres = InscriptionModel::editMembresInfos($_POST, $projet["id"]);
+					$test = 'true';
+					
+				}catch(Exception $e){
+					$test = null;
+				}
 			}
+			$data = self::findProject($_SESSION['id']);
+			View::getView('Home/editInscription.html', [
+				"lead" => $data["lead"],
+				"projet" => $data["projet"],
+				"membres" => $data["membres"],
+				"test" => $test
+			]);
+		}else{
+			View::getView('Home/index.html');
 		}
-		$data = self::findProject($_SESSION['id']);
-		View::getView('Home/editInscription.html', [
-			"lead" => $data["lead"],
-		 	"projet" => $data["projet"],
-			"membres" => $data["membres"],
-			"test" => $test
-		]);
-	}else{
-		View::getView('Home/index.html');
-	}
 	}
 
 	protected function findProject($idLead){
@@ -205,6 +205,18 @@ class Inscription extends \Core\Controller{
 			if($result == 0){
 				echo "yes";
 			}else{echo "no";}
+		}else{
+			$this->indexAction();
+		}
+	}
+
+	protected function verifyEditEmailAction(){
+		if(isset($_POST["email"])){
+			$email = $_POST["email"];
+			$lead = InscriptionModel::findLeadById($_SESSION["id"]);
+			if(strcmp($email, $lead["email"]) != 0){
+				echo "no";
+			}else{echo "yes";}
 		}else{
 			$this->indexAction();
 		}
