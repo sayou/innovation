@@ -26,8 +26,8 @@ class Coach extends \Core\Controller{
                   $datas = Projet::getEtatAvancement($id);
                   $countdata = Projet::getCountEtatAvancement($id);
                   }else{$result = "no";}
-                $datasCoach = Coachs::getCoachById(8);
-                $allproject = Projet::getProjetDataByCoach(8);
+                $datasCoach = Coachs::getCoachById($_SESSION['id']);
+                $allproject = Projet::getProjetDataByCoach($_SESSION['id']);
                 View::getView('Coach/mesprojets.html',[
                     "projects"=>$allproject,
                     "datas"=>$datas,
@@ -63,7 +63,7 @@ class Coach extends \Core\Controller{
                                 styling: 'bootstrap3'
                             });</script>";
                         }else{ 
-                            $res = Projet::addingCoachToProject($id,8);
+                            $res = Projet::addingCoachToProject($id,$_SESSION['id']);
                             if($res > 0){
                                 echo "<script>new PNotify({
                                     title: 'Super',
@@ -79,7 +79,7 @@ class Coach extends \Core\Controller{
                             });</script>";}
                         }
                     }else{
-                        $result = Projet::deleteCoachFromProject($id,8);
+                        $result = Projet::deleteCoachFromProject($id,$_SESSION['id']);
                         if($result > 0){
                             echo "<script>new PNotify({
                                 title: 'Super',
@@ -103,10 +103,10 @@ class Coach extends \Core\Controller{
                             });</script>";
                     
                 }else{
-                $allprojectofcoach = Projet::getProjetByCoach(8);
+                $allprojectofcoach = Projet::getProjetByCoach($_SESSION['id']);
                 $allproject = Projet::getAllProjects();
                 $coachs = Projet::getAllCoachs();
-                $datasCoach = Coachs::getCoachById(8);
+                $datasCoach = Coachs::getCoachById($_SESSION['id']);
                 View::getView('Coach/projets.html',[
                     "projects"=>$allproject,
                     "projectsofcoach"=>$allprojectofcoach,
@@ -131,7 +131,7 @@ class Coach extends \Core\Controller{
                 $password = $_POST["password"];
                 $password2 = $_POST["password2"];
                 if(strcmp($password,$password2) == 0){
-                    $result = Coachs::updateCoach($password,8);
+                    $result = Coachs::updateCoach($password,$_SESSION['id']);
                     if($result > 0){
                         $test = "true";
                     }else{$test = "false";}
@@ -139,7 +139,7 @@ class Coach extends \Core\Controller{
                     $test = "erreur";
                 } 
             }
-            $datasCoach = Coachs::getCoachById(8);
+            $datasCoach = Coachs::getCoachById($_SESSION['id']);
             View::getView('Coach/moncompte.html',[
                 "datasCoach"=>$datasCoach,
                 "test"=>$test

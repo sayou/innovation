@@ -945,3 +945,451 @@ Stack Trace : '#0 [internal function]: App\Controllers\Home->loginAction()
 #4 {main}'
 Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/App/Controllers/Home.php' Line : '31'
 
+[21-May-2018 11:28:01 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:28:05 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:28:35 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:34:36 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:35:16 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:40:10 America/New_York] Error Uncaught Exception : 'Error'</p>
+Message : 'Call to undefined function Core\get_classa()'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php(50): Core\Controller->__call('index', Array)
+#1 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('coach/index')
+#2 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Controller.php' Line : '24'
+
+[21-May-2018 11:40:11 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:41:00 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:41:14 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:43:16 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteweb/fonts/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:43:35 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:02 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:50 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:52 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:54 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:54 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:54 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:54 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:55 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:55 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:48:59 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:31 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:41 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:41 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:41 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:42 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:42 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:50 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:50 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:50 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:50 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:50 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:51 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:50:51 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/switche...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:51:41 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:51:48 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:51:57 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:51:57 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:52:00 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:52:00 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:52:00 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:54:37 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:54:38 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:55:22 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('img/slides/slid...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:55:57 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:56:01 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:56:01 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:56:01 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/pdfmake...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:57:00 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:57:52 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:57:54 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:58:07 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:58:11 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 11:59:58 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('img/slides/slid...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:01:03 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('siteWebOutils/i...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:01:15 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:01:19 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:01:28 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:01:40 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:01:49 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:02:09 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:02:34 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:02:39 America/New_York] Error Uncaught Exception : 'Error'</p>
+Message : 'Call to undefined function Core\get_classa()'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php(50): Core\Controller->__call('projet', Array)
+#1 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('coach/projet')
+#2 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Controller.php' Line : '24'
+
+[21-May-2018 12:02:48 America/New_York] Error Uncaught Exception : 'Error'</p>
+Message : 'Call to undefined function Core\get_classa()'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php(50): Core\Controller->__call('projet', Array)
+#1 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('coach/projet')
+#2 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Controller.php' Line : '24'
+
+[21-May-2018 12:02:54 America/New_York] Error Uncaught Exception : 'Error'</p>
+Message : 'Call to undefined function Core\get_classa()'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php(50): Core\Controller->__call('projet', Array)
+#1 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('coach/projet')
+#2 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Controller.php' Line : '24'
+
+[21-May-2018 12:02:56 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:02:58 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:04:04 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:04:17 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:05:25 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:05:29 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:05:49 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:06:22 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('vendors/animate...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+
+[21-May-2018 12:06:31 America/New_York] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 /hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/public/index.php(43): Core\Router->dispatch('production/imag...')
+#1 {main}'
+Error in : '/hermes/bosnacweb02/bosnacweb02af/b360/ipg.aracpicom/innovation/Core/Router.php' Line : '61'
+

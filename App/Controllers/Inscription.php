@@ -231,7 +231,7 @@ class Inscription extends \Core\Controller{
 		}
 	}
 
-	/*protected function verifyEmailAction(){
+	protected function verifyEmailAction(){
 		if(isset($_POST["email"])){
 			$email = $_POST["email"];
 			$result = InscriptionModel::findLeadByEmail($email);
@@ -241,7 +241,7 @@ class Inscription extends \Core\Controller{
 		}else{
 			$this->indexAction();
 		}
-	}*/
+	}
 
 	protected function logoutAction(){
 		if(isset($_SESSION['id']) && isset($_SESSION['role'])){
