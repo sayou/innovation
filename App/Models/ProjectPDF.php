@@ -19,7 +19,7 @@ class ProjectPDF extends FPDF
         // Epaisseur du cadre (1 mm)
         $this->SetLineWidth(1);
         // Titre
-        $this->Cell($w,9,$titre,1,1,'C',true);
+        $this->Cell($w,9,utf8_decode($titre),1,1,'C',true);
         // Saut de ligne
         $this->Ln(10);
 	}
@@ -43,7 +43,7 @@ class ProjectPDF extends FPDF
         // Couleur de fond
         $this->SetFillColor(200,220,255);
         // Titre
-        $this->Cell(0,6,"Section $num : $libelle",0,1,'L',true);
+        $this->Cell(0,6,utf8_decode("Séction $num : $libelle"),0,1,'L',true);
         // Saut de ligne
         $this->Ln(4);
     }
@@ -51,46 +51,48 @@ class ProjectPDF extends FPDF
     function CorpsSectionProjet($projet)
     {
         
-        $attributs = [
-            "Idee",
-            "Description du probleme",
-            "Description de la solution",
-            "Cibles",
-            "Changement",
-            "Valeur sociale",
-            "Valeur economique",
-            "Ressources humaines",
-            "Moyens techniques et financiers",
-            "Activites"
-        ];
-        $nbr = 0;
-        foreach($projet as $key => $value){
-            if($nbr == 10){
-                break;
-            }else{
+        // $attributs = [
+        //     "Idée",
+        //     "Description du problème",
+        //     "Description de la solution",
+        //     "Cibles",
+        //     "Changement",
+        //     "Valeur sociale",
+        //     "Valeur économique",
+        //     "Ressources humaines",
+        //     "Moyens téchniques et financiers",
+        //     "Activités"
+        // ];
+        // $nbr = 0;
+        // foreach($projet as $key => $value){
+        //     if($nbr == 10){
+        //         break;
+        //     }else{
                 // Arial 12 BOLD
-            $this->SetFont('Arial','B',12);
-            // Couleur de fond
-            $this->SetFillColor(224,224,224);
-            //attribut en gras
-            $this->Cell(0,6,iconv('UTF-8', 'windows-1252',stripslashes($attributs[$nbr])),0,1,'C',true);
-            // Saut de ligne
-            $this->Ln();
-            // Times 12
-            $this->SetFont('Times','',12);
-            // Sortie du texte justifié
-            $this->MultiCell(0,5,$value);
-            // Saut de ligne
-            $this->Ln();
-            $nbr++;
-            }
+                $this->SetFont('Arial','B',12);
+                // Couleur de fond
+                $this->SetFillColor(224,224,224);
+                //attribut en gras
+                //$this->Cell(0,6,utf8_decode($attributs[$nbr]),0,1,'C',true);
+                $this->Cell(0,6,utf8_decode("L'idée du projet"),0,1,'C',true);
+                // Saut de ligne
+                $this->Ln();
+                // Times 12
+                $this->SetFont('Times','',12);
+                // Sortie du texte justifié
+                //$this->MultiCell(0,5,$value);
+                $this->MultiCell(0,5,utf8_decode($projet));
+                // Saut de ligne
+                $this->Ln();
+        //         $nbr++;
+        //     }
             
-        }
+        // }
     }
 
     function CorpsSectionLead($lead)
     {
-        $attributs = ["Nom & Prenom", "Date de naissance", "Email", "Telephone", "Etablissement", "Niveau de formation", "Experiences profetionnelles", "Motivations"];
+        $attributs = ["Nom & Prénom", "Date de naissance", "Email", "Téléphone", "Etablissement", "Niveau de formation", "Expériences profetionnelles", "Motivations"];
         $nbr = 0;
         foreach($lead as $key => $value){
             // Arial 12 BOLD
@@ -98,13 +100,13 @@ class ProjectPDF extends FPDF
             // Couleur de fond
             $this->SetFillColor(224,224,224);
             //attribut en gras
-            $this->Cell(0,6,iconv('UTF-8', 'windows-1252',stripslashes($attributs[$nbr])),0,1,'C',true);
+            $this->Cell(0,6,utf8_decode($attributs[$nbr]),0,1,'C',true);
             // Saut de ligne
             $this->Ln();
             // Times 12
             $this->SetFont('Times','',12);
             // Sortie du texte justifié
-            $this->MultiCell(0,5,$value);
+            $this->MultiCell(0,5,utf8_decode($value));
             // Saut de ligne
             $this->Ln();
             $nbr++;
@@ -113,52 +115,76 @@ class ProjectPDF extends FPDF
 
     function CorpsSectionMembres($membres)
     {
-        $attributs = ["Nom & Prenom", "Date de naissance", "Niveau de formation", "Etablissement"];
+        $attributs = ["Nom & Prénom", "Date de naissance", "Niveau de formation", "Etablissement"];
+        $this->BasicTable($attributs, $membres);
+        // $taille = count($membres);
+        // $decrement = $taille - 1;
 
-        $taille = count($membres);
-        $decrement = $taille - 1;
+        // foreach($membres as $key => $value){
+        //     $cmp = 0;
+        //     $nbr = $taille - $decrement;
+        //     // Arial 12 BOLD
+        //     $this->SetFont('Arial','B',12);
+        //     // Couleur de fond
+        //     $this->SetFillColor(204,255,204);
+        //     //attribut en gras
+        //     $this->Cell(0,6,utf8_decode("Membre $nbr"),0,1,'C',true);
+        //     // Saut de ligne
+        //     $this->Ln(4);
 
-        foreach($membres as $key => $value){
-            $cmp = 0;
-            $nbr = $taille - $decrement;
-            // Arial 12 BOLD
+        //     foreach($value as $k => $v){
+        //         // Arial 12 BOLD
+        //         $this->SetFont('Arial','B',12);
+        //         // Couleur de fond
+        //         $this->SetFillColor(224,224,224);
+        //         //attribut en gras
+        //         $this->Cell(0,6,utf8_decode($attributs[$cmp]),0,1,'C',true);
+        //         // Saut de ligne
+        //         $this->Ln();
+        //         // Times 12
+        //         $this->SetFont('Times','',12);
+        //         // Sortie du texte justifié
+        //         $this->MultiCell(0,5,$v);
+        //         // Saut de ligne
+        //         $this->Ln();
+        //         $cmp++;
+        //     }
+
+        //     $decrement -= 1;
+        // }
+    }
+
+    function BasicTable($header, $data){
+        // En-t�te
+        foreach($header as $col){
             $this->SetFont('Arial','B',12);
-            // Couleur de fond
             $this->SetFillColor(204,255,204);
-            //attribut en gras
-            $this->Cell(0,6,"Membre $nbr",0,1,'C',true);
-            // Saut de ligne
-            $this->Ln(4);
-
-            foreach($value as $k => $v){
-                // Arial 12 BOLD
-                $this->SetFont('Arial','B',12);
-                // Couleur de fond
-                $this->SetFillColor(224,224,224);
-                //attribut en gras
-                $this->Cell(0,6,iconv('UTF-8', 'windows-1252',stripslashes($attributs[$cmp])),0,1,'C',true);
-                // Saut de ligne
-                $this->Ln();
-                // Times 12
+            $this->Cell(45,7,utf8_decode($col),1);
+        }
+        $this->Ln();
+        // Donn�es
+        foreach($data as $row)
+        {
+            foreach($row as $col){
                 $this->SetFont('Times','',12);
-                // Sortie du texte justifié
-                $this->MultiCell(0,5,$v);
-                // Saut de ligne
-                $this->Ln();
-                $cmp++;
+                $this->Cell(45,6,utf8_decode($col),1);
             }
-
-            $decrement -= 1;
+            $this->Ln();
         }
     }
 
-    function AjouterSection($num, $titre, $data)
+    function AjouterSection($projet, $lead, $membres)
     {   
         $this->AddPage();
-        $this->TitreChapitre($num,$titre);
-        if($num == 1) $this->CorpsSectionProjet($data);
-        else if($num == 2) $this->CorpsSectionLead($data);
-        else $this->CorpsSectionMembres($data);
+        $this->TitreChapitre(1, "Projet");
+        $this->CorpsSectionProjet($projet);
+
+        $this->TitreChapitre(2, "Lead");
+        $this->CorpsSectionLead($lead);
+        
+        $this->AddPage();
+        $this->TitreChapitre(3,"Membres");
+        $this->CorpsSectionMembres($membres);
     }
 }
 

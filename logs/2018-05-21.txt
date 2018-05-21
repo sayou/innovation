@@ -1,0 +1,187 @@
+[21-May-2018 01:06:12 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('nouvelleInscrip...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 01:06:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('login.html')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 01:06:19 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('login')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:00:36 UTC] Error Uncaught Exception : 'Error'</p>
+Message : 'Call to undefined function Core\get_classa()'
+Stack Trace : '#0 C:\wamp\www\innovation\Core\Router.php(50): Core\Controller->__call('index', Array)
+#1 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('coach/coach/ind...')
+#2 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Controller.php' Line : '24'
+
+[21-May-2018 02:00:40 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:00:40 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:00:50 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:00:50 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:00:53 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:00:53 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:01:34 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:01:34 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:03:23 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:03:23 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:03:25 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:10:50 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:10:50 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:08 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:08 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:21 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:21 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:34 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:34 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:40 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:40 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:45 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:45 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:48 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:11:48 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:12:17 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/nprogre...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 02:12:17 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->dispatch('vendors/bootstr...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+

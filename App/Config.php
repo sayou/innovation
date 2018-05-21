@@ -5,6 +5,6 @@ class Config{
     const DB_NAME = "innovation";
     const DB_USER = "root";
     const DB_PASSWORD = "";
-    const SHOW_ERRORS = false;
+    const SHOW_ERRORS = true;
 }
 ?>

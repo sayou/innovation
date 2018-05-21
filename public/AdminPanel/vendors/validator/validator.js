@@ -17,18 +17,18 @@ var validator = (function($){
     message = {
         invalid         : 'invalid input',
         checked         : 'must be checked',
-        empty           : 'please put something here',
+        empty           : 'Ce champ est obligatoire',
         min             : 'input is too short',
         max             : 'input is too long',
         number_min      : 'too low',
         number_max      : 'too high',
         url             : 'invalid URL',
         number          : 'not a number',
-        email           : 'email address is invalid',
+        email           : 'Cette adresse email est invalide',
         email_repeat    : 'emails do not match',
-        password_repeat : 'passwords do not match',
+        password_repeat : 'Les mots de passe ne correspondent pas',
         repeat          : 'no match',
-        complete        : 'input is not complete',
+        complete        : 'S\'il vous plaît écrivez votre nom complet( avec l\'espace)',
         select          : 'Please select an option'
     };
 

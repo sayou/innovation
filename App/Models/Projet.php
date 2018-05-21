@@ -35,6 +35,16 @@ class Projet extends \Core\Model{
         }catch(PDOException $e){echo $e->getMessage();}
     }
 
+    public static function getProjetByID($id){
+        try{
+            $db = static::getDB();
+            $sql = "SELECT * FROM projetinfos WHERE id = $id LIMIT 1";
+            $stmt = $db->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }catch(PDOException $e){echo $e->getMessage();}
+    }
+
     public static function getProjetDataByCoach($idCoach){
         try{
             $db = static::getDB();

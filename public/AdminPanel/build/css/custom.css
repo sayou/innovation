@@ -2289,7 +2289,8 @@ select.parsley-error {
 }
 .item.bad .alert {
     left: 0;
-    opacity: 1
+    opacity: 1;
+    white-space:pre-line;
 }
 .inl-bl {
     display: inline-block

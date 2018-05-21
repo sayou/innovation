@@ -11,9 +11,10 @@ $router = new Core\Router();
 //Routes
 
 $router->add('',['controller'=>'Home','action'=>'siteWeb']);
+$router->add('login',['controller'=>'Home','action'=>'login']);
 $router->add('inscriptionPlatform',['controller'=>'Inscription','action'=>'index']);
 //$router->add('',['controller'=>'Home','action'=>'index']);
-$router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
+//$router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
 $router->add('editInscription',['controller'=>'Inscription','action'=>'edit']);
 $router->add('saveInscription',['controller'=>'Inscription','action'=>'saveChanges']);
 $router->add('progress',['controller'=>'Inscription','action'=>'progress']);

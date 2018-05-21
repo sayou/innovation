@@ -15,6 +15,15 @@ class HomeModel extends \Core\Model{
             return $result;
         }catch(PDOException $e){echo $e->getMessage();}
 	}
+
+	public static function getByPasswordAndName($name,$password){
+		try{
+        	$db = static::getDB();
+			$stmt = $db->query("SELECT * FROM users WHERE userName = '$name' AND motDePasse = '$password' LIMIT 1");	
+			$result = $stmt->fetch();
+            return $result;
+        }catch(PDOException $e){echo $e->getMessage();}
+	}
 	
 }	
 
