@@ -42,7 +42,6 @@ class SuperAdmin extends \Core\Controller{
 			$leadInfos = SuperAdminModel::getLeadInfos($projetInfos[0]['idLead']);
 			$membresInfos = SuperAdminModel::getMembresInfos($_GET['id']);
 
-
 			View::getView('SuperAdmin/details.html', ['statistiques' => $this->getStatistiques(), 'projetInfos' => $projetInfos, 'leadInfos' => $leadInfos, 'membresInfos' =>$membresInfos]);
 		}
 		else{
