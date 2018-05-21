@@ -17,6 +17,8 @@
     <link href="http://localhost/AdminPanel/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="http://localhost/AdminPanel/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- sweetAlert css -->
+    <link href="http://localhost/sweetAlert/sweetalert.min.css" rel="stylesheet">
 
     <!-- Datatables -->
     <link href="http://localhost/AdminPanel/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
@@ -27,6 +29,9 @@
 
     <!-- Custom Theme Style -->
     <link href="http://localhost/AdminPanel/build/css/custom.min.css" rel="stylesheet">
+    
+    <!-- sweetAlert Script -->
+    <script src="http://localhost/sweetAlert/sweetalert.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -34,20 +39,13 @@
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
-            </div>
 
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="http://localhost/AdminPanel/production/images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h3 style="color: white; margin-top: 50px;">Espase Administrateur</h3>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -57,23 +55,10 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="/superAdmin"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a></li>
                   <li><a href="/superAdmin/listDesProjets"><i class="fa fa-edit"></i> Projets <span class="fa fa-chevron"></span></a></li>
-                  <li><a><i class="fa fa-desktop"></i> Coachs <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="general_elements.html">Liste des coachs</a></li>
-                      <li><a href="general_elements.html">Ajouter un coach</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Jury <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="tables.html">Liste des jurés</a></li>
-                      <li><a href="tables.html">Ajouter un Jury</a></li>
-                    </ul>
-                  </li>
-                                    
+                  <li><a href="/superAdmin/coachJury"><i class="fa fa-desktop"></i> Coaches & Jurys <span class="fa fa-chevron"></span></a></li>                                                      
                 </ul>
               </div>
               
@@ -206,6 +191,8 @@
     <script src="http://localhost/AdminPanel/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="http://localhost/AdminPanel/vendors/nprogress/nprogress.js"></script>
+    <!-- validator -->
+    <script src="http://localhost/AdminPanel/vendors/validator/validator.js"></script>
     <!-- Chart.js -->
     <script src="http://localhost/AdminPanel/vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- jQuery Sparklines -->

@@ -17,6 +17,9 @@ $router->add('inscriptionPlatform',['controller'=>'Inscription','action'=>'index
 $router->add('superAdmin',['controller'=>'SuperAdmin','action'=>'index']);
 $router->add('superAdmin/listDesProjets',['controller'=>'SuperAdmin','action'=>'listDesProjets']);
 $router->add('superAdmin/details',['controller'=>'SuperAdmin','action'=>'details']);
+$router->add('superAdmin/coachJury',['controller'=>'SuperAdmin','action'=>'coachJury']);
+$router->add('superAdmin/addCoachJury',['controller'=>'SuperAdmin','action'=>'addCoachJury']);
+$router->add('superAdmin/deleteCoachJury',['controller'=>'SuperAdmin','action'=>'deleteCoachJury']);
 // end super admin
 
 //$router->add('',['controller'=>'Home','action'=>'index']);

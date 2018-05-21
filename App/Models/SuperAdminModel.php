@@ -48,7 +48,7 @@ class SuperAdminModel extends \Core\Model{
 		// end statistiques.
 
 
-	    // get project info
+	    // get project, lead & membres infos
 
 	    public static function getListOfProjects(){
 	        try{
@@ -86,9 +86,40 @@ class SuperAdminModel extends \Core\Model{
 	        }catch(PDOException $e){echo $e->getMessage();}
 		}
 
-	   // end get project info
+		public static function getCoachesJurys(){
+	        try{
+	        	$db = static::getDB();
+				$stmt = $db->query("SELECT * FROM users WHERE role = 'coach' OR role = 'jury'");	
+				$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	            return $result;
+	        }catch(PDOException $e){echo $e->getMessage();}
+		}
+
+	   // end get project, lead & membres infos
 
 
+		public static function addCoachesJurys($newUser){
+			try{
+				$db = static::getDB();
+				$stmt = $db->prepare("INSERT INTO users(userName, email, motDePasse, role) VALUES(:username, :email, :motDePasse, :role)");				
+				$stmt->bindParam(':username',  $newUser['username']);
+				$stmt->bindParam(':email',  $newUser['email']);
+				$stmt->bindParam(':motDePasse',  $newUser['password']);
+				$stmt->bindParam(':role',  $newUser['role']);
+				$stmt->execute();
+				return 'true';
+			}catch(PDOException $e){return 'false';}
+		}
+
+		public static function DeleteCoachesJurys($idUser){
+			try{
+				$db = static::getDB();
+				$stmt = $db->prepare("DELETE FROM users WHERE id = :id");
+				$stmt->bindParam(':id',  $idUser);
+				$stmt->execute();
+				return 'true';
+			}catch(PDOException $e){return 'false';}
+		}
 }
 
 ?>
