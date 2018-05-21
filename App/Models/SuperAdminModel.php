@@ -40,7 +40,7 @@ class SuperAdminModel extends \Core\Model{
 	    public static function getSuperAdminsNumber(){
 	        try{
 	        	$db = static::getDB();
-	           	$stmt = $db->query("SELECT count(*) AS nbr FROM users WHERE role='superAdmin'");	
+	           	$stmt = $db->query("SELECT count(*) AS nbr FROM users WHERE role='admin'");	
 				$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	            return $result[0]['nbr'];
 	        }catch(PDOException $e){echo $e->getMessage();}
