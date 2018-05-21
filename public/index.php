@@ -12,6 +12,13 @@ $router = new Core\Router();
 
 $router->add('',['controller'=>'Home','action'=>'siteWeb']);
 $router->add('inscriptionPlatform',['controller'=>'Inscription','action'=>'index']);
+
+// begin super admin
+$router->add('superAdmin',['controller'=>'SuperAdmin','action'=>'index']);
+$router->add('superAdmin/listDesProjets',['controller'=>'SuperAdmin','action'=>'listDesProjets']);
+$router->add('superAdmin/details',['controller'=>'SuperAdmin','action'=>'details']);
+// end super admin
+
 //$router->add('',['controller'=>'Home','action'=>'index']);
 $router->add('nouvelleInscription',['controller'=>'Inscription','action'=>'addNew']);
 $router->add('editInscription',['controller'=>'Inscription','action'=>'edit']);

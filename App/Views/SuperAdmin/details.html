@@ -1,0 +1,243 @@
+{% extends "baseSuperAdmin.html" %}
+{% block title %} SuperAdmin-Innovation-Safi {% endblock %}
+{% block body %}
+
+
+  <div class="right_col" role="main">
+    <div class="">
+      <div class="row top_tiles">
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-caret-square-o-right"></i></div>
+            <div class="count">{{ statistiques.nbrProjets }}</div>
+            <h3>Nombre de projets</h3>
+          </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-comments-o"></i></div>
+            <div class="count">{{ statistiques.nbrCoaches }}</div>
+            <h3>Nombre de Coaches</h3>
+          </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
+            <div class="count">{{ statistiques.nbrJurys }}</div>
+            <h3>Nombre de Jurys</h3>
+          </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-check-square-o"></i></div>
+            <div class="count">{{ statistiques.nbrSuperAdmins }}</div>
+            <h3>Nombre d'Admins</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <br><br>
+
+      <div class="row">
+        <div class="col-md-11 col-sm-11 col-xs-12">
+          <div class="profile_title">
+            <div class="col-md-6">
+              <h2>Projet Détails</h2>
+            </div>
+          </div>
+          <br>
+          <div class="" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">les informations de projet</a>
+              </li>
+              <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">les informations du lead</a>
+              </li>
+              <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">les informations des membres</a>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+
+              <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+                <!-- start recent activity -->
+                <ul class="messages">
+                  {% for item in projetInfos %}
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Mon idée</h4>
+                      <blockquote class="message">{{ item.idee }}</blockquote>
+                      <br />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Description du problème</h4>
+                      <blockquote class="message">{{ item.descriptionProbleme }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Description de ma solution</h4>
+                      <blockquote class="message">{{ item.descriptionSolution }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Qui sont mes cibles ?</h4>
+                      <blockquote class="message">{{ item.cibles }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Qu’est ce que je vais changer ?</h4>
+                      <blockquote class="message">{{ item.changement }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Valeur sociale</h4>
+                      <blockquote class="message">{{ item.valeurSociale  }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Valeur économique</h4>
+                      <blockquote class="message">{{ item.valeurEconomique  }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Ressources humaines</h4>
+                      <blockquote class="message">{{ item.ressourcesHumaines }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Moyens technique et financiers</h4>
+                      <blockquote class="message">{{ item.moyensTechniqueEtFinancier }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Activités</h4>
+                      <blockquote class="message">{{ item.activites }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+
+                   {% endfor %}              
+                </ul>
+                <!-- end recent activity -->
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+                <!-- start recent activity -->
+                <ul class="messages">
+                  {% for item in leadInfos %}
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Nom et Prénom</h4>
+                      <blockquote class="message">{{ item.nomPrenom }}</blockquote>
+                      <br />
+                    </div>
+                  </li>  
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Date de naissance</h4>
+                      <blockquote class="message">{{ item.dateNaissance  }}</blockquote>
+                      <br />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Adresse mail</h4>
+                      <blockquote class="message">{{ item.email  }}</blockquote>
+                      <br />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Numéro de téléphone</h4>
+                      <blockquote class="message">{{ item.tel  }}</blockquote>
+                      <br />
+                    </div>
+                  </li> 
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Etablissement</h4>
+                      <blockquote class="message">{{ item.etablissement  }}</blockquote>
+                      <br />
+                    </div>
+                  </li> 
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Niveau de formation/études</h4>
+                      <blockquote class="message">{{ item.niveauDeFormation  }}</blockquote>
+                      <br />
+                    </div>
+                  </li> 
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Expérience professionnelles</h4>
+                      <blockquote class="message">{{ item.experienceProfessionnelles  }}</blockquote>
+                      <br />
+                    </div>
+                  </li> 
+                  <li>
+                    <div class="message_wrapper">
+                      <h4 class="heading">Motivation de participation</h4>
+                      <blockquote class="message">{{ item.motivations  }}</blockquote>
+                      <br />
+                    </div>
+                  </li> 
+
+                   {% endfor %}              
+                </ul>
+                <!-- end recent activity -->
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">  
+                <!-- start user projects -->
+                <table class="data table table-striped no-margin">
+                  <thead>
+                    <tr>
+                      <th>Membre</th>
+                      <th>Date de naisssance</th>
+                      <th>Niveau de formation</th>
+                      <th>Etablissement</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in membresInfos %}
+                    <tr>
+                      <td>{{ item.nomPrenom }}</td>
+                      <td>{{ item.dateNaissance }}</td>
+                      <td>{{ item.niveauDeFormation }}</td>
+                      <td>{{ item.etablissement }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+                <!-- end user projects -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br><br><br><br><br><br><br><br>
+
+    </div>
+  </div>
+
+{% endblock %}
