@@ -6,21 +6,12 @@ use PDO;
 
 class Coachs extends \Core\Model{
     
-    public static function getAll(){
-        
-        try{
-            $db = static::getDB();
-            $stmt = $db->query("SELECT ID,Title,Content FROM posts ");
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $result;
-        }catch(PDOException $e){echo $e->getMessage();}
-    }
 
     public static function getCoachById($id){
         try{
             $db = static::getDB();
-            $stmt = $db->query("SELECT * FROM users WHERE id = $id ");
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+            $stmt = $db->query("SELECT * FROM users WHERE id = $id AND role = 'coach' LIMIT 1");
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
         }catch(PDOException $e){echo $e->getMessage();}
     }

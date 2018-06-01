@@ -21,10 +21,10 @@ class Coach extends \Core\Controller{
                 $id = isset($this->route_params['id']) ? $this->route_params['id'] : null; 
         
         
-                if(!empty($id)){
+                if(!is_null($id)){
                   $result = "yes";
                   $datas = Projet::getEtatAvancement($id);
-                  $countdata = Projet::getCountEtatAvancement($id);
+                  $countdata = sizeof($datas);
                   }else{$result = "no";}
                 $datasCoach = Coachs::getCoachById($_SESSION['id']);
                 $allproject = Projet::getProjetDataByCoach($_SESSION['id']);
@@ -50,34 +50,32 @@ class Coach extends \Core\Controller{
     protected function indexAction(){
         if(isset($_SESSION['id']) && isset($_SESSION['role'])){
             if(strcmp($_SESSION['role'],'coach') == 0){
+                $test = null;
+                $dataoneprojet = null;
+                $id_route = isset($this->route_params['id']) ? $this->route_params['id'] : null;
+                if(!is_null($id_route)){
+                    $test = 'true';
+                    $dataoneprojet = Projet::getProjetInformationByID($id_route);
                 if($id = filter_input(INPUT_POST,'id')){
-                    /*$type = filter_input(INPUT_POST,'type');
+                    $type = filter_input(INPUT_POST,'type');
                     if($type === 'true'){
                         
-                        $result = Projet::getProjetByID($id);
-                        if(!is_null($result['idCoach'])){
+                        $res = Projet::addingCoachToProject($id,$_SESSION['id']);
+                        if($res > 0){
                             echo "<script>new PNotify({
-                                title: 'Malheureusement',
-                                text: 'Malheureusement ce projet a déjà un coach',
-                                type: 'warning',
-                                styling: 'bootstrap3'
-                            });</script>";
-                        }else{ 
-                            $res = Projet::addingCoachToProject($id,$_SESSION['id']);
-                            if($res > 0){
-                                echo "<script>new PNotify({
                                     title: 'Super',
                                     text: 'Vous êtes maintenant le coach de ce projet, vous permet le suivre maintenant',
                                     type: 'success',
                                     styling: 'bootstrap3'
-                                });</script>";
-                            }else{echo "<script>new PNotify({
+                            });</script>";
+                        }else{echo "<script>new PNotify({
                                 title: 'Une erreur s'est produite',
                                 text: 'Oop! Une erreur s'est produite veuillez réessayer après',
                                 type: 'error',
                                 styling: 'bootstrap3'
-                            });</script>";}
+                            });</script>";
                         }
+                        
                     }else{
                         $result = Projet::deleteCoachFromProject($id,$_SESSION['id']);
                         if($result > 0){
@@ -93,14 +91,7 @@ class Coach extends \Core\Controller{
                             type: 'error',
                             styling: 'bootstrap3'
                         });</script>";}
-                    }*/
-
-                    echo "<script>new PNotify({
-                                title: 'Malheureusement',
-                                text: 'Malheureusement vous ne pouvez pas suiver les projets maintenant  (cette option s\'ouvre prochainement)',
-                                type: 'info',
-                                styling: 'bootstrap3'
-                            });</script>";
+                    }
                     
                 }else{
                 $allprojectofcoach = Projet::getProjetByCoach($_SESSION['id']);
@@ -111,9 +102,66 @@ class Coach extends \Core\Controller{
                     "projects"=>$allproject,
                     "projectsofcoach"=>$allprojectofcoach,
                     "coachs"=>$coachs,
-                    "datasCoach"=>$datasCoach
+                    "datasCoach"=>$datasCoach,
+                    "test" => $test,
+                    "dataoneprojet"=>$dataoneprojet
                     ]);
-            }}else{
+            }
+        }else{
+            if($id = filter_input(INPUT_POST,'id')){
+                $type = filter_input(INPUT_POST,'type');
+                if($type === 'true'){
+                    
+                    $res = Projet::addingCoachToProject($id,$_SESSION['id']);
+                    if($res > 0){
+                        echo "<script>new PNotify({
+                                title: 'Super',
+                                text: 'Vous êtes maintenant le coach de ce projet, vous permet le suivre maintenant',
+                                type: 'success',
+                                styling: 'bootstrap3'
+                        });</script>";
+                    }else{echo "<script>new PNotify({
+                            title: 'Une erreur s'est produite',
+                            text: 'Oop! Une erreur s'est produite veuillez réessayer après',
+                            type: 'error',
+                            styling: 'bootstrap3'
+                        });</script>";
+                    }
+                    
+                }else{
+                    $result = Projet::deleteCoachFromProject($id,$_SESSION['id']);
+                    if($result > 0){
+                        echo "<script>new PNotify({
+                            title: 'Super',
+                            text: 'Le projet est supprimé de votre listes des projets que vous suivez',
+                            type: 'success',
+                            styling: 'bootstrap3'
+                        });</script>";
+                    }else{echo "<script>new PNotify({
+                        title: 'Une erreur s'est produite',
+                        text: 'Oop! Une erreur s'est produite veuillez réessayer après',
+                        type: 'error',
+                        styling: 'bootstrap3'
+                    });</script>";}
+                }
+                
+            }else{
+            $allprojectofcoach = Projet::getProjetByCoach($_SESSION['id']);
+            $allproject = Projet::getAllProjects();
+            $coachs = Projet::getAllCoachs();
+            $datasCoach = Coachs::getCoachById($_SESSION['id']);
+            View::getView('Coach/projets.html',[
+                "projects"=>$allproject,
+                "projectsofcoach"=>$allprojectofcoach,
+                "coachs"=>$coachs,
+                "datasCoach"=>$datasCoach,
+                "test" => $test,
+                "dataoneprojet"=>$dataoneprojet
+                ]);
+        }
+        }
+        
+        }else{
                 header('Location: https://aracpi.com/innovation/'.$_SESSION['role'].'/index', true, 303);
                 exit;
             }

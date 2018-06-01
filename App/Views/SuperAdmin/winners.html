@@ -1,0 +1,190 @@
+{% extends "baseSuperAdmin.html" %}
+{% block title %} SuperAdmin-Innovation-Safi {% endblock %}
+{% block body %}
+
+
+  <div class="right_col" role="main">
+    <div class="">
+
+
+        <div class="row tile_count">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-bar-chart-o"></i> Total Projets</span>
+              <div class="count">{{ statistiques.nbrProjets }}</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Coaches</span>
+              <div class="count">{{ statistiques.nbrCoaches }}</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Jurys</span>
+              <div class="count green">{{ statistiques.nbrJurys }}</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Admins</span>
+              <div class="count blue">{{ statistiques.nbrSuperAdmins }}</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total </span>
+              <div class="count">-</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total </span>
+              <div class="count">-</div>
+            </div>
+        </div>
+
+
+
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>3éme prix</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+             <form class="form-horizontal form-label-left" novalidate method="POST" name="ajoutCoachJury" action="https://aracpi.com/innovation/admin/winner">
+                
+                <div class="item form-group">
+                  <label for="third" class="control-label col-md-3 col-sm-3 col-xs-12">Projet 3éme</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="third" name="third" class="form-control col-md-7 col-xs-12" required="required">
+                        <option>Winner 3</option>
+                        {% for projet in listprojet %}
+                            <option value="{{projet.id}}">{{projet.idee}}</option>
+                        {% endfor %}
+                    </select>
+                  </div>
+                </div>             
+                
+                <div class="ln_solid"></div>
+                <div class="form-group">
+                  <div class="col-md-6 col-md-offset-3">
+                    <input type="submit" id="send3" name="send3" class="btn btn-success" value="Submit" />
+                  </div>
+                </div>
+            </form>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>2éme prix</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+      
+                   <form class="form-horizontal form-label-left" novalidate method="POST" name="ajoutCoachJury" action="https://aracpi.com/innovation/admin/winner">
+                      
+                      <div class="item form-group">
+                        <label for="third" class="control-label col-md-3 col-sm-3 col-xs-12">Projet 2éme</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select id="second" name="second" class="form-control col-md-7 col-xs-12" required="required">
+                              <option>Winner 3</option>
+                              {% for projet in listprojet %}
+                            <option value="{{projet.id}}">{{projet.idee}}</option>
+                        {% endfor %}
+                          </select>
+                        </div>
+                      </div>             
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                          <input type="submit" id="send2" name="send2" class="btn btn-success" value="Submit" />
+                        </div>
+                      </div>
+                  </form>
+      
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <h2>1ér prix</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                          </li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                          </li>
+                          <li><a class="close-link"><i class="fa fa-close"></i></a>
+                          </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="x_content">
+          
+                       <form class="form-horizontal form-label-left" novalidate method="POST" name="ajoutCoachJury" action="https://aracpi.com/innovation/admin/winner">
+                          
+                          <div class="item form-group">
+                            <label for="third" class="control-label col-md-3 col-sm-3 col-xs-12">Winner</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="winner" name="winner" class="form-control col-md-7 col-xs-12" required="required">
+                                  <option>Winner 3</option>
+                                  {% for projet in listprojet %}
+                                <option value="{{projet.id}}">{{projet.idee}}</option>
+                                    {% endfor %}
+                              </select>
+                            </div>
+                          </div>             
+                          
+                          <div class="ln_solid"></div>
+                          <div class="form-group">
+                            <div class="col-md-6 col-md-offset-3">
+                              <input type="submit" id="send1" name="send1" class="btn btn-success" value="Submit" />
+                            </div>
+                          </div>
+                      </form>
+          
+                      </div>
+                    </div>
+                  </div>
+      </div>
+
+
+
+    {% if etat == 'true' %}
+      <script>swal('Bien enregistré !', '', 'success')</script> 
+    {% elseif etat == 'false' %}
+        <script>swal('la base de données n\'est pas disponible ou @ mail déjà utilisée !', '', 'error')</script> 
+    {% endif %}
+
+
+    {% if etatDelete == 'true' %}
+      <script>swal('l\'utilisateur à bien étè supprimer !', '', 'success')</script> 
+    {% elseif etatDelete == 'false' %}
+        <script>swal('la base de données n\'est pas disponible !', '', 'error')</script> 
+    {% endif %}
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

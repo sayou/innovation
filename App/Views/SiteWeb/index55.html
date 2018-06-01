@@ -77,7 +77,7 @@
 			        <a class="nav-link" href="#" data-scroll-nav="4">Prix</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#" data-scroll-nav="5">Liste des projets sélectionnés</a>
+			        <a class="nav-link" href="#" data-scroll-nav="5">List des projets</a>
                   </li>
                   <li class="nav-item">
 			        <a class="nav-link" href="https://aracpi.com/innovation/inscriptionPlatform">Se connecter</a>
@@ -110,9 +110,9 @@
                               <b>Dream</b>
                             </span>
                         </h1>
-                        <p>Les projets arrivent à l'étape de déclin </p>
-                        <a href="#" data-scroll-nav="4" class="butn butn-bg">
-                            <span>Consultez les projets gagnants</span>
+                        <p>Les projets arrivent à la deuxième étape de la présélection </p>
+                        <a href="#" data-scroll-nav="5" class="butn butn-bg">
+                            <span>Consultez les projets</span>
                         </a>
     				</div>
     			</div>
@@ -130,7 +130,7 @@
 
 
     	<!-- =====================================
-    	==== Start Innovation Sociale Safi -->
+    	==== Start Hero -->
     	
         <section class="hero section-padding pb-0" data-scroll-index="1">
             <div class="container">
@@ -216,7 +216,7 @@
                                     <p><small class="text-muted"><i class="fa fa-clock"></i> 22 Mai 2018</small></p>
                                   </div>
                                   <div class="timeline-body">
-                                    <p>Dès le 24 Mai jusqu'à 25 Mai 2018.</p>                                    
+                                    <p>Dès le 22 Mai jusqu'à 23 Mai 2018.</p>                                    
                                   </div>
                                 </div>
                               </li>
@@ -229,7 +229,7 @@
                                     <p><small class="text-muted"><i class="fa fa-clock"></i> 24 Mai 2018</small></p>
                                   </div>
                                   <div class="timeline-body">
-                                    <p>Dès le 26 Mai jusqu'à 27 Mai 2018..</p>
+                                    <p>Dès le 24 Mai jusqu'à 27 Mai 2018..</p>
                                   </div>
                                 </div>
                               </li>
@@ -278,7 +278,7 @@
 
         </section>
 
-    	<!-- End Innovation Sociale Safi ====
+    	<!-- End Hero ====
     	======================================= -->
 
 
@@ -289,7 +289,7 @@
 
 
     	<!-- =====================================
-    	==== Start APIs -->
+    	==== Start Services -->
     	
         <section class="services section-padding pb-70" data-scroll-index="3">
             <div class="container">
@@ -386,14 +386,14 @@
             </div>
         </section>
 
-    	<!-- End APIs ====
+    	<!-- End Services ====
     	======================================= -->
 
 
 
 
     	<!-- =====================================
-    	==== Start Prix -->
+    	==== Start Price -->
 
     	<section class="price section-padding bg-gray" data-scroll-index="4">
             <div class="container">
@@ -415,18 +415,7 @@
                             <div class="value">
                                 <h3>7.000 <span>MAD</span></h3>
                             </div>
-                            {% if third is not null %}
-                                <div class="content">
-                                    <span class="tag">
-                                        {{ third.nomPrenom }}
-                                    </span>
-                                    <h5><i class="icofont icofont-medal" id="icon{{key}}"></i>{{ third.idee }}</h5>
-                                </div>
-                            {% else %}
-                            <div class="content">
-                                <h5>Résultat n'est pas encore affichée</h5>
-                            </div>
-                            {% endif %}
+                            
                         </div>
                     </div>
 
@@ -440,19 +429,6 @@
                                 <div class="value">
                                     <h3>15.000 <span>MAD</span></h3>
                                 </div>
-
-                                {% if winner is not null %}
-                                <div class="content">
-                                    <span class="tag">
-                                        {{ winner.nomPrenom }}
-                                    </span>
-                                    <h5><i class="icofont icofont-medal" id="icon{{key}}"></i>{{ winner.idee }}</h5>
-                                </div>
-                            {% else %}
-                            <div class="content">
-                                <h5>Résultat n'est pas encore affichée</h5>
-                            </div>
-                            {% endif %}
                                 
                             </div>
                     </div>
@@ -466,20 +442,7 @@
                                 <div class="value">
                                     <h3>10.000 <span>MAD</span></h3>
                                 </div>
-
                                 
-                            {% if second is not null %}
-                            <div class="content">
-                                <span class="tag">
-                                    {{ second.nomPrenom }}
-                                </span>
-                                <h5><i class="icofont icofont-medal" id="icon{{key}}"></i>{{ second.idee }}</h5>
-                            </div>
-                        {% else %}
-                        <div class="content">
-                            <h5>Résultat n'est pas encore affichée</h5>
-                        </div>
-                        {% endif %}  
                             </div>
                         </div>
 
@@ -488,12 +451,12 @@
             </div>
         </section>
 
-    	<!-- End Prix ====
+    	<!-- End Price ====
     	======================================= -->
 
 
         <!-- =====================================
-        ==== Start FAQs -->
+        ==== Start Testimonails -->
         
         <div class="testimonails bg-img" data-overlay-dark="9" data-background="siteweb/img/3.jpg">
             <div class="container">
@@ -541,65 +504,19 @@
             </div>
         </div>
 
-        <!-- End FAQs ====
+        <!-- End Testimonails ====
         ======================================= -->
 
-        <!-- =====================================
-    	==== Start List des projets sélectionnés -->
+
+    	<!-- =====================================
+    	==== Start Blog -->
     	<section class="blog section-padding" data-scroll-index="5">
             <div class="container">
                 <div class="row">
 
                     <div class="section-head col-sm-12">
                         <h4>
-                            <span>Liste des projets</span><br>
-                            Sélectionnés
-                        </h4>
-                    </div>
-                    
-                    <div class="clearfix"></div>
-                    {% if nbrprojectListSelected == 0 %}
-                    <div class="col-lg-12">
-                        <div class="item text-center mb-md50">
-                            <div class="content">
-                                <p>La liste des projets sélectionnés n'est pas encore lancé. <b>Le lancement va s'affichera plûtot</b></p>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-										
-					{% for key,item in  projectListSelected %}
-                    <div class="col-lg-4">
-                        <div class="item text-center mb-md50">
-                            <div class="content">
-                                <span class="tag" style="color:#16BAC5 !important;">
-                                    {{ item.nomPrenom }} / {{ item.email }}
-                                </span>
-                                <h5><a href="#0" onclick="verifySelected({{key}})"><i class="icofont icofont-hand-drawn-down" id="iconSelected{{key}}"></i>{{ item.idee }}</a></h5>
-                                <p id="textShowID{{key}}" style="display: none">{{ item.descriptionProbleme }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                    
-                    
-                    
-
-                </div>
-            </div>
-        </section>
-    	<!-- End Start List des projets sélectionnés ====
-    	======================================= -->
-
-    	<!-- =====================================
-    	==== Start Liste des projets -->
-    	<section class="blog section-padding">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-head col-sm-12">
-                        <h4>
-                            <span>Liste</span><br>
+                            <span>List</span><br>
                             Des projets
                         </h4>
                     </div>
@@ -621,7 +538,7 @@
                                 <span class="tag">
                                     {{ item.nomPrenom }} / {{ item.email }}
                                 </span>
-                                <h5><a href="#0" onclick="verify({{key}})"><i class="icofont icofont-hand-drawn-down" id="icon{{key}}"></i>{{ item.idee }}</a></h5>
+                                <h5><a href="#0" onclick="verify({{key}})" ondblclick="hide({{key}})"><i class="icofont icofont-hand-drawn-down" id="icon{{key}}"></i>{{ item.idee }}</a></h5>
                                 <p id="textShow{{key}}" style="display: none">{{ item.descriptionProbleme }}</p>
                             </div>
                         </div>
@@ -632,7 +549,7 @@
                 </div>
             </div>
         </section>
-    	<!-- End Liste des projets ====
+    	<!-- End Blog ====
     	======================================= -->
 
 
@@ -719,14 +636,14 @@
 
                                     <div class="section-head col-sm-12">
                                         <h4>
-                                            <span>Consultez les projets</span><br>
-                                                Sélectionnés
+                                            <span>Consultez</span><br>
+                                                Les projets 
                                         </h4>
                                     </div>
 
                                     
                                     <a href="#" data-scroll-nav="5" class="butn butn-bg" style="color: white;background:#accd0d;padding: 10px 30px;width: 100%;text-align: center">
-                                        <span>Liste des projets sélectionnés</span>
+                                        <span>List des projets</span>
                                     </a>
 
                                 </div>                             

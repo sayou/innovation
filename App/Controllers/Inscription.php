@@ -78,11 +78,11 @@ class Inscription extends \Core\Controller{
 				  "membres" => $data["membres"]
 			 		]);
 			}else{
-				header('Location: http://' . $_SERVER['HTTP_HOST'] . '/'.$_SESSION['role'].'/index', true, 303);
+				header('Location: https://aracpi.com/innovation/'.$_SESSION['role'].'/index', true, 303);
             	exit;
 			}
 		}
-		else if(isset($_POST['process']) && !isset($_SESSION['id'])){
+		else if(isset($_POST['email']) && !isset($_SESSION['id']) && !isset($_SESSION['role'])){
 			try{
 				//l'id est recuperé a l'aide d'une session apres auth normalement
 				$email = filter_input(INPUT_POST,"email");
@@ -92,7 +92,7 @@ class Inscription extends \Core\Controller{
 				if($result){
 					$id = $result[0]["id"];
 					$_SESSION['id']=$id;
-					$_SESSION['role']=$result[0]["role"];
+					$_SESSION['role']="lead";
 					$data = self::findProject($_SESSION['id']);
 					View::getView('Home/editInscription.html', [
 					"lead" => $data["lead"],
@@ -142,7 +142,7 @@ class Inscription extends \Core\Controller{
 				"test" => $test
 			]);
 			}else{
-				header('Location: http://' . $_SERVER['HTTP_HOST'] . '/'.$_SESSION['role'].'/index', true, 303);
+				header('Location: https://aracpi.com/innovation/'.$_SESSION['role'].'/index', true, 303);
             	exit;
 			}
 			
@@ -193,7 +193,7 @@ class Inscription extends \Core\Controller{
 			// $pdf->AjouterSection(3, 'Membres', $membres);
 			$pdf->Output();
 			}else{
-				header('Location: http://' . $_SERVER['HTTP_HOST'] . '/'.$_SESSION['role'].'/index', true, 303);
+				header('Location: https://aracpi.com/innovation/'.$_SESSION['role'].'/index', true, 303);
             	exit;
 			}
 			
@@ -222,7 +222,7 @@ class Inscription extends \Core\Controller{
 					"testProgress" => $testProgress
 				]);
 			}else{
-				header('Location: http://' . $_SERVER['HTTP_HOST'] . '/'.$_SESSION['role'].'/index', true, 303);
+				header('Location: https://aracpi.com/innovation/'.$_SESSION['role'].'/index', true, 303);
             	exit;
 			}
 			
@@ -238,6 +238,18 @@ class Inscription extends \Core\Controller{
 			if($result == 0){
 				echo "yes";
 			}else{echo "no";}
+		}else{
+			$this->indexAction();
+		}
+	}
+
+	protected function verifyEditEmailAction(){
+		if(isset($_POST["email"])){
+			$email = $_POST["email"];
+			$lead = InscriptionModel::findLeadById($_SESSION["id"]);
+			if(strcmp($email, $lead["email"]) != 0){
+				echo "no";
+			}else{echo "yes";}
 		}else{
 			$this->indexAction();
 		}

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées ou de l’Ecole Supérieure de Technologie à Safi. Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux. Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.">
+    <meta name="author" content="Innovation Sociale Safi">
+    <title>Innovation Sociale SAFI</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+    <link href="css/magnific-popup.min.css" rel="stylesheet">
+    <link href="css/skins/square/yellow.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- sweetAlert-->
+    <link href="sweetAlert/sweetalert.min.css" rel="stylesheet">
+    <script src="sweetAlert/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    
+    <div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /Loader_form -->
+
+    <header>
+        <div id="logo_home">
+            <a href="#"><img src="siteweb/img/logo-light.png"></a>
+        </div>
+        
+        <a id="menu-button-mobile" class="cmn-toggle-switch cmn-toggle-switch__htx" href="javascript:void(0);"><span>Menu mobile</span></a>
+        <nav class="main_nav">
+            <ul class="nav nav-tabs">
+                <li><a href="https://aracpi.com/innovation/">Visiter le site</a></li>
+                <li><a href="#tab_2" data-toggle="tab">Login</a></li>
+            </ul>
+        </nav>
+    </header><!-- /header -->
+
+    <div class="intro_txt animated fadeInUp">
+        <h2>Innovation Sociale SAFI</h2>
+        <p>Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées
+            ou de l’Ecole Supérieure de Technologie à Safi.
+            Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux.
+            Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.</p>
+    </div><!-- /intro_txt -->
+    
+    <video id="my-video" class="video" loop muted autoplay playsinline>
+      <source src="media/demo.mp4" type="video/mp4">
+      <source src="media/demo.ogv" type="video/ogg">
+      <source src="media/demo.webm" type="video/webm">
+	</video><!-- /video -->
+    <div class="video_fallback"></div>
+
+    <div class="layer"></div><!-- /mask -->
+
+    <div id="main_container">
+       
+        <div id="header_in">
+            <a href="#" class="close_in "><i class="pe-7s-close-circle"></i></a>
+        </div>
+
+        <div class="wrapper_in">
+			
+            <div class="container-fluid">
+                <div class="tab-content">
+                   
+                    
+                    <div class="tab-pane fade" id="tab_2">
+                       <!-- Partie login -->
+
+                       <div class="subheader" id="about"></div>
+                       <div class="row">
+
+   <div class="col-xl-12 col-lg-8">
+       <div id="wizard_container">
+           
+                {% if test == 'error' %}
+                <script>swal('Email ou mot de passe est incorrect !', '', 'error')</script>
+                {% elseif test == 'stop' %}
+                <script>swal('Désolé ! La page login n\'est pas ouverte pour le moment !', '', 'error')</script>
+                {% endif %}
+           <form name="example-1" method="POST" action="https://aracpi.com/innovation/editInscription">
+               <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
+               <div id="middle-wizard">
+        
+
+                   <div class="submit step">
+                       <h3 class="main_question">Vous avez un compte ?</h3>
+
+                        <div class="row">
+                           <div class="col-sm-12">
+                               <div class="form-group">
+                                   <input type="email" name="email" class="required form-control" placeholder="Votre email" required>
+                               </div>
+                           </div>
+
+                           <div class="col-sm-12">
+                               <div class="form-group">
+                                   <input type="password" name="password" class="required form-control" placeholder="Votre mot de passe" required>
+                               </div>
+                           </div>
+                       </div> 
+                    </div> 
+                </div>
+                       <div id="bottom-wizard">
+                        <button type="submit" name="process" class="submit">Se Connecter</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+                       <!-- End partie login -->
+                    
+                 </div></div> 
+        </div><!-- /wrapper_in -->
+    </div><!-- /main_container -->
+
+    <div id="additional_links">
+        <ul>
+            <li>© 2018 Hackathon - Innovation Sociale</li>
+        </ul>
+    </div><!-- /add links -->
+
+    
+
+	<!-- SCRIPTS -->
+    <!-- Jquery-->
+    <script data-cfasync="false" src="js/email-decode.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Common script -->
+    <script src="js/common_scripts_min.js"></script>
+    <!-- Theme script -->
+	<script src="js/file-validator.js"></script>
+	<script src="js/functions_with_upload.js"></script>
+
+    <script src="controlleurs/addNewPerson.js"></script>
+
+</body>
+
+</html>

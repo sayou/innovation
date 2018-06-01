@@ -15,17 +15,9 @@
     <link href="https://aracpi.com/innovation/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="https://aracpi.com/innovation/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="https://aracpi.com/innovation/vendors/nprogress/nprogress.css" rel="stylesheet">
-	
-    <!-- bootstrap-progressbar -->
-    <link href="https://aracpi.com/innovation/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- PNotify -->
-    <link href="https://aracpi.com/innovation/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
-    <link href="https://aracpi.com/innovation/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
-    <link href="https://aracpi.com/innovation/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="https://aracpi.com/innovation/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- sweetAlert css -->
+    <link href="https://aracpi.com/innovation/sweetAlert/sweetalert.min.css" rel="stylesheet">
+
     <!-- Datatables -->
     <link href="https://aracpi.com/innovation/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="https://aracpi.com/innovation/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
@@ -36,6 +28,8 @@
     <!-- Custom Theme Style -->
     <link href="https://aracpi.com/innovation/build/css/custom.min.css" rel="stylesheet">
     
+    <!-- sweetAlert Script -->
+    <script src="https://aracpi.com/innovation/sweetAlert/sweetalert.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -43,27 +37,27 @@
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="https://aracpi.com/innovation/coach/index" class="site_title"><img src="https://aracpi.com/innovation/production/images/logo.png"> <span>Innovation Safi </span></a>
-            </div>
 
             <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_info">
+                <h3 style="color: white;"><i class="fa fa-cogs" style="display: inline;"></i> Administration</h3>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
 
             <br />
 
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-edit"></i> Projets <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="https://aracpi.com/innovation/coach/index">Liste des projets</a></li>
-                      <li><a href="https://aracpi.com/innovation/coach/mesprojets">Projets sélectionnées par moi</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="https://aracpi.com/innovation/coach/moncompte"><i class="fa fa-edit"></i> Mon compte </a>
-                  </li>
+                  <li><a href="https://aracpi.com/innovation/admin/index"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a></li>
+                  <li><a href="https://aracpi.com/innovation/admin/listDesProjets"><i class="fa fa-edit"></i> Projets <span class="fa fa-chevron"></span></a></li>
+                  <li><a href="https://aracpi.com/innovation/admin/coachJury"><i class="fa fa-desktop"></i> Coaches & Jurys <span class="fa fa-chevron"></span></a></li> 
+                  <li><a href="https://aracpi.com/innovation/admin/winner"><i class="fa fa-trophy"></i> Projets gangants <span class="fa fa-chevron"></span></a></li>                                                      
                 </ul>
               </div>
               
@@ -77,28 +71,28 @@
 
         <!-- top navigation -->
         <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    {{datasCoach.userName}}
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="https://aracpi.com/innovation/logout"><i class="fa fa-sign-out pull-right"></i> Se déconnecter</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
+            <div class="nav_menu">
+              <nav>
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+  
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      {{datasAdmin.userName}}
+                      <span class=" fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                      <li><a href="https://aracpi.com/innovation/logout"><i class="fa fa-sign-out pull-right"></i> Se déconnecter</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
         <!-- /top navigation -->
-
+        
         <!-- page content -->
           {% block body %}
           {% endblock %}
@@ -165,7 +159,7 @@
     <script src="https://aracpi.com/innovation/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 
     <script src="https://aracpi.com/innovation/build/js/custom.js"></script>
-    <script src="https://aracpi.com/innovation/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-    <script src="https://aracpi.com/innovation/controlleurs/coach.js"></script>
+    <script src="https://aracpi.com/innovation/controlleurs/more.js"></script>
+    
   </body>
 </html>

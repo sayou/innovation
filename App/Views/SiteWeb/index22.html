@@ -111,8 +111,8 @@
                             </span>
                         </h1>
                         <p>Les projets arrivent à l'étape de déclin </p>
-                        <a href="#" data-scroll-nav="4" class="butn butn-bg">
-                            <span>Consultez les projets gagnants</span>
+                        <a href="#" data-scroll-nav="5" class="butn butn-bg">
+                            <span>Consultez les projets sélectionnés</span>
                         </a>
     				</div>
     			</div>
@@ -415,18 +415,7 @@
                             <div class="value">
                                 <h3>7.000 <span>MAD</span></h3>
                             </div>
-                            {% if third is not null %}
-                                <div class="content">
-                                    <span class="tag">
-                                        {{ third.nomPrenom }}
-                                    </span>
-                                    <h5><i class="icofont icofont-medal" id="icon{{key}}"></i>{{ third.idee }}</h5>
-                                </div>
-                            {% else %}
-                            <div class="content">
-                                <h5>Résultat n'est pas encore affichée</h5>
-                            </div>
-                            {% endif %}
+                            
                         </div>
                     </div>
 
@@ -440,19 +429,6 @@
                                 <div class="value">
                                     <h3>15.000 <span>MAD</span></h3>
                                 </div>
-
-                                {% if winner is not null %}
-                                <div class="content">
-                                    <span class="tag">
-                                        {{ winner.nomPrenom }}
-                                    </span>
-                                    <h5><i class="icofont icofont-medal" id="icon{{key}}"></i>{{ winner.idee }}</h5>
-                                </div>
-                            {% else %}
-                            <div class="content">
-                                <h5>Résultat n'est pas encore affichée</h5>
-                            </div>
-                            {% endif %}
                                 
                             </div>
                     </div>
@@ -466,20 +442,7 @@
                                 <div class="value">
                                     <h3>10.000 <span>MAD</span></h3>
                                 </div>
-
                                 
-                            {% if second is not null %}
-                            <div class="content">
-                                <span class="tag">
-                                    {{ second.nomPrenom }}
-                                </span>
-                                <h5><i class="icofont icofont-medal" id="icon{{key}}"></i>{{ second.idee }}</h5>
-                            </div>
-                        {% else %}
-                        <div class="content">
-                            <h5>Résultat n'est pas encore affichée</h5>
-                        </div>
-                        {% endif %}  
                             </div>
                         </div>
 
@@ -556,7 +519,26 @@
                             Sélectionnés
                         </h4>
                     </div>
-                    
+                    <div class="col-lg-12">
+                        <div class="item text-center mb-md50">
+                            <div class="content">
+                                <p>Les projets présélectionnés sont invités à participer à une formation qui aura lieu <b style="color:#16BAC5">le 24 - 25 Mai 2018 à l'Ecole Supérieure de Technologie de Safi.</b></p>
+                                <p> Le programme de la formation est le suivant :
+                                    <div class="clearfix"></div>
+                                    <b style="color:#16BAC5">24 Mai 2018 (10h - 14h)</b>
+                                    <ul>
+                                        <li>Formation sur le design Thinking </li>
+                                        <li>Formation sur la prise de parole</li>
+                                    </ul>
+                                    <b style="color:#16BAC5">25 Mai 2018 (10h - 14h)</b>
+                                    
+                                    <ul>
+                                        <li> Formation sur le Business Model  de l'Innovation Socialle</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="clearfix"></div>
                     {% if nbrprojectListSelected == 0 %}
                     <div class="col-lg-12">

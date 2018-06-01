@@ -1,0 +1,133 @@
+{% extends "baseSuperAdmin.html" %}
+{% block title %} SuperAdmin-Innovation-Safi {% endblock %}
+{% block body %}
+
+
+  <div class="right_col" role="main">
+    <div class="">
+            <div class="row tile_count">
+                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                  <span class="count_top"><i class="fa fa-bar-chart-o"></i> Total Projets</span>
+                  <div class="count">{{ statistiques.nbrProjets }}</div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Coaches</span>
+                  <div class="count">{{ statistiques.nbrCoaches }}</div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Jurys</span>
+                  <div class="count green">{{ statistiques.nbrJurys }}</div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Admins</span>
+                  <div class="count blue">{{ statistiques.nbrSuperAdmins }}</div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total </span>
+                  <div class="count">-</div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total </span>
+                  <div class="count">-</div>
+                </div>
+            </div>
+
+
+
+
+      <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>List des projets séléctionnées</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  
+                  <table id="datatable-responsive1" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="text-align: center">
+                    <thead>
+                      <tr>
+                        <th>Libellé de projet</th>
+                        <th>Lead de projet</th>
+                        <th>Adresse mail du lead</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in listProjetsSelected %}
+                        <tr>
+                          <td>{{ item.idee }}</td>
+                          <td>{{ item.nomPrenom }}</td>
+                          <td>{{ item.email }}</td>
+                          <td><center><a href="https://aracpi.com/innovation/admin/{{ item.id }}/details" class="btn btn-warning">Détails</a></center></td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+    
+                </div>
+              </div>
+            </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>List des projets</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+              <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="text-align: center">
+                <thead>
+                  <tr>
+                    <th>Libellé de projet</th>
+                    <th>Lead de projet</th>
+                    <th>Adresse mail du lead</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in listProjets %}
+                    <tr>
+                      <td>{{ item.idee }}</td>
+                      <td>{{ item.nomPrenom }}</td>
+                      <td>{{ item.email }}</td>
+                      <td><center><a href="https://aracpi.com/innovation/admin/{{ item.id }}/details" class="btn btn-warning">Détails</a>
+                        <a href="https://aracpi.com/innovation/admin/{{ item.id }}/selected" class="btn btn-success">Séléctionnée</a></center></td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if result == 'yes'%}
+      <script>swal('Super !', '', 'success')</script> 
+      {% elseif result == 'no' %}
+      <script>swal('Oops !', '', 'error')</script> 
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

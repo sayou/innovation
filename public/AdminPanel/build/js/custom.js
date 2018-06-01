@@ -2473,6 +2473,8 @@ if (typeof NProgress != 'undefined') {
 
 				$('#datatable-responsive').DataTable();
 
+				$('#datatable-responsive1').DataTable();
+
 				$('#datatable-scroller').DataTable({
 				  ajax: "js/datatables/json/scroller-demo.json",
 				  deferRender: true,
