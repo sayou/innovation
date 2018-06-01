@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    {{number}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="Vous êtes des étudiants (es) de la faculté poly-disciplinaire, de l’Ecole Nationale des Sciences Appliquées ou de l’Ecole Supérieure de Technologie à Safi. Vous voulez mettre vos connaissances au service de communautés défavorisées et chercher des solutions innovantes aux déficits sociaux. Le Hakathon de l’innovation sociale est la bonne adresse pour tester votre idée de projet.">
@@ -198,7 +197,7 @@
                                                     </div>
                                                      <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <input type="email" name="leadAdresseMail" value="{{lead.email}}" required class="form-control" placeholder="adresse mail" />
+                                                            <input type="email" id="verifyEditEmail" name="leadAdresseMail" value="{{lead.email}}" required class="form-control" placeholder="adresse mail" />
                                                         </div> 
                                                     </div>
                                                     <div class="col-sm-6">
@@ -359,11 +358,6 @@
     <!-- Theme script -->
 	<script src="js/file-validator.js"></script>
 	<script src="js/functions_with_upload.js"></script>
-
-    <!-- Google map -->
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script src="js/mapmarker.jquery.js"></script>
-    <script src="js/mapmarker_func.jquery.js"></script>
 
     <script src="controlleurs/addNewPerson.js"></script>
 

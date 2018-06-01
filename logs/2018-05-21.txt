@@ -185,3 +185,207 @@ Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(42): Core\Router->disp
 #1 {main}'
 Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
 
+[21-May-2018 18:25:06 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('favicon.ico')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:12 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:12 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:12 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:12 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:12 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:15 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:15 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:15 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:15 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:15 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:15 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:29:16 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:25 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:25 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:25 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.or...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot-sp...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[21-May-2018 18:32:28 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(54): Core\Router->dispatch('vendors/flot.cu...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+

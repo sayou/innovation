@@ -1,0 +1,194 @@
+[31-May-2018 01:36:17 UTC] Error Uncaught Exception : 'Twig_Error_Syntax'</p>
+Message : 'Unexpected token "operator" of value "not" ("end of statement block" expected).'
+Stack Trace : '#0 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\TokenParser\If.php(33): Twig_TokenStream->expect(3)
+#1 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Parser.php(168): Twig_TokenParser_If->parse(Object(Twig_Token))
+#2 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Parser.php(81): Twig_Parser->subparse(NULL, false)
+#3 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(533): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(565): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(368): Twig_Environment->compileSource(Object(Twig_Source))
+#6 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(289): Twig_Environment->loadTemplate('SiteWeb/index.h...')
+#7 C:\wamp\www\innovation\Core\View.php(15): Twig_Environment->render('SiteWeb/index.h...', Array)
+#8 C:\wamp\www\innovation\App\Controllers\Home.php(34): Core\View::getView('SiteWeb/index.h...', Array)
+#9 [internal function]: App\Controllers\Home->siteWebAction()
+#10 C:\wamp\www\innovation\Core\Controller.php(18): call_user_func_array(Array, Array)
+#11 C:\wamp\www\innovation\Core\Router.php(50): Core\Controller->__call('siteWeb', Array)
+#12 C:\wamp\www\innovation\public\index.php(64): Core\Router->dispatch('')
+#13 {main}'
+Error in : 'C:\wamp\www\innovation\App\Views\SiteWeb\index.html' Line : '418'
+
+[31-May-2018 01:42:01 UTC] Error Uncaught Exception : 'ErrorException'</p>
+Message : 'count(): Parameter must be an array or an object that implements Countable'
+Stack Trace : '#0 [internal function]: Core\Error::errorHandler(2, 'count(): Parame...', 'C:\\wamp\\www\\inn...', 29, Array)
+#1 C:\wamp\www\innovation\App\Controllers\Home.php(29): count(false)
+#2 [internal function]: App\Controllers\Home->siteWebAction()
+#3 C:\wamp\www\innovation\Core\Controller.php(18): call_user_func_array(Array, Array)
+#4 C:\wamp\www\innovation\Core\Router.php(50): Core\Controller->__call('siteWeb', Array)
+#5 C:\wamp\www\innovation\public\index.php(64): Core\Router->dispatch('')
+#6 {main}'
+Error in : 'C:\wamp\www\innovation\App\Controllers\Home.php' Line : '29'
+
+[31-May-2018 11:56:12 UTC] Error Uncaught Exception : 'Twig_Error_Loader'</p>
+Message : 'Unable to find template "SuperAdmin/winner.html" (looked into: ../App/Views).'
+Stack Trace : '#0 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Loader\Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('SuperAdmin/winn...')
+#1 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(270): Twig_Loader_Filesystem->getCacheKey('SuperAdmin/winn...')
+#2 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(350): Twig_Environment->getTemplateClass('SuperAdmin/winn...')
+#3 C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Environment.php(289): Twig_Environment->loadTemplate('SuperAdmin/winn...')
+#4 C:\wamp\www\innovation\Core\View.php(15): Twig_Environment->render('SuperAdmin/winn...', Array)
+#5 C:\wamp\www\innovation\App\Controllers\Admin.php(239): Core\View::getView('SuperAdmin/winn...')
+#6 [internal function]: App\Controllers\Admin->winnerAction()
+#7 C:\wamp\www\innovation\Core\Controller.php(18): call_user_func_array(Array, Array)
+#8 C:\wamp\www\innovation\Core\Router.php(50): Core\Controller->__call('winner', Array)
+#9 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/winner')
+#10 {main}'
+Error in : 'C:\wamp\www\innovation\vendor\twig\twig\lib\Twig\Loader\Filesystem.php' Line : '226'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/c...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/c...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/c...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/i...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/siteweb/j...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+
+[31-May-2018 11:56:13 UTC] Error Uncaught Exception : 'Exception'</p>
+Message : 'No route matched.'
+Stack Trace : '#0 C:\wamp\www\innovation\public\index.php(65): Core\Router->dispatch('admin/img/favic...')
+#1 {main}'
+Error in : 'C:\wamp\www\innovation\Core\Router.php' Line : '61'
+

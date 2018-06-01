@@ -52,6 +52,7 @@
         <nav class="main_nav">
             <ul class="nav nav-tabs">
                 <li><a href="https://aracpi.com/innovation/">Visiter le site</a></li>
+                <li><a href="#tab_1" data-toggle="tab">Inscription</a></li>
                 <li><a href="#tab_2" data-toggle="tab">Login</a></li>
             </ul>
         </nav>
@@ -84,7 +85,188 @@
 			
             <div class="container-fluid">
                 <div class="tab-content">
-                   
+                    <div class="tab-pane fade" id="tab_1">                                               
+                        <div class="subheader" id="quote"></div>
+                        
+                        <!-- Partie inscription -->
+                        {% if test == 'true' %}
+                            <script>swal('Votre inscription est bien enregistré !', '', 'success')</script> 
+                        {% elseif test == 'false' %}
+                            <script>swal('Votre inscription n\'est pas enregistré.. réessayer !', '', 'error')</script> 
+                        {% elseif test == 'error' %}
+                            <script>swal('Email ou mot de passe est incorrect !', '', 'error')</script>
+                        {% elseif test == 'stop' %}
+                            <script>swal('Désolé ! La page login n\'est pas ouverte pour le moment !', '', 'error')</script>
+                        {% endif %}
+
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-8">
+                                <div id="wizard_container">
+                                    <div id="top-wizard">
+                                        <strong>Progress</strong>
+                                        <div id="progressbar"></div>
+                                    </div><!-- /top-wizard -->
+                        
+                                    <form method="POST" action="nouvelleInscription" name="inscriptionFormulaire" id="inscriptionForm">
+                                        <input id="website" name="website" type="text" value="">
+                                        <div id="middle-wizard">
+                                        
+                                            <div class="step"> 
+                                                <center><h3 class="main_question"><strong>Informations sur le  projet (Etape 1/2 )</strong></h3></center><br/><br/>
+                        
+                                                <div class="row">                           
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <h4>Mon idée</h4>
+                                                            <input type="text" required name="monIdee" class="form-control" placeholder="titre, énoncé ou le nom du projet" />
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Description du problème</h4>
+                                                            <textarea name="descriptionProbleme" required class="form-control" style="height: 110px;" placeholder="Vous devez justifier de la pertinence de la problématique sociale à adresser et de l’intérêt de votre projet pour la population cible"></textarea>
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Description de ma solution</h4>
+                                                            <textarea name="descriptionSolution" required class="form-control" style="height: 110px;" placeholder="bien identifier et décrire ma solution envisagée pour le problème identifié)"></textarea>
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Qui sont mes cibles? et comment vont-ils participer au projet?</h4>
+                                                            <textarea name="cible" required class="form-control" style="height: 110px;" placeholder="bien identifier ma (es) population (s) cible (s), qui sont -ils? leur point commun ?..."></textarea>
+                                                        </div>
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Moyens technique et financiers nécessaire à la réalisation du projet</h4>
+                                                            <textarea name="moyensTechniqueEtFinancier" required class="form-control" style="height: 110px;" placeholder="définir et décrire les moyens techniques et le montant financier estimatif nécessaires à la réalisation du projet"></textarea>
+                                                        </div>  
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Qu’est ce que je vais changer ?</h4>
+                                                            <textarea name="changement" required class="form-control" style="height: 110px;" placeholder="Décrire les avantages ou les bénéfices que votre projet doit générer pour la population cible. Ils doivent refléter un changement d’état des bénéficiaires et être exprimer de leur points de vue"></textarea>
+                                                        </div>                                                      
+                                                    </div><!-- /col-sm-12 -->
+                                                </div><!-- /row -->                        
+                                            </div><!-- /step 1-->
+                        
+                                            <div class="step">                        
+                                                <center><h3 class="main_question"><strong>Informations sur le  projet (Etape 2/2 )</strong></h3></center><br/><br/>
+                                                
+                                                <h4>Quelle est la valeur que je vais ajouter à mes populations cibles ?</h4><br/>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="titre" class="label"><b>1.  Valeur sociale</b></label>
+                                                            <textarea name="valeurSociale" required class="form-control" style="height: 110px;" placeholder="amélioration d’éducation ou de santé, création d’emploi, Bien être, loisirs, solidarité, autres"></textarea>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="titre" class="label"><b>2.  Valeur économique</b></label>
+                                                            <textarea name="valeurEconomique" required class="form-control" style="height: 110px;" placeholder="gains économiques de la solution, revenus générés)"></textarea>
+                                                        </div> 
+                                                    </div>
+                        
+                        
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <h4>Ressources humaines</h4>
+                                                            <textarea name="ressourcesHumaines" required class="form-control" style="height: 110px;" placeholder="Ressources humaines nécessaires à la réalisation du projet"></textarea>
+                                                        </div>    
+                                                        <div class="form-group textarea_info">
+                                                            <h4>Activités</h4>
+                                                            <textarea name="activites" required class="form-control" style="height: 110px;" placeholder="décrire, dans un enchaînement logique, les activités à réaliser pour atteindre les résultats et l’objectif (s) prévus dans le cadre du projet"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /step 2-->
+                        
+                                            <div class="step">
+                                                <center><h3 class="main_question"><strong>Informations sur les porteurs du projet (Etape 1/2 )</strong></h3></center><br/><br/>
+                                                
+                                                <h4>Informations du lead du projet / équipe</h4><br/>
+                        
+                                                <div class="row">                       
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadNomPrenom" required class="form-control" placeholder="Nom et prénom du lead du projet/équipe" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="date" name="leadDateNaissance" required class="form-control" placeholder="Date de naissance" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="email" name="leadAdresseMail" id="verifyEmail" required class="form-control" placeholder="adresse mail" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadTel" required class="form-control" placeholder="Téléphone : 0611111111" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="password" name="motDePasse" id="motDePasse" required class="form-control" placeholder="mot de passe" />
+                                                        </div> 
+                                                    </div>
+                                                     <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="password" name="motDePasseDeux" required class="form-control" placeholder="retapez le mot de passe" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadEtablissement" required class="form-control" placeholder="Etablissement" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="leadNiveauDeFormation" required class="form-control" placeholder="Niveau de formation/études" />
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <textarea name="leadExperienceProfessionelles" required class="form-control" style="height: 110px;" placeholder="Expérience professionnelles"></textarea>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <textarea name="leadMotivation" required class="form-control" style="height: 110px;" placeholder="Motivation de participation à la compétition 'Sociale innovation projet'"></textarea>
+                                                        </div> 
+                                                    </div>
+                        
+                                                </div><!-- /row-->
+                                            </div><!-- /step 3-->
+                        
+                                            <div class="submit step">
+                                                <center><h3 class="main_question"><strong>Informations sur les porteurs du projet (Etape 2/2 )</strong></h3></center><br/><br/>
+                        
+                                                <h4>Liste des membres de l’équipe du projet</h4><br>
+                        
+                                                <div class="row">                           
+                                                    
+                                                     
+                                                    <div class="col-sm-12">
+                                                        <input type="button" required class="btn btn-success" id="addNewPerson" value="Add" style="width: 100%" />
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <div id="addNewHere"></div>
+                                            </div><!-- /step 4-->
+                        
+                                        </div><!-- /middle-wizard -->
+                                        <div id="bottom-wizard">
+                                            <button type="button" name="backward" class="backward">Previous</button>
+                                            <button type="button" name="forward" class="forward">Next</button>
+                                            <button type="submit" name="process" class="submit">Submit</button>
+                                        </div><!-- /bottom-wizard -->
+                                    </form>
+                                </div><!-- /Wizard container -->
+                        
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+
+
+                        <!-- End partie inscription-->
+                    </div><!-- /TAB 1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
                     
                     <div class="tab-pane fade" id="tab_2">
                        <!-- Partie login -->
@@ -95,11 +277,7 @@
    <div class="col-xl-12 col-lg-8">
        <div id="wizard_container">
            
-                {% if test == 'error' %}
-                <script>swal('Email ou mot de passe est incorrect !', '', 'error')</script>
-                {% elseif test == 'stop' %}
-                <script>swal('Désolé ! La page login n\'est pas ouverte pour le moment !', '', 'error')</script>
-                {% endif %}
+
            <form name="example-1" method="POST" action="editInscription">
                <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                <div id="middle-wizard">

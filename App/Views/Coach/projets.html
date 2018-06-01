@@ -25,9 +25,7 @@
                     <th>Suivi ce projet</th>
                     <th>Lead du projet</th>
                     <th>Idee</th>
-                    <th>Tele lead</th>
-                    <th>Email Lead</th>
-                    <th>Coach</th>
+                    <th>Détails</th>
                   </tr>
                 </thead>
                 <tbody style="text-align: center">
@@ -36,7 +34,7 @@
                       <td>
                           <input class="js-switch" type="checkbox" value="{{projet.id}}" name="Adding[]" 
                             {% for projetcoach in projectsofcoach %}
-                              {% if projetcoach.id == projet.id %}
+                              {% if projetcoach.idProjet == projet.id %}
                                 checked
                               {% endif %}
                             {% endfor %}
@@ -44,15 +42,9 @@
                       </td>
                     <td>{{projet.nomPrenom}}</td>
                     <td>{{projet.idee}}</td>
-                    <td>{{projet.tel}}</td>
-                    <td>{{projet.email}}</td>
-
-                    {% if projet.idCoach is null %}
-                    <td>Non</td>
-                    {% else %}
-                    <td>Oui</td>
-                    {% endif %}
-
+                    <td>
+                      <a href="https://aracpi.com/innovation/coach/{{ projet.id }}/index" class="btn btn-success">Détails</a>
+                    </td>
                     
                   </tr>
                   {% endfor %}
@@ -63,8 +55,140 @@
             </div>
           </div>
         </div>
+        {% if test == 'true' %}
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Détails du projet </h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                
+                
+                  <div id="wizard_verticle" class="form_wizard wizard_verticle">
+                      <ul class="list-unstyled wizard_steps">
+                        <li>
+                          <a href="#step-11">
+                            <span class="step_no">1</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-22">
+                            <span class="step_no">2</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-33">
+                            <span class="step_no">3</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-44">
+                            <span class="step_no">4</span>
+                          </a>
+                        </li>
+                      </ul>
 
-        
+                      <div id="step-11">
+                        <form class="form-horizontal form-label-left">
+                            <h2 class="StepTitle">Personal Info Lead du projet </h2>
+
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3" for="first-name">Nom et prenom
+                            </label>
+                            <div class="col-md-6 col-sm-6">
+                              <input type="text"  value="{{dataoneprojet.nomPrenom}}" required="required" disabled class="form-control col-md-7 col-xs-12">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3" for="last-name">Date naissance
+                            </label>
+                            <div class="col-md-6 col-sm-6">
+                              <input type="text" value="{{dataoneprojet.dateNaissance}}" disabled required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3">Email</label>
+                            <div class="col-md-6 col-sm-6">
+                              <input class="form-control col-md-7 col-xs-12" type="text" disabled value="{{dataoneprojet.email}}">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="middle-name" class="control-label col-md-3 col-sm-3">Télé</label>
+                              <div class="col-md-6 col-sm-6">
+                                <input class="form-control col-md-7 col-xs-12" type="text" disabled value="{{dataoneprojet.tel}}">
+                              </div>
+                            </div>
+
+                          <div class="form-group">
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3">Etablissement</label>
+                                <div class="col-md-6 col-sm-6">
+                                  <input  class="form-control col-md-7 col-xs-12" type="text" disabled value="{{dataoneprojet.etablissement}}">
+                                </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="middle-name" class="control-label col-md-3 col-sm-3">Niveau de formation</label>
+                              <div class="col-md-6 col-sm-6">
+                                <input  class="form-control col-md-7 col-xs-12" type="text" disabled value="{{dataoneprojet.niveauDeFormation}}">
+                              </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3">Experience Professionnelles</label>
+                            <div class="col-md-6 col-sm-6">
+                              <textarea class="form-control col-md-7 col-xs-12" disabled>{{dataoneprojet.experienceProfessionnelles}}</textarea>
+                            </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="middle-name" class="control-label col-md-3 col-sm-3">Motivations</label>
+                          <div class="col-md-6 col-sm-6">
+                            <textarea class="form-control col-md-7 col-xs-12" disabled>{{dataoneprojet.motivations}}</textarea>
+                          </div>
+                    </div>
+
+                        </form>
+                      </div>
+                      <div id="step-22">
+                          <h2 class="StepTitle">Détails projet</h2>                        
+                          <form class="form-horizontal form-label-left">
+                          <div class="form-group">
+                              <label for="middle-name" class="control-label col-md-3 col-sm-3">idée</label>
+                              <div class="col-md-6 col-sm-6">
+                                <input  class="form-control col-md-7 col-xs-12" type="text" value="{{dataoneprojet.idee}}">
+                              </div>
+                        </div>
+                        </form>
+                        <h2 class="StepTitle">Description probleme</h2>
+                        <p>{{dataoneprojet.descriptionProbleme}}</p>
+                        <h2 class="StepTitle">Description Solution</h2>
+                        <p>{{dataoneprojet.descriptionSolution}}</p>
+                      </div>
+                      <div id="step-33">
+                          <h2 class="StepTitle">Cibles</h2>
+                          <p>{{dataoneprojet.cibles}}</p>
+                          <h2 class="StepTitle">Changement</h2>
+                          <p>{{dataoneprojet.changement}}</p>
+                          <h2 class="StepTitle">Valeur Sociale</h2>
+                          <p>{{dataoneprojet.valeurSociale}}</p>
+                          <h2 class="StepTitle">Valeur Economique</h2>
+                          <p>{{dataoneprojet.valeurEconomique}}</p>
+                      </div>
+                      <div id="step-44">
+                          <h2 class="StepTitle">Ressources Humaines</h2>
+                          <p>{{dataoneprojet.ressourcesHumaines}}</p>
+                          <h2 class="StepTitle">Moyens Technique et Financier</h2>
+                          <p>{{dataoneprojet.moyensTechniqueEtFinancier}}</p>
+                          <h2 class="StepTitle">Activites</h2>
+                          <p>{{dataoneprojet.activites}}</p>
+                      </div>
+                    </div>
+                
+              </div>
+            </div>
+          </div>
+
+        {% endif %}
 
         
       </div>

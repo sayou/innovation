@@ -126,10 +126,10 @@ class InscriptionModel extends \Core\Model{
 	public static function editLeadInfos($lead, $idLead){
         try{
         	$db = static::getDB();
-           	$stmt = $db->prepare("UPDATE `leadduprojetinfos` SET nomPrenom = :np, dateNaissance = :dn, email = :em, tel = :t, etablissement = :eb, niveauDeFormation = :nf, experienceProfessionnelles = :ep, motivations = :m WHERE id = " . $idLead);
+           	$stmt = $db->prepare("UPDATE `leadduprojetinfos` SET nomPrenom = :np, dateNaissance = :dn, tel = :t, etablissement = :eb, niveauDeFormation = :nf, experienceProfessionnelles = :ep, motivations = :m WHERE id = " . $idLead);
 			$stmt->bindParam(':np',  $lead['leadNomPrenom']);
 			$stmt->bindParam(':dn',  $lead['leadDateNaissance']);
-			$stmt->bindParam(':em',  $lead['leadAdresseMail']);
+			//$stmt->bindParam(':em',  $lead['leadAdresseMail']);
 			$stmt->bindParam(':t',   $lead['leadTel']);
 			$stmt->bindParam(':eb',  $lead['leadEtablissement']);
 			$stmt->bindParam(':nf',  $lead['leadNiveauDeFormation']);

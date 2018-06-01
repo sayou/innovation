@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use \Core\View;
 use App\Models\HomeModel;
+session_start();
 
 class Home extends \Core\Controller{
     
@@ -18,19 +19,45 @@ class Home extends \Core\Controller{
 
     protected function siteWebAction(){
 
-        $result = HomeModel::getProjectAndLeadInfos();
+        $result = HomeModel::getProjectAndLeadInfosNonSelected();
+        $result1 = HomeModel::getProjectAndLeadInfosSelected();
+        $third = empty(HomeModel::getProjectAndLeadInfosThirdOne()) ? null : HomeModel::getProjectAndLeadInfosThirdOne();
+        $second = empty(HomeModel::getProjectAndLeadInfosSecondOne()) ? null : HomeModel::getProjectAndLeadInfosSecondOne();
+        $winner = empty(HomeModel::getProjectAndLeadInfosWinner()) ? null : HomeModel::getProjectAndLeadInfosWinner();
         $count = count($result);
-        View::getView('SiteWeb/index.html', ['projectList' => $result, 'nbrProjects' => $count]);
+        $count1 = count($result1);
+        View::getView('SiteWeb/index.html', [
+            'projectList' => $result,
+            'projectListSelected' => $result1,
+            'nbrProjects' => $count,
+            'nbrprojectListSelected'=>$count1,
+            'third'=>$third,
+            'second'=>$second,
+            'winner'=>$winner]);
     }
 
     protected function loginAction(){
-        $test = null;
+        if(isset($_SESSION['id']) && isset($_SESSION['role'])){
+            if(strcmp($_SESSION['role'],'coach') == 0){
+                header('Location: https://aracpi.com/innovation/coach/index', true, 303);
+                exit;
+            }else if(strcmp($_SESSION['role'],'jury') == 0){
+                header('Location: https://aracpi.com/innovation/jury/index', true, 303);
+                exit;
+            }else if(strcmp($_SESSION['role'],'admin') == 0){
+                header('Location: https://aracpi.com/innovation/admin/index', true, 303);
+                exit;
+            }else{
+                header('Location: https://aracpi.com/innovation/inscriptionPlatform', true, 303);
+                exit;
+            }
+        }else{
+            $test = null;
         if(isset($_POST["submit"])){
             $nom = $_POST["nomComplete"];
             $password = $_POST["password"];
             $datas = HomeModel::getByPasswordAndName($nom,$password);
             if(!empty($datas)){
-                session_start();
                 if(strcmp($datas['role'],'coach') == 0){
                     $_SESSION['id'] = $datas['id'];
                     $_SESSION['role'] = $datas['role'];
@@ -55,6 +82,8 @@ class Home extends \Core\Controller{
                 View::getView("login.html",['test'=>$test]);
             }
         }else{View::getView("login.html",['test'=>$test]);}
+        }
+        
     }
     
 }
